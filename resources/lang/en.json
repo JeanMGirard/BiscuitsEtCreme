@@ -1,0 +1,18 @@
+{
+    "nav_home": "Home",
+    "nav_about": "About us",
+    "nav_products": "Our products",
+    "nav_shop": "Shop",
+    "nav_users": "Customers",
+    "nav_contact": "Contact",
+
+    "rte_about": "rte_about",
+    "rte_products": "rte_products",
+    "rte_shop": "rte_shop",
+    "rte_users": "rte_users",
+    "rte_contact": "rte_contact",
+
+    "prod_cookie_dough": "Cookie Dough",
+    "prod_ice_cream": "Ice Cream",
+    "prod_cakes_and_pies": "Cakes & Pies"
+}

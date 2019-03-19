@@ -1,0 +1,33 @@
+
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: "Nunito", sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66D9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+
+
+$header-primary-color: rgb(4, 163, 255);
+$header-secondary-color: rgb(255, 255, 255);
+$header-margin-1: 15px;
+$header-margin-2: 55px;
+$content-padding: 100px;
+$header-transition-time: 1500ms;
+$header-transition: background 500ms, color 500ms, margin $header-transition-time;
+$header-logo-transition-show: opacity 1500ms;
+$header-logo-transition-hide: opacity 1000ms;
+$header-logo-url: "/img/logo/logo-title-154.png";

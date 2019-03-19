@@ -1,0 +1,21 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+// Variables
+@import 'variables';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import './theme.scss';
+@import './components/header.scss';
+@import './components/content.scss';
+@import './components/footer.scss';
+
+// To generate separatly when in production
+//@import './pages/home.scss';
+//@import './pages/products.scss';
+
+html, body, #content>.row{
+  margin: 0;
+  padding: 0; 
+}

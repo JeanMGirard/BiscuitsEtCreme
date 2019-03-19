@@ -1,0 +1,19 @@
+{
+    "nav_home": "Accueil",
+    "nav_about": "A propos",
+    "nav_products": "Nos produits",
+    "nav_shop": "Magasin",
+    "nav_users": "Clients",
+    "nav_contact": "Nous Contacter",
+    "nav_contact_2": "Nous Joindre",
+
+    "rte_about": "rte_about_fr",
+    "rte_products": "rte_products_fr",
+    "rte_shop": "rte_shop_fr",
+    "rte_users": "rte_users_fr",
+    "rte_contact": "rte_contact_fr",
+
+    "prod_cookie_dough": "Pate a biscuit",
+    "prod_ice_cream": "Cremes glacees",
+    "prod_cakes_and_pies": "Tartes & Gateaux"
+}

@@ -1,0 +1,27 @@
+$a: 100vh;
+$b: (($content-padding - ($header-margin-2 - $header-margin-1)) + $content-padding) / 2;
+
+#content{
+    z-index: 500;
+    position: absolute;
+    top: 0;
+    padding-top: $content-padding;
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+#content.active{
+    transition: padding $header-transition-time;
+}
+#content.scrolled{
+    padding-top: $content-padding - ($header-margin-2 - $header-margin-1);
+}
+#content>.row:first-child{
+    height: calc(#{$a} - #{$b});
+}
+#content .fill-bg{
+    background-color: lightgray;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:50% 50%;
+}

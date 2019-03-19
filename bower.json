@@ -1,0 +1,22 @@
+{
+  "name": "biscuits_et_creme",
+  "description": "",
+  "main": "",
+  "authors": [
+    "JeanMGirard <Jean.M.Girard@Outlook.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.3.1"
+  }
+}
