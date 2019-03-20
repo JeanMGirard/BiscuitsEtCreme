@@ -5,24 +5,38 @@
 <link rel="stylesheet" href="{{ URL::asset('css/pages/home.css') }}">
 @stop
 
+
 @section('content')
+<!-- NEW PARRALLAX -->
 <div class="row">
-    <div class="col fill-bg" 
-        style="background-image: url({{ URL::asset('img/backgrounds/ice-cream-bg-600.png') }}); 
-                background-position:50% 10%; ">
-        <div class="row" style="height:100%; background:rgba(255,255,255, 0.5);"></div>
+    <div class="col fill-bg" style="z-index:-10;">
+        <div class="row parallax" 
+             style="background-image: url({{ URL::asset('img/backgrounds/ice-cream-bg-600.png') }}); 
+                background-position:50% -10%; position:fixed; top:0; background-size:103% 150%; ">
+        </div>
+        <div class="row parallax-effect effect-white"></div>
+        
     </div>
+ 
 </div>
+
+
+<!-- NEW ROW -->
 <div class="row content-box" style="height:100vh;background:white;">
 
 </div> 
+
+<!-- NEW PARRALLAX -->
 <div class="row" style="height:500px;">
-    <div class="col fill-bg" 
-        style="background-image: url({{ URL::asset('img/backgrounds/biscuits-bg-600.png') }}); 
-                background-position:50% 50%; background-size: 200% 200%;">
-        <div class="row" style="height:100%; background:rgba(255,255,255, 0.5);"></div>
+    <div class="col fill-bg"  style="z-index:-9;">
+        <div class="row parallax" 
+             style="background-image: url({{ URL::asset('img/backgrounds/bouchees-bg-600.png') }});">
+        </div>
+        <div class="row parallax-effect effect-white"></div>
     </div>
 </div>
+
+<!-- NEW ROW -->
 <div class="row content-box" style="min-height:80vh;background:white;">
     <div class="col justify-content-center">
         <div class="row">
@@ -66,22 +80,39 @@
         
     </div>
 </div> 
+
+<!-- NEW PARRALLAX -->
 <div class="row" style="height:500px;">
-    <div class="col fill-bg" 
-        style="background-image: url({{ URL::asset('img/backgrounds/biscuits-bg-600.png') }}); 
-                background-position:50% 50%; background-size: 200% 200%;">
-        <div class="row" style="height:100%; background:rgba(255,255,255, 0.5);"></div>
+    <div class="col fill-bg"  style="z-index:-9;">
+        <div class="row parallax" 
+             style="background-image: url({{ URL::asset('img/backgrounds/biscuits-bg-600.png') }});">
+        </div>
+        <div class="row parallax-effect effect-white"></div>
     </div>
 </div>
+
+
+<!-- NEW ROW -->
 <div class="row content-box" style="min-height:80vh;background:white;">
     <div class="col justify-content-center">
     </div>
 </div> 
+
+
+<!-- NEW PARRALLAX -->
 <div class="row" style="height:200px;">
-    <div class="col fill-bg" 
-        style="background-image: url({{ URL::asset('img/backgrounds/biscuits-bg-600.png') }}); 
-                background-position:50% 50%; background-size: 200% 200%;">
-        <div class="row" style="height:100%; background:rgba(255,255,255, 0.5);"></div>
+    <div class="col fill-bg"  style="z-index:-9;">
+        <div class="row parallax" 
+             style="background-image: url({{ URL::asset('img/backgrounds/biscuits-bg-600.png') }});">
+        </div>
+        <div class="row parallax-effect effect-white"></div>
     </div>
 </div>
+@stop
+
+@section('js')
+<script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+<script>
+
+</script>
 @stop

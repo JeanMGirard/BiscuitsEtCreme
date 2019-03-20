@@ -19,7 +19,6 @@ $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
 
-
 $assets-url: "/";
 $header-primary-color: rgb(4, 163, 255);
 $header-secondary-color: rgb(255, 255, 255);
@@ -31,3 +30,6 @@ $header-transition: background 500ms, color 500ms, margin $header-transition-tim
 $header-logo-transition-show: opacity 1500ms;
 $header-logo-transition-hide: opacity 1000ms;
 $header-logo-url: "/img/logo/logo-title-154.png";
+
+$a: 100vh;
+$b: (($content-padding - ($header-margin-2 - $header-margin-1)) + $content-padding) / 2;

@@ -1,5 +1,9 @@
+@import "../_variables.scss";
+ 
 $border-color: rgba(0, 0, 0, 0.705);
-
+#content>.row:first-child{
+    height: calc(#{$a} - #{$b}) !important;
+}
 #grid-biscuits{
     margin: 70px;
     margin-right: 20px;
