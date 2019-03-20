@@ -14,5 +14,20 @@
 
     "prod_cookie_dough": "Cookie Dough",
     "prod_ice_cream": "Ice Cream",
-    "prod_cakes_and_pies": "Cakes & Pies"
+    "prod_cakes_and_pies": "Cakes & Pies",
+
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "open_mon": "00:00 - 00:00",
+    "open_tue": "00:00 - 00:00",
+    "open_wed": "00:00 - 00:00",
+    "open_thu": "00:00 - 00:00",
+    "open_fri": "00:00 - 00:00",
+    "open_sat": "00:00 - 00:00",
+    "open_sun": "00:00 - 00:00"
 }

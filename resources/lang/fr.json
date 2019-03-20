@@ -15,5 +15,20 @@
 
     "prod_cookie_dough": "Pate a biscuit",
     "prod_ice_cream": "Cremes glacees",
-    "prod_cakes_and_pies": "Tartes & Gateaux"
+    "prod_cakes_and_pies": "Tartes & Gateaux",
+
+    "monday": "Lundi",
+    "tuesday": "Mardi",
+    "wednesday": "Mercredi",
+    "thursday": "Jeudi",
+    "friday": "Vendredi",
+    "saturday": "Samedi",
+    "sunday": "Dimanche",
+    "open_mon": "00:00 - 00:00",
+    "open_tue": "00:00 - 00:00",
+    "open_wed": "00:00 - 00:00",
+    "open_thu": "00:00 - 00:00",
+    "open_fri": "00:00 - 00:00",
+    "open_sat": "00:00 - 00:00",
+    "open_sun": "00:00 - 00:00"
 }

@@ -1,0 +1,24 @@
+
+
+.content-box{
+    width: 100%;
+}
+
+
+.row.content-box{
+    border: 2px solid rgba(170, 170, 170, 0.7);
+    -webkit-box-shadow: -1px 6px 10px 3px rgba(0,0,0,0.12) inset;
+    box-shadow: -1px 6px 10px 3px rgba(0,0,0,0.12) inset;
+}
+
+#content>.row{
+    border-right: none;
+    border-left: none;
+}
+
+table.no-indent td{
+    text-indent: 0px !important;
+}
+.selector-content{
+    display: hidden;
+}

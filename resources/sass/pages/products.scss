@@ -1,4 +1,5 @@
 $product-box-transition: opacity 700ms, background 700ms;
+$select-box-transition: opacity 300ms;
 
 header, html{
     border-bottom: 2px solid gray;
@@ -44,4 +45,48 @@ div.info-hover>.container.info-hower-inact, div.info-hover:hover>.container.info
 }
 div.info-hover>.container.info-hower-act, div.info-hover:hover>.container.info-hower-inact{
     opacity: 0;
+}
+#selected-content{
+    position: absolute;
+    min-width: 100vw;
+    min-height: 90vh;
+    max-height: 100vh;
+    background: white;
+    z-index: -1;
+    transition: $select-box-transition;
+    opacity:0;
+    padding-left: 10vw;
+    overflow: auto;
+    height:92vh;
+}
+#unselect-button{
+    position: absolute;
+    z-index:1000;
+    top: 20px;
+    right: 60px;
+
+    vertical-align: middle;
+    text-align: center;
+
+    height: 30px;
+    width: 30px;
+
+    color: rgb(46, 46, 46);
+    font-weight: bold;
+    font-size: 24px;
+    
+    /*
+    height: 30px;
+    width: 140px;
+    line-height: 2;
+    background: blue;
+    border-radius: 10px;
+    color: white;
+    */
+}
+#unselect-button:hover{
+    cursor: pointer;
+}
+.selector-content{
+    height:1000px;
 }

@@ -1,0 +1,97 @@
+
+@import "../_variables.scss";
+$gmap-margin: 80px 0px 0px 30px;
+
+#map{
+    overflow: visible;
+}
+#map>iframe{
+    border: 2px solid rgb(140, 140, 140);
+    margin: $gmap-margin;
+}
+#social-icons{
+    /*position: absolute;
+    top: 120px;
+    left: 10vw;*/
+    width: fit-content;
+    background: rgba(0,0,0,0.1);
+    padding: 5px;
+}
+#contactUs{
+    background: rgba(211, 211, 211, 0.15);
+    margin-top: 25px;
+    padding-top:15px;
+    padding-bottom: 40px;
+}
+#contactUs td:first-child{
+    text-align: left;
+    text-indent: 20px;
+    padding-right: 55px;
+    vertical-align: top;
+    padding-top:3px;
+}
+#contactUs td:last-child>p{
+    position: relative;
+}
+#sendMessage{
+    background: rgba(211, 211, 211, 0.15);
+    margin-top: 35px;
+    margin-bottom: 80px;
+    padding-top: 20px;
+    padding-left: 60px;
+    padding-bottom:15px;
+}
+
+#sendMessage form{
+    width: 70%;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#sendMessage form input{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    min-width: 160px;
+}
+#sendMessage input[type=text], 
+#sendMessage input[type=email]{
+    width: 60%;
+}
+#sendMessage textarea{
+    width: 100%;
+    margin-top: 5px;
+}
+#sendMessage .button{
+    float: right;
+    min-width: 200px;
+}
+#contactUs table.no-indent{
+    line-height: 1;
+    font-size: 90%;
+}
+
+@media only screen and (min-width: 1100px) {
+    #contactUs-box{
+      margin-left: 5%;
+      max-width: 48%;
+    }
+}
+@media only screen and (max-width: 1100px){
+    #sendMessage{
+        padding-left: 20px;
+    }
+    
+    #sendMessage form{
+        width: 90%;
+        padding-left: 2vw;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    #sendMessage form input{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        min-width: 60vw;
+    }
+}
+
+  

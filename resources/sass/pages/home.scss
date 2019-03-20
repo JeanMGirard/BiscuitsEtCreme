@@ -1,0 +1,27 @@
+$border-color: rgba(0, 0, 0, 0.705);
+
+#grid-biscuits{
+    margin: 70px;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    width: fit-content;
+    /*background: rgba(4, 10, 31, 0.8);*/
+    border: 3px solid $border-color;
+}
+
+#grid-biscuits img{
+    width: 130px;
+    height: 130px;
+    margin: 8px;
+    border-radius: 2px;
+    border: 2px solid $border-color;
+    opacity: 0.9;
+}
+#grid-biscuits img:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+#grid-biscuits tr, #grid-biscuits td{
+    border: none;
+}

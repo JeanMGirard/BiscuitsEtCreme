@@ -27,7 +27,7 @@
         <div id="content" class="container">
             @yield('content')
 
-            @component('components.footer')
+            @component('components.footer', ['no-color' => true])
                 <strong>Unable to load footer</strong>
             @endcomponent
         </div>

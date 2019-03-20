@@ -1,11 +1,9 @@
 /bower_components
 /resources/vendor
 /node_modules
-/public/hot
-/public/storage
-/public/img
-/public/css
-/public/js
+/public
+!/public/_OLD
+!/public/**
 /storage/*.key
 /vendor
 .env

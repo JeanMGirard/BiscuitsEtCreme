@@ -1,4 +1,19 @@
 #footer{
-    height: 400px;
+    height: 300px;
     background: rgb(40,40,40);
+    color: white;
+    padding: 20px !important;
+    line-height: 1.2;
+}
+#footer h3{
+    font-size: 14px;
+}
+#footer .col-md-4{
+    padding-right: 10px;
+}
+#footer table{
+    font-size: 80%;
+}
+#footer table tr td:first-child{
+    padding-right: 15px;
 }
