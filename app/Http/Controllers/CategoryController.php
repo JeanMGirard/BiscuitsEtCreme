@@ -40,15 +40,16 @@ class CategoryController extends Controller
         $category->save();
     }
 
+
     /**
      * Display the specified resource.
      *
-     * @param  \App\Category  $category
-     * @return \Illuminate\Http\Response
+     * @param  int  $id
+     * @return View
      */
-    public function show(Category $category)
+    public function show($id)
     {
-        //
+        return view('pages.products', ['category' => Category::findOrFail($id)]);
     }
 
     /**

@@ -8,3 +8,8 @@ class Category extends Model
 {
     //
 }
+
+class Categories extends Model
+{
+    //
+}

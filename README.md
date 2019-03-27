@@ -17,6 +17,5 @@ npm install --no-bin-links
 
 
 ### Maitain
-```
-php artisan migrate --env=local
-```
+- Migrate: ``php artisan migrate --env=local``
+- File changes: ``composer dumpautoload``

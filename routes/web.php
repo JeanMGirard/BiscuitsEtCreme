@@ -13,6 +13,7 @@
 
 
 Route::get('/',                 function () {   return view('home');    })->name('rte_home');
+Route::get('/admin', 'AdminController@index');
 
 Route::get('/about-us',         function () {   return view('pages.about');    })->name('rte_about');
 Route::get('/a-propos',         function () {   return view('pages.about');    })->name('rte_about_fr');
@@ -37,7 +38,9 @@ Route::get('lang/{locale}', function ($locale) {
 })->name('rte_language');
 
 Route::get('/404',  function () { return view('404');   })->name('rte_404');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/category/{id}', 'CategoryController@show');
