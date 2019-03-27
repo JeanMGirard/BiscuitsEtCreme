@@ -37,3 +37,7 @@ Route::get('lang/{locale}', function ($locale) {
 })->name('rte_language');
 
 Route::get('/404',  function () { return view('404');   })->name('rte_404');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
