@@ -15,7 +15,11 @@ npm install -g cross-env gulp-cli
 npm install --no-bin-links
 ```
 
-
 ### Maitain
 - Migrate: ``php artisan migrate --env=local``
 - File changes: ``composer dumpautoload``
+
+## Start server
+```
+php artisan serve --port=8090
+```
