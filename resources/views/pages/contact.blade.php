@@ -27,15 +27,15 @@
             <table>
               <tr>
                 <td><h6><b>Telephone</b></h6></td>
-                <td><p>xxx-xxx-xxxx</p></td>
+                <td><p>{{ __('contact_phone') }}</p></td>
               </tr>
               <tr>
                 <td><h6><b>Email</b></h6></td>
-                <td><p><a href="mailto:contact@biscuitsetcreme.ca">contact@biscuitsetcreme.ca</a></p></td>
+                <td><p><a href="mailto:{{ __('contact_email') }}">{{ __('contact_email') }}</a></p></td>
               </tr>
               <tr>
                 <td><h6><b>En Personne</b></h6><br/> </td>
-                <td><p>13619 Boulevard Curé-Labelle<br/>Mirabel, QC J7J 1K3</p></td>
+                <td><p>{{ __('addr1') }}<br/>{{ __('addr2') }}</p></td>
               </tr>
               <tr>
                 <td><h6><b>Heures d'ouverture</b></h6><br/> </td>

@@ -7,7 +7,7 @@
         </div>
         <div class="row justify-content-center">
             <div>
-                <p>13619 Boulevard Curé-Labelle<br/>Mirabel, QC J7J 1K3</p>
+                <p>{{ __('addr1') }}<br/>{{ __('addr2') }}</p>
             </div>
         </div>
         <div class="row justify-content-center">

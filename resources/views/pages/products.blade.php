@@ -18,11 +18,11 @@
      <div id="selector-1" class="col-md fill-bg" 
          style="background-image: url({{ URL::asset('img/backgrounds/biscuits-bg-600.png') }});">
          <div class="info-hover">
-               <div class="container info-hower-inact " style="text-align:center;">
-                    <h4>{{ __('prod_cookie_dough') }}</h4>
+               <div class="container info-hover-inact " style="text-align:center;">
+                    <h4 class="prod-ctg-ttl">{{ __('prod_cookie_dough') }}</h4>
                </div>
-               <div class="container info-hower-act">
-                    <h4>{{ __('prod_cookie_dough') }}</h4>
+               <div class="container info-hover-act">
+                    <h4 class="prod-ctg-ttl">{{ __('prod_cookie_dough') }}</h4>
                </div>
           </div>
     </div>
@@ -30,11 +30,11 @@
     <div id="selector-2" class="col-md fill-bg" 
          style="background-image: url({{ URL::asset('img/backgrounds/ice-cream-bg-600.png') }});">
          <div class="info-hover">
-               <div class="container info-hower-inact">
-                    <h4>{{ __('prod_ice_cream') }}</h4>
+               <div class="container info-hover-inact">
+                    <h4 class="prod-ctg-ttl">{{ __('prod_ice_cream') }}</h4>
                </div>
-               <div class="container info-hower-act">
-                    <h4>{{ __('prod_ice_cream') }}</h4>
+               <div class="container info-hover-act">
+                    <h4 class="prod-ctg-ttl">{{ __('prod_ice_cream') }}</h4>
                </div>
           </div>
     </div>
@@ -42,11 +42,11 @@
     <div id="selector-3" class="col-md fill-bg" 
          style="background-image: url({{ URL::asset('img/backgrounds/tarte-bg-600.png') }});">
          <div class="info-hover">
-               <div class="container info-hower-inact">
-                    <h4>{{ __('prod_cakes_and_pies') }}</h4>
+               <div class="container info-hover-inact">
+                    <h4 class="prod-ctg-ttl">{{ __('prod_cakes_and_pies') }}</h4>
                </div>
-               <div class="container info-hower-act">
-                    <h4>{{ __('prod_cakes_and_pies') }}</h4>
+               <div class="container info-hover-act">
+                    <h4 class="prod-ctg-ttl">{{ __('prod_cakes_and_pies') }}</h4>
                </div>
           </div>
     </div>

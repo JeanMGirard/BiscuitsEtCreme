@@ -40,10 +40,10 @@ div.info-hover>.container{
     transition: $product-box-transition;
 }
 
-div.info-hover>.container.info-hower-inact, div.info-hover:hover>.container.info-hower-act{
+div.info-hover>.container.info-hover-inact, div.info-hover:hover>.container.info-hover-act{
     opacity: 1;
 }
-div.info-hover>.container.info-hower-act, div.info-hover:hover>.container.info-hower-inact{
+div.info-hover>.container.info-hover-act, div.info-hover:hover>.container.info-hover-inact{
     opacity: 0;
 }
 #selected-content{
@@ -89,4 +89,11 @@ div.info-hover>.container.info-hower-act, div.info-hover:hover>.container.info-h
 }
 .selector-content{
     height:1000px;
+}
+.prod-ctg-ttl{
+    opacity: 0;
+    font-family: "Lobster", cursive;
+    font-size: 40px;
+    padding-top: 40px;
+    color: rgba(0,0,0, 0.9);
 }

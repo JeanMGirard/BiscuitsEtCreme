@@ -23,11 +23,31 @@
     "friday": "Friday",
     "saturday": "Saturday",
     "sunday": "Sunday",
-    "open_mon": "00:00 - 00:00",
-    "open_tue": "00:00 - 00:00",
-    "open_wed": "00:00 - 00:00",
-    "open_thu": "00:00 - 00:00",
-    "open_fri": "00:00 - 00:00",
-    "open_sat": "00:00 - 00:00",
-    "open_sun": "00:00 - 00:00"
+    "open_mon": "12:00 - 22:00",
+    "open_tue": "12:00 - 22:00",
+    "open_wed": "12:00 - 22:00",
+    "open_thu": "12:00 - 22:00",
+    "open_fri": "12:00 - 22:30",
+    "open_sat": "12:00 - 22:30",
+    "open_sun": "12:00 - 22:30",
+
+    "home_intro_1": "More than an ice cream shop !",
+
+    "addr1": "13619 Boulevard Curé-Labelle",
+    "addr2": "Mirabel, Qc, J7J 1K3",
+    "contact_email": "info@biscuitsetcreme.com",
+    "contact_phone": "450 508-4066",
+
+    "about_p1t": "Une équipe attentionnée",
+    "about_p1c": "Procedente igitur mox tempore cum adventicium nihil inveniretur, relicta ora maritima in Lycaoniam adnexam Isauriae se contulerunt ibique densis intersaepientes itinera praetenturis provincialium et viatorum opibus pascebantur.",
+    "about_p1_tags": "",
+    "about_p2t": "Des produits uniques!",
+    "about_p2c": "Menu varié, service personnalisé, qualité.  Chacun y trouve son bonheur.  Produits sans lactose, végans, smoothies, limonade fraîchement pressée, yogourt glacé, crème glacée, pâte à biscuits crue ou cuite de différentes façons, sauce sucre à la crème maison et tellement plus.  Le but :  vous gâter.",
+    "about_p2_tags": "",
+    "about_p3t": "Le virage vert",
+    "about_p3c": "Nous sommes conscients de l’impact de notre emprunte environnementale, c’est pourquoi, nous nous engageons à faire le maximum pour réduire celle-ci en remplaçant graduellement les contenants en plastique que nous avons par des contenants de carton et en prenant soin de choisir les nouveaux contenants en matière plus écologique.",
+    "about_p3_tags": "",
+    "about_p4t": "",
+    "about_p4c": "",
+    "about_p4_tags": ""
 }

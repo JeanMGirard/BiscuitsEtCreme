@@ -4,7 +4,10 @@
 @section('css')
 <link rel="stylesheet" href="{{ URL::asset('css/pages/home.css') }}">
 @stop
-
+@section('js')
+<script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+<script src="{{ URL::asset('js/pages/home.js') }}"></script>
+@stop
 
 @section('content')
 <!-- NEW PARRALLAX -->
@@ -15,9 +18,10 @@
                 background-position:50% -10%; position:fixed; top:0; background-size:103% 150%; ">
         </div>
         <div class="row parallax-effect effect-white"></div>
-        
+        <div id="home-content-1" class="row justify-content-center">
+            <h2 id="home1-title">{{ __('home_intro_1') }}</h2>
+        </div>
     </div>
- 
 </div>
 
 
@@ -108,11 +112,4 @@
         <div class="row parallax-effect effect-white"></div>
     </div>
 </div>
-@stop
-
-@section('js')
-<script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
-<script>
-
-</script>
 @stop

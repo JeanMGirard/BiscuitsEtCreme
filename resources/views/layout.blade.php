@@ -35,7 +35,6 @@
         
 
         <!-- JS here -->
-        <script src="{{ URL::asset('js/vendor.js') }}"></script>
         <script src="{{ URL::asset('js/app.js') }}"></script>
         @yield('js')
     </body>

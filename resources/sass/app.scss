@@ -1,6 +1,6 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Dosis|Indie+Flower|Lobster|Kaushan+Script|Dancing+Script:400,700|Nunito');
 // Variables
 @import 'variables';
 @import './_variables.scss';
@@ -20,4 +20,5 @@
 html, body, #content>.row{
   margin: 0;
   padding: 0; 
+  font-family: "Nunito", cursive;
 }

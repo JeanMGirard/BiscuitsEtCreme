@@ -24,6 +24,12 @@ function show_content(){
 }
 
 $(function() {
+    $('.prod-ctg-ttl').each(function () {
+        (new CircleType(this)).radius(500)
+    }).css("opacity", "1");
+
+    
+
     empty_content();
     $("#selected-content").hide();
     $("#selected-content").css("z-index", "1");
