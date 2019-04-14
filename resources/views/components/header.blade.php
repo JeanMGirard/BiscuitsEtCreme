@@ -18,7 +18,7 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{{ route(__('rte_users')) }}">{{ __('nav_users') }} </a>
+      <a class="nav-link" href="{{ route(__('rte_menu')) }}">{{ __('nav_menu') }} </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="{{ route(__('rte_contact')) }}"> {{ __('nav_contact') }}</a>

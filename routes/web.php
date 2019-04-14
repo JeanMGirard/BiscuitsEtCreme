@@ -24,11 +24,21 @@ Route::get('/produits',         function () {   return view('pages.products');  
 Route::get('/shop',             function () {   return view('pages.shop');    })->name('rte_shop');
 Route::get('/magasiner',        function () {   return view('pages.shop');    })->name('rte_shop_fr');
 
-Route::get('/customers',        function () {   return view('pages.shop');    })->name('rte_users');
-Route::get('/clients',          function () {   return view('pages.shop');    })->name('rte_users_fr');
-
 Route::get('/contact-us',       function () {   return view('pages.contact');    })->name('rte_contact');
 Route::get('/contactez-nous',   function () {   return view('pages.contact');    })->name('rte_contact_fr');
+
+Route::get('/our-menu', function () {
+    return response()->file("app/public/menu/menu.en.pdf", [
+        'Content-Type' => 'application/pdf'
+    ]);
+})->name('rte_menu');
+Route::get('/menu',     function () {
+    return response()->file(__DIR__ . "/../storage/app/public/menu/menu.fr.pdf", [
+        'Content-Type' => 'application/pdf'
+    ]);
+})->name('rte_menu_fr');
+
+
 
 
 

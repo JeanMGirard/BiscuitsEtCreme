@@ -4,6 +4,8 @@
 /public
 !/public/_OLD
 !/public/**
+/bin/composer/
+/bin/php73/
 /storage/*.key
 /vendor
 .env

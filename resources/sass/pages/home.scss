@@ -64,3 +64,35 @@ $border-color: rgba(0, 0, 0, 0.705);
 #grid-biscuits tr, #grid-biscuits td{
     border: none;
 }
+#row-2{
+    height:97vh;
+    background:white;
+}
+#row-3{
+    height:500px;
+}
+#row-4{ 
+    color:white;
+    min-height:80vh;
+    background:rgb(17, 17, 17);
+}
+#row-4-bg{ 
+    background-size: 100% 130%;
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+    -webkit-box-shadow: 0 -3px 19px 7px rgba(0, 0, 0, 0.5) inset,
+    0 3px 19px 6px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0 -3px 19px 7px rgba(0, 0, 0, 0.5) inset,
+    0 3px 19px 6px rgba(0, 0, 0, 0.5) inset;
+    border-radius: 5px;
+}
+#row-5{
+    height:500px;
+}
+#row-6{
+    min-height:80vh;
+    background:rgb(17, 17, 17);
+}
+#row-7 {
+    height:200px;
+}
