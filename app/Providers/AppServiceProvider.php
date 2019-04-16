@@ -24,7 +24,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-      //Blade::component('components.header', 'header');
+        //Blade::component('components.header', 'header');
         //
+        if (class_exists(Config::class)) Config::load();
+        
     }
 }

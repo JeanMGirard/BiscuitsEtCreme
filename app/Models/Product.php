@@ -6,7 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+    protected $table = 'products';
+    /**
+     * The model's default values for attributes.
+     *
+     * @var array
+     */
+    protected $attributes = [
+        'delayed' => false,
+    ];
 
+   /* public static function all(){
+        return App\Product::where('number', 'FR 900')->first();
+    }*/
 }
 abstract class ProductStatus
 {

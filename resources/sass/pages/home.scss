@@ -68,6 +68,20 @@ $border-color: rgba(0, 0, 0, 0.705);
     height:97vh;
     background:white;
 }
+#row-2>div>.row{
+    height:40%;
+    padding-top:75px;
+}
+#row-2 .carousel-side-content{
+    padding-left:20px;
+    padding-top:30px;
+}
+#row-2 .carousel-item img{
+    border-style: ridge;
+}
+#row-2 .carousel-inner{
+    max-height: 250px;
+}
 #row-3{
     height:500px;
 }

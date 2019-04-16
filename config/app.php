@@ -7,17 +7,8 @@ return [
     'url' => env('APP_URL', 'http://localhost'),
     'asset_url' => env('ASSET_URL', null),
     'timezone' => 'UTC',
-    /*
-    |--------------------------------------------------------------------------
-    | Application Locale
-    |--------------------------------------------------------------------------
-    | The application locale determines the default locale that will be used
-    | by the translation service provider. You are free to set this value
-    | to any of the locales which will be supported by the application.
-    |
-    */
-
-    'locale' => 'en',
+    /* The application locale determines the default locale that will be used by the translation service provider. */
+    'locale' => 'fr',
     'lang_list' => ['en', 'fr'],
     'fallback_locale' => 'en',
 
@@ -94,7 +85,6 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AdminServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         App\Providers\BroadcastServiceProvider::class,
@@ -115,7 +105,7 @@ return [
     */
 
     'aliases' => [
-      //  'Admin' => App\
+       // 'Admin' => App\Admin
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
