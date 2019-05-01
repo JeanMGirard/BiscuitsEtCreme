@@ -51,37 +51,5 @@ header.scrolled li.nav-logo{
     transition: $header-logo-transition-hide;
 }
 #nav-logo{
-    opacity: 0.8;
-}
-
-
-@media screen and (max-width: $breakpoint-cellphone) {
-    header{
-        border-bottom: none !important;
-    }
-    .nav-logo{
-        left:0;
-        width:100vw;
-        height: 10vh;
-    }
-    #nav-logo{
-        width: 60vw;
-        margin-left: 20vw;
-    }
-    .nav-item{
-        // display:none;
-    }
-    #content{
-        padding-top: 60px;
-    }
-    #content .fill-bg{
-        background-position: 50% 10%;
-    }
-    .nav-hide-sm{
-        display: none;
-    }
-}
-@media screen and (min-width: $breakpoint-cellphone) 
-              and (max-width: $breakpoint-tablet) {
-
+    opacity: 0.8
 }

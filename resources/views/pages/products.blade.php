@@ -19,7 +19,7 @@
 </style>
 
 <div class="row" style="max-height:100vh; height:95vh; min-height:95vh;">
-     <div id="selector-1" class="col-md fill-bg product-ctg-case" style="background-image: url({{ URL::asset('img/backgrounds/biscuits-bg-600.png') }});">
+     <div id="selector-1" class="col-md fill-bg" style="background-image: url({{ URL::asset('img/backgrounds/biscuits-bg-600.png') }});">
           <div class="info-hover">
                <div class="container info-hover-inact " style="text-align:center;">
                     <h4 class="prod-ctg-ttl">{{ __('prod_categ_1') }}</h4>
@@ -30,7 +30,7 @@
           </div>
      </div>
 
-     <div id="selector-2" class="col-md fill-bg product-ctg-case" style="background-image: url({{ URL::asset('img/backgrounds/ice-cream-bg-600.png') }});">
+     <div id="selector-2" class="col-md fill-bg" style="background-image: url({{ URL::asset('img/backgrounds/ice-cream-bg-600.png') }});">
           <div class="info-hover">
                <div class="container info-hover-inact">
                     <h4 class="prod-ctg-ttl">{{ __('prod_categ_2') }}</h4>
@@ -41,7 +41,7 @@
           </div>
      </div>
 
-     <div id="selector-3" class="col-md fill-bg product-ctg-case" style="background-image: url({{ URL::asset('img/backgrounds/tarte-bg-600.png') }});">
+     <div id="selector-3" class="col-md fill-bg" style="background-image: url({{ URL::asset('img/backgrounds/tarte-bg-600.png') }});">
           <div class="info-hover">
                <div class="container info-hover-inact">
                     <h4 class="prod-ctg-ttl">{{ __('prod_categ_3') }}</h4>
