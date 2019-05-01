@@ -10,7 +10,7 @@ function composer {
 }
 function runserver{
     CD $env:BC_website
-    php artisan serve --port=8090
+    php artisan serve --port=8091
 }
 function watchdev{
     CD $env:BC_website
