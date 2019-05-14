@@ -46,7 +46,9 @@
         <br />
         <h2>Des options santés!</h2>
         <p>Yogourt, creme glace sans gras, vege?</p>
-        <p>Mettre une grille des fruits disponible?</p>
+        @component('components.home.fruitgrid')
+            <strong>Unable to load selector-content</strong>
+        @endcomponent
     </div>
 </div>
 
