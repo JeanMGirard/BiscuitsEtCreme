@@ -17,8 +17,8 @@
     "rte_accounts": "rte_accounts_fr",
     "rte_contact": "rte_contact_fr",
 
-    "prod_categ_1": "Pâte a biscuit",
-    "prod_categ_2": "Crèmes glacées",
+    "prod_categ_1": "Pâtes à biscuit",
+    "prod_categ_2": "Crèmerie",
     "prod_categ_3": "Autres spécialitées",
 
     "monday": "Lundi",
@@ -37,6 +37,10 @@
     "open_sun": "12:00 - 22:30",
 
     "home_intro_1": "Beaucoup plus qu’un bar laitier!",
+    "home_bisc_title": "Nos pates à biscuits",
+    "home_bisc_desc": "Procedente igitur mox tempore cum adventicium nihil inveniretur, relicta ora maritima in Lycaoniam adnexam Isauriae",
+    "home_garn_title": "Nos garnitures",
+    "home_garn_desc": "Procedente igitur mox tempore cum adventicium nihil inveniretur, relicta ora maritima in Lycaoniam adnexam Isauriae",
 
     "addr1": "13619 Boulevard Curé-Labelle",
     "addr2": "Mirabel, Qc, J7J 1K3",
@@ -50,7 +54,7 @@
     "about_p2c": "Menu varié, service personnalisé, qualité.  Chacun y trouve son bonheur.  Produits sans lactose, végans, smoothies, limonade fraîchement pressée, yogourt glacé, crème glacée, pâte à biscuits crue ou cuite de différentes façons, sauce sucre à la crème maison et tellement plus.  Le but :  vous gâter.",
     "about_p2_tags": "",
     "about_p3t": "Le virage vert",
-    "about_p3c": "Nous sommes conscients de l’impact de notre emprunte environnementale, c’est pourquoi, nous nous engageons à faire le maximum pour réduire celle-ci en remplaçant graduellement les contenants en plastique que nous avons par des contenants de carton et en prenant soin de choisir les nouveaux contenants en matière plus écologique.",
+    "about_p3c": "Nous sommes conscients de l’impact de notre emprunte environnementale, c’est pourquoi, nous nous engageons à faire le maximum pour réduire celle-ci en remplaçant graduellement nos contenants en plastique par des contenants de carton.",
     "about_p3_tags": "",
     "about_p4t": "Évènements, fêtes et bien plus!",
     "about_p4c": "Procedente igitur mox tempore cum adventicium nihil inveniretur, relicta ora maritima in Lycaoniam adnexam Isauriae se contulerunt ibique densis intersaepientes itinera praetenturis provincialium et viatorum opibus pascebantur.",

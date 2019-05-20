@@ -27,6 +27,7 @@ mix
   .js('resources/js/vendor.js', 'public/js')
   .js('resources/js/pages/products.js', 'public/js/pages')
   .js('resources/js/pages/home.js', 'public/js/pages')
+  .js('resources/js/pages/about.js', 'public/js/pages')
   .sass('resources/sass/app.scss', 'public/css')
   .sass('resources/sass/vendor.scss', 'public/css')
   .sass('resources/sass/pages/home.scss', 'public/css/pages')

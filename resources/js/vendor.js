@@ -4,6 +4,7 @@ try {
     window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
 
+   // import 'jquery-ui/ui/widgets/datepicker.js';
     require('bootstrap');
     
     
@@ -14,6 +15,7 @@ window.CircleType = require('circletype');
 window.axios = require('axios');
 window.ImageScroll = require('parallax-imagescroll');
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.slick = require('slick-carousel');
 let token = document.head.querySelector('meta[name="csrf-token"]');
 
 /*if (token) {

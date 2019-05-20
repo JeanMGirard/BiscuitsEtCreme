@@ -1,12 +1,13 @@
 {
-    "/js/app.js": "/js/app.js?id=7e440ce0939990b73f76",
+    "/js/app.js": "/js/app.js?id=9adb65feaf3676123caf",
     "/css/app.css": "/css/app.css?id=9bbc6433edac5a9b8715",
-    "/css/vendor.css": "/css/vendor.css?id=fcbee819bcf81ceac048",
-    "/css/pages/home.css": "/css/pages/home.css?id=f2130bdc1cf08e186533",
+    "/css/vendor.css": "/css/vendor.css?id=e95b03978e68ce87244e",
+    "/css/pages/home.css": "/css/pages/home.css?id=2dee4f3628f7b273bca6",
     "/css/pages/products.css": "/css/pages/products.css?id=f935f1f28841b36e030c",
-    "/css/pages/about.css": "/css/pages/about.css?id=fe4c012b141e66fc0a37",
+    "/css/pages/about.css": "/css/pages/about.css?id=fcf90b36bc57f7c7990c",
     "/css/pages/contact.css": "/css/pages/contact.css?id=65a7e7f4471bb80e8d44",
+    "/js/pages/about.js": "/js/pages/about.js?id=bdd75a0a18062ba8919c",
     "/js/pages/home.js": "/js/pages/home.js?id=60ac9cfa4a7b7f80d260",
     "/js/pages/products.js": "/js/pages/products.js?id=a50e9a82816a051d360d",
-    "/js/vendor.js": "/js/vendor.js?id=1cb2c8889b39da442a0b"
+    "/js/vendor.js": "/js/vendor.js?id=94a5c48b3a187716e390"
 }

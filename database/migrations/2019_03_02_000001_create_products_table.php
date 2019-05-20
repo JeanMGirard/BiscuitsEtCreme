@@ -17,14 +17,17 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->string('name_en')
+                ->nullable();
+            $table->string('name_fr')
+                ->nullable();
             $table->integer('category_id')
                 ->nullable()
                 ->references('id')->on('categories');
-            $table->text('description')
+            $table->text('desc_en')
                 ->nullable();
-            $table->string('status')
-                ->default(ProductStatus::inactive);
-            $table->timestamps();
+            $table->text('desc_fr')
+                ->nullable();
             
         });
     }

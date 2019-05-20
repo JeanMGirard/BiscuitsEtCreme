@@ -7,6 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     protected $table = 'products';
+    protected $primaryKey = 'id';
+    public $incrementing = true;
+    //protected $connection = 'connection-name';
+
+    protected $fillable = [
+        'name', 'name_fr', 'name_en',
+        "desc_fr", "desc_en"
+    ];
     /**
      * The model's default values for attributes.
      *
@@ -22,7 +30,6 @@ class Product extends Model
 }
 abstract class ProductStatus
 {
-    
     const active = "active";
     const inactive = "inactive";
 

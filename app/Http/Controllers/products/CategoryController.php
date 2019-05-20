@@ -15,7 +15,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $ctgs = Category::all();
+        return $ctgs;
     }
 
     /**
@@ -36,9 +37,9 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $category = new Category;
-        $category->name = $request->name;
-        $category->save();
+        if (Category::Create($request->all())) {
+            return true;
+        }
     }
 
 
@@ -73,7 +74,9 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //
+        if ( $category->fill($request->all())->save()) {
+            return true;
+        }
     }
 
     /**

@@ -29,52 +29,6 @@
 <strong>Unable to load selector-content</strong>
 @endcomponent
 
-<!-- NEW PARRALLAX -->
-<div id="row-3" class="row">
-    <div class="col fill-bg" style="z-index:-9;">
-        <div class="row parallax" style="background-image: url({{ URL::asset('img/backgrounds/home-bg-2.png') }});">
-        </div>
-        <div class="row parallax-effect effect-white"></div>
-    </div>
-</div>
-
-<!-- NEW ROW -->
-<div id="row-4" class="row content-box">
-    <div id="row-4-bg" class="col-md-4" style="background-image: url({{ URL::asset('img/home/yogourt-glace-1.jpg') }});">
-    </div>
-    <div class="col-md-6">
-        <br />
-        <h2>Des options santés!</h2>
-        <p>Yogourt, creme glace sans gras, vege?</p>
-        @component('components.home.fruitgrid')
-            <strong>Unable to load selector-content</strong>
-        @endcomponent
-    </div>
-</div>
-
-<!-- NEW PARRALLAX -->
-<div id="row-5" class="row">
-    <div class="col fill-bg" style="z-index:-9;">
-        <div class="row parallax" style="background-image: url({{ URL::asset('img/backgrounds/home-bg-3.png') }});">
-        </div>
-        <div class="row parallax-effect effect-white"></div>
-    </div>
-</div>
 
 
-<!-- NEW ROW -->
-<div id="row-6" class="row content-box">
-    <div class="col justify-content-center">
-    </div>
-</div>
-
-
-<!-- NEW PARRALLAX -->
-<div id="row-7" class="row">
-    <div class="col fill-bg" style="z-index:-9;">
-        <div class="row parallax" style="background-image: url({{ URL::asset('img/backgrounds/home-bg-4.png') }});">
-        </div>
-        <div class="row parallax-effect effect-white"></div>
-    </div>
-</div>
 @stop

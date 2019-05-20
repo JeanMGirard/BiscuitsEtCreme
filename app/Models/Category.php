@@ -9,8 +9,13 @@ use Encore\Admin\Facades\Admin;
 class Category extends Model
 {
     protected $table = 'categories';
+    protected $primaryKey = 'id';
+    public $incrementing = true;
+    //protected $connection = 'connection-name';
+
     protected $fillable = [
-        'name',
+        'name', 'name_fr', 'name_en', 
+        "desc_fr", "desc_en"
     ];
     public function products()
     {
