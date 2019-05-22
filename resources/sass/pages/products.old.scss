@@ -55,7 +55,7 @@ div.info-hover>.container.info-hover-act, div.info-hover:hover>.container.info-h
     z-index: -1;
     transition: $select-box-transition;
     opacity:0;
-   /* padding-left: 10vw; */
+    padding-left: 10vw;
     overflow: auto;
     height:92vh;
 }

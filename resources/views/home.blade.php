@@ -11,18 +11,9 @@
 
 @section('content')
 <!-- NEW PARRALLAX -->
-<div id="row-1" class="row">
-    <div class="col fill-bg" style="z-index:-10;">
-        <div class="row parallax" style="background-image: url({{ URL::asset('img/backgrounds/ice-cream-bg-600.png') }}); 
-                background-position:50% -10%; top:0; background-size:103% 150%; ">
-        </div>
-        <div class="row parallax-effect effect-white"></div>
-        <div id="home-content-1" class="row justify-content-center">
-            <h2 id="home1-title">{{ __('home_intro_1') }}</h2>
-        </div>
-    </div>
-</div>
-
+@component('pages.homepage.row_1')
+<strong>Unable to load selector-content</strong>
+@endcomponent
 
 <!-- NEW ROW -->
 @component('pages.homepage.row_2')
@@ -30,5 +21,9 @@
 @endcomponent
 
 
+<!-- NEW PARRALLAX -->
+@component('pages.homepage.row_3')
+<strong>Unable to load selector-content</strong>
+@endcomponent
 
 @stop

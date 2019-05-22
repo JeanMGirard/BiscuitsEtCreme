@@ -1,4 +1,4 @@
-<table class="no-indent">
+<table id="hours-tbl" class="no-indent">
     <tr><td>{{ __('monday') }}</td>
         <td>{{ __('open_mon') }}</td>
     </tr>
@@ -21,3 +21,9 @@
         <td>{{ __('open_sun') }}</td>
     </tr>
 </table>
+
+<style>
+#hours-tbl{
+    text-align: left;
+}
+</style>

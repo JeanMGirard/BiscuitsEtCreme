@@ -24,12 +24,15 @@ $header-primary-color: rgb(4, 163, 255);
 $header-secondary-color: rgb(255, 255, 255);
 $header-margin-1: 15px;
 $header-margin-2: 55px;
-$content-padding: 100px;
+$header-min: 50px;
+$header-max: 100px;
+
+$content-padding: 50px;
 $header-transition-time: 1500ms;
-$header-transition: background 500ms, color 500ms, margin $header-transition-time;
+$header-transition: background 500ms, color 1000ms, margin $header-transition-time;
 $header-logo-transition-show: opacity 1500ms;
 $header-logo-transition-hide: opacity 1000ms;
 $header-logo-url: "/img/logo/logo-title-154.png";
 
 $a: 100vh;
-$b: (($content-padding - ($header-margin-2 - $header-margin-1)) + $content-padding) / 2;
+$b: (($content-padding - ($header-max - $header-min)) + $content-padding) / 2;
