@@ -1,3 +1,6 @@
+# *------- DEVELOPMENT STAGE ---------------*
+
+**This is still in early development stage**
 
 # Biscuits Et Creme
 
