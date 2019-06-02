@@ -1,0 +1,26 @@
+@import "../../_variables.less";
+
+#menu-home{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100vw;
+    height: ~"calc(100vh - @{header-max})";
+    background: white;
+    z-index: 10000;
+}
+#menu-home>button{
+    position: absolute;
+    z-index: 1000;
+    top: 10px;
+    left: 10px;
+}
+.sub-menu{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height:100%;
+    background: white;
+    z-index: 100;
+}

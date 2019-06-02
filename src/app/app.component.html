@@ -1,4 +1,9 @@
 
+
 <app-header></app-header>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<div id="content" class="container">
+        <router-outlet>
+                <div id="page-loader" style="height:100vh;"></div>
+        </router-outlet>
+        <app-footer></app-footer>
+</div>

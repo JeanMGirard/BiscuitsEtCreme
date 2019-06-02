@@ -1,0 +1,45 @@
+<style>
+    body,
+    html {
+         overflow-y: hidden;
+         height: 100vh;
+    }
+</style>
+
+<div class="row"  style="max-height:100vh; height:95vh; min-height:95vh;">
+    <div id="selector-1" (click)="show('app-cookie-dough')" class="col-sm-12 col-md fill-bg" style="background-image: url( '/assets/img/backgrounds/biscuits-bg-600.png');">
+         <div class="info-hover">
+              <div class="container info-hover-inact " style="text-align:center;">
+                   <h4 class="prod-ctg-ttl"> categ_1'</h4>
+              </div>
+              <div class="container info-hover-act">
+                   <h4 class="prod-ctg-ttl"> categ_1'</h4>
+              </div>
+         </div>
+    </div>
+
+    <div id="selector-2" (click)="show('app-ice-cream')" class="col-sm-12 col-md fill-bg" style="background-image: url( '/assets/img/backgrounds/ice-cream-bg-600.png');">
+         <div class="info-hover">
+              <div class="container info-hover-inact">
+                   <h4 class="prod-ctg-ttl"> categ_2'</h4>
+              </div>
+              <div class="container info-hover-act">
+                   <h4 class="prod-ctg-ttl"> categ_2'</h4>
+              </div>
+         </div>
+    </div>
+
+    <div id="selector-3" (click)="show('app-other-products')"
+     class="col-sm-12 col-md fill-bg" 
+     style="background-image: url( '/assets/img/backgrounds/tarte-bg-600.png');">
+
+    </div>
+
+    <div id="selected-content" class="container">
+          <div id="unselect-button" (click)="close()">X</div>
+          <app-cookie-dough class="menu-section"></app-cookie-dough>
+          <app-ice-cream class="menu-section"></app-ice-cream>
+          <app-other-products class="menu-section"></app-other-products>
+    </div>
+</div>
+
