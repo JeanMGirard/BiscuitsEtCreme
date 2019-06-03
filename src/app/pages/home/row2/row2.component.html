@@ -2,25 +2,13 @@
 
 <div id="row-2" class="row content-box" style="text-align: center;">
     <div id="imgrd-1-1" class="col-sm-12 col-md-10 container">
-
-        <div class="mask"></div>
-
-        <div id="img-1-1-1" class="textbox">
-            <img src="/assets/img/home/grid-1-1.1.jpg" alt="Snow" />
-            <h3>Garnitures</h3>
-            <p>Découvrez nos saveurs!</p>
-        </div>
-
-        <div id="img-1-1-2"  class="textbox">
-            <img src="/assets/img/home/grid-1-1.2.jpg" alt="Snow" />
-            <h3>Pates a biscuits</h3>
-            <p>La saveur est au rendez-vous!!</p>
-        </div>
-
-        <div id="img-1-1-3" class="textbox">
-            <img src="/assets/img/home/grid-1-1.3.jpg" alt="Snow" />
-            <h3>Promotions</h3>
-            <p>La saveur est au rendez-vous!</p>
+        <div *ngFor="let menu of menus$ | async ; let i = index"
+            [id]="'imgrd-1-1-'+i"
+            class="textbox col-sm-12 col-md-4"
+            [routerLink]="['/menu/', menu.name]">
+                <img [src]="menu.tileImage" alt="Snow" />
+                <h3>{{menu.tileTitle}}</h3>
+                <p>{{menu.tileDesc}}</p>
         </div>
 
     </div>
@@ -56,16 +44,20 @@
     #imgrd-1-1 .textbox {
         height: 100%;
         width: 30%;
-        position: absolute;
         top: 10%;
         cursor: pointer;
         text-align: center;
         opacity: 0.9;
         overflow: hidden;
+        display: inline-block;
     }
-    #img-1-1-1{ left: 0; }
-    #img-1-1-2{ left: 35%; }
-    #img-1-1-3{ left: 70%; }
+    #imgrd-1-1-0{
+        float:left;
+    }
+    #imgrd-1-1-2{
+        float:right;
+    }
+
 
     #imgrd-1-1 div.textbox:hover {
         opacity: 1;

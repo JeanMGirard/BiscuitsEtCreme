@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { MenuService } from '../../menu/menu.service';
+import { Menu } from '../../menu/menu';
 
 @Component({
   selector: 'app-row2',
@@ -6,10 +10,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./row2.component.less']
 })
 export class Row2Component implements OnInit {
+  menus$: Observable<Menu[]>;
 
-  constructor() { }
+  constructor(
+    private menuService: MenuService
+  ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.menus$ = this.menuService.getMenus();
   }
 
 }

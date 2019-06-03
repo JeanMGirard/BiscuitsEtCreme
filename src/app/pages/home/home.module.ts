@@ -11,7 +11,12 @@ import { Row3Component } from './row3/row3.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, Row1Component, Row2Component, Row3Component],
+  declarations: [
+    HomeComponent, 
+    Row1Component, 
+    Row2Component, 
+    Row3Component
+  ],
   imports: [
     CommonModule,
     HomeRoutingModule

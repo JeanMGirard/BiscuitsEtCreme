@@ -1,15 +1,26 @@
 
+<div id="menu-home" class="row" >
+    <div *ngFor="let menu of menus$ | async"
+        class="open-menu col-md-4 col-sm-12"
+        [ngStyle]="{'background-image':'url('+menu.linkImgUrl+')'}"
+        [class.selected]="menu.name === selectedMenu"
+        (click)="goToMenu(menu)">
+        <div class="mask"></div>
+        <h4 class="menu-ttl">{{menu.title}}</h4>
+    </div>
 
-<div id="menu-home" class="row">
-     <div class="open-menu col-md-4 col-sm-12" (click)="menu = 'cookie'" style="background-image: url( '/assets/img/backgrounds/biscuits-bg-600.png');">1</div>
-     <div class="open-menu col-md-4 col-sm-12" (click)="menu = 'cream'" style="background-image: url( '/assets/img/backgrounds/ice-cream-bg-600.png');">2</div>
-     <div class="open-menu col-md-4 col-sm-12" (click)="menu = 'other'" style="background-image: url( '/assets/img/backgrounds/tarte-bg-600.png');">3</div>
-
-     <button *ngIf="menu" (click)="menu = ''">x</button>
-     
-     <app-cookie-dough   class="sub-menu"  *ngIf="menu == 'cookie'"></app-cookie-dough>
-     <app-ice-cream      class="sub-menu"  *ngIf="menu == 'cream'"></app-ice-cream>
-     <app-other-products class="sub-menu"  *ngIf="menu == 'other'"></app-other-products>
+     <!--a routerLink='/menu/cookie-dough'
+        class="open-menu col-md-4 col-sm-12"
+        style="background-image: url( '/assets/img/backgrounds/biscuits-bg-600.png');">
+     </a>
+     <a routerLink='/menu/ice-cream'
+        class="open-menu col-md-4 col-sm-12"
+        style="background-image: url( '/assets/img/backgrounds/ice-cream-bg-600.png');">
+     </a>
+     <a routerLink='/menu/other-products'
+        class="open-menu col-md-4 col-sm-12" 
+        style="background-image: url( '/assets/img/backgrounds/tarte-bg-600.png');">
+     </a-->
 </div>
 
 

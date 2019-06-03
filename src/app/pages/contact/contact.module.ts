@@ -9,9 +9,15 @@ import { Row2Component } from './row2/row2.component';
 import { Row3Component } from './row3/row3.component';
 
 @NgModule({
-  declarations: [ContactComponent, Row1Component, Row2Component, Row3Component],
+  declarations: [
+    ContactComponent,
+    Row1Component, 
+    Row2Component, 
+    Row3Component
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    ContactRoutingModule
   ]
 })
 export class ContactModule { }

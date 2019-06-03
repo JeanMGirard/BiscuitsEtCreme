@@ -1,9 +1,11 @@
 
 
 <app-header></app-header>
-<div id="content" class="container">
-        <router-outlet>
+<div id="content" class="container" [@routeAnimation]="getAnimationData(routerOutlet)">
+
+        <router-outlet #routerOutlet="outlet">
                 <div id="page-loader" style="height:100vh;"></div>
         </router-outlet>
+
         <app-footer></app-footer>
 </div>

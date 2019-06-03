@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FooterService } from './footer.service';
+
+declare var $: any;
 
 @Component({
   selector: 'app-footer',
@@ -6,10 +9,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.less']
 })
 export class FooterComponent implements OnInit {
+  private hidden?: boolean = false;
+  
 
-  constructor() { }
+  constructor(
+    private service: FooterService
+  ) { 
+    this.service.hide.subscribe((value)=>{ this.serviceHide(value); });
+  }
 
   ngOnInit() {
   }
 
+  serviceHide(value: boolean){
+    this.hidden = value;
+    if(value){  $('#footer').hide();
+    } else {  $('#footer').show(); }
+  }
+  
 }

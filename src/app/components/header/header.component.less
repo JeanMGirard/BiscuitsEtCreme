@@ -1,34 +1,42 @@
 @import "../../_variables";
 
-  
+
+
 header {
     position: fixed;
     text-align: center;
     z-index: 1000;
     width: 100%;
-    max-height: @header-max;
+    height: @header-max;
     top: 0;
     left: 0;
 
     background: rgba(255, 255, 255, 1);
     border-bottom: 1px solid rgba(212, 212, 212, 0.582);
 }
-header.active {
+header.loaded {
     -webkit-transition: @header-transition;
     transition: @header-transition;
 }
 header.scrolled{
-    margin-top: -1 * (@header-max - @header-min);
+    height: @header-min;
+    //margin-top: -1 * (@header-max - @header-min);
     background: @header-primary-color;
     border-bottom: 2px solid rgba(212, 212, 212, 0.582);
 }
 
 
 header>.logo:first-of-type {
-    opacity: 1;
+    opacity: 0;
     margin-top: -20px;
     -webkit-transition: @header-logo-transition-show;
     transition: @header-logo-transition-show;
+}
+header:not(.loaded)>.logo:first-of-type {
+    opacity: 0;
+}
+header.loaded:not(.scrolled)>.logo:first-of-type{
+    opacity: 1;
 }
 header.scrolled>.logo:first-of-type {
     opacity: 0;
@@ -39,11 +47,11 @@ header.scrolled>.logo:first-of-type {
 header ul.nav {
     text-align: center;
     position: absolute;
-    top: 60px;
+    bottom: 0px;
     left: 0;
     width: 100%;
 }
-header.active ul.nav, 
+header.loaded ul.nav, 
 header ul.nav a {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
