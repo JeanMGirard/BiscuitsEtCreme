@@ -1,0 +1,46 @@
+
+@import "../_variables.scss";
+
+#about-r1{
+    padding-bottom: 60px !important;
+    background: white;
+    border-bottom: 1px solid gray;
+}
+#about-r1 h2 {
+    line-height: 150%;
+    font-size: 24px;
+}
+#about-r1 p{
+    text-indent: 40px;
+    padding: 20px;
+    font-size: 18px;
+    font-family: 'Dosis', cursive;
+}
+#about-r1 h4 {
+    line-height: 150%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    font-weight: bold;
+    //font-family: 'Kaushan Script', cursive;
+    //font-size: 24px;
+    text-indent: 80px;
+}
+.about-cbox{
+    padding-bottom: 20px !important;
+}
+.about-cbox h4 {
+    line-height: 2;
+}
+.about-cbox img {
+    height:140px;
+    margin-right: 15px;
+}
+#about-banner-1{
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 50% 40%;
+    -webkit-box-shadow: 0 -3px 9px -3px rgba(0, 0, 0, 0.5) inset,
+    0 3px 9px -4px rgba(0, 0, 0, 0.5) inset;
+    box-shadow: 0 -3px 9px -3px rgba(0, 0, 0, 0.5) inset,
+    0 3px 9px -4px rgba(0, 0, 0, 0.5) inset;
+}

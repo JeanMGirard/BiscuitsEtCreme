@@ -1,0 +1,40 @@
+.social-icon{
+    display: inline-block;
+    text-indent: -9999px;
+    width: 32px;
+    height: 32px;
+    margin:2px;
+    opacity:0.8;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.social-icon:hover{
+    opacity:1;
+}
+
+#ico-fb{
+    background-image: url($assets-url + unquote("vendor/Facebook/FB-f-Logo__blue_29.png"));
+}
+#ico-insta{
+    /* ----- ILLEGAL ------  ILLEGAL ------  ILLEGAL ------  ILLEGAL ------*/
+    background-image: url($assets-url + unquote("vendor/__Illegal/instagram.png"));
+}
+#ico-twt{
+    background-image: url($assets-url + unquote("vendor/Twitter/TwitterLogo.png"));
+    background-color: white;
+    border-radius: 3px;
+}
+#ico-snap{
+    background-image: url($assets-url + unquote("vendor/Facebook/FB-f-Logo__blue_29.png"));
+}
+#ico-gg{
+    background-image: url($assets-url + unquote("vendor/Google/btn_google_dark_normal.png"));
+    background-size: 120% 120%;
+}
+#ico-lkn{
+    background-image: url($assets-url + unquote("vendor/LinkedIn/In-2CRev-34px-R.png"));
+    background-size: 140% 100%;
+    background-position: 20% 50%;
+    border-radius: 3px;
+}

@@ -1,27 +1,84 @@
-# BiscuitsEtCreme
+# *------- DEVELOPMENT STAGE ---------------*
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
+**This is still in early development stage**
 
-## Development server
+# Biscuits Et Creme
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Website
 
-## Code scaffolding
+### Start
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```sh
+php artisan serve --port=8090
+```
 
-## Build
+### Setup
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+#### php
 
-## Running unit tests
+```sh
+php require global laravel/installer
+php artisan migrate:install --env=local
+php artisan vendor:publish
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### npm
 
-## Running end-to-end tests
+```sh
+npm install -g cross-env gulp-cli
+npm install --no-bin-links
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Build
 
-## Further help
+```sh
+php artisan key:generate
+# Create cache
+php artisan cache:table
+php artisan view:cache 
+php artisan route:cache
+php artisan config:cache
+# Publish
+php artisan vendor:publish
+php artisan admin:publish
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Maitain
+
+- Migrate: ``php artisan migrate --env=local``
+- File changes: ``composer dumpautoload``
+
+#### Update
+
+```sh
+php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"
+php artisan admin:install
+php artisan vendor:publish --tag=laravel-admin-cropper
+php artisan vendor:publish --tag=laravel-admin-data-table
+```
+
+##### Update Extensions
+
+- ``php artisan vendor:publish --tag=laravel-admin-data-table --force``
+
+php artisan migrate
+php artisan admin:import config
+php artisan admin:import phpinfo
+php artisan admin:import media-manager
+php artisan admin:import scheduling
+php artisan admin:import log-viewer
+php artisan admin:import helpers
+php artisan migrate
+
+
+### Extensions
+
+- [media-manager](https://github.com/laravel-admin-extensions/media-manager)
+- [scheduling](https://github.com/laravel-admin-extensions/scheduling)
+- [Croper](https://github.com/laravel-admin-extensions/cropper) - A simple jQuery image cropping plugin.
+- [log-viewer](https://github.com/laravel-admin-extensions/log-viewer)
+- [material-ui](https://github.com/laravel-admin-extensions/material-ui)
+- [data-table](https://github.com/laravel-admin-extensions/data-table)
+- [BackUp](https://github.com/laravel-admin-extensions/backup)
+- [Config](https://github.com/laravel-admin-extensions/config)
+- [phpinfo](https://github.com/z-song/laravel-admin#extensions)
