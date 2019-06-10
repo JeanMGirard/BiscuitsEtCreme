@@ -3,7 +3,7 @@ import {
     transition, animate, style, query
   } from '@angular/animations';
 
-export const animateTimer = '800ms';
+export const animateTimer = '300ms';
 
 // Routable animations
 export const routeAnimation =
@@ -15,7 +15,7 @@ trigger('routeAnimation', [
         ]),
         query(':leave', [
             style({ opacity: 1 }),
-            animate('300ms',style({ opacity: 0.7 })),
+            animate('200ms',style({ opacity: 0.7 })),
             animate(animateTimer, style({ opacity: 0 }))
         ])
     ])

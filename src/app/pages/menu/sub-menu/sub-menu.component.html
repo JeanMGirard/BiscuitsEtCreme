@@ -1,5 +1,5 @@
 <div id="menu-home" class="row">
-  <button (click)="gotoPrev()">Back</button>
+  <button id="submenu-back" mat-stroked-button (click)="gotoPrev()" color="primary">Retour</button>
   <div  *ngIf="menu$ | async as menu">
       <app-cookie-dough   class="sub-menu"  *ngIf="menu.elem == 'app-cookie-dough'"></app-cookie-dough>
       <app-ice-cream      class="sub-menu"  *ngIf="menu.elem == 'app-ice-cream'"></app-ice-cream>

@@ -1,0 +1,49 @@
+@import "../../../_variables.less";
+.submenu>div:not(.banner){
+    min-height: 250px;
+    //border: 1px solid black;
+    padding-top: 15px;
+    text-align: center;
+}
+#molle-fruits{
+    @media (min-width: @sizes-media-min[md]) {
+        margin-top: -150px;
+    }
+}
+.submenu>div.done{
+    border: none !important;
+}
+#icecream-carousel{
+    height: 400px;
+}
+#icecream-carousel div{
+    height: 100%;
+    text-align: center;
+}
+#icecream-carousel img{
+    height: 300px;
+}
+
+#icecream-carousel .carousel-caption h3, 
+#icecream-carousel .carousel-caption p{
+    color: rgb(29, 29, 29) !important;
+    bottom: 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+#icecream-carousel h3{
+    font-size: 38px;
+    padding-bottom: 28px;
+}
+#icecream-carousel p{
+    bottom: 15px !important;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+
+#icecream-carousel a.carousel-control-prev,
+#icecream-carousel a.carousel-control-next{
+    background-color: rgba(150,150,150,0.1);
+}

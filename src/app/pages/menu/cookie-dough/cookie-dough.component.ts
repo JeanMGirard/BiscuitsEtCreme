@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './cookie-dough.component.html',
   styleUrls: [
     '../menu.component.less',
+    '../sub-menu/sub-menu.component.less',
     './cookie-dough.component.less'
   ]
 })

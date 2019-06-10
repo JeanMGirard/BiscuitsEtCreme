@@ -45,6 +45,9 @@ export class SubMenuComponent implements OnInit, OnDestroy {
       switchMap((params: ParamMap) =>
         this.service.getMenu(params.get('menu')))
     );
+    $(document).ready(() => { 
+      $('body').addClass('loaded');
+    });
   }
   
   ngOnDestroy(): void {

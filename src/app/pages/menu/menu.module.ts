@@ -10,6 +10,7 @@ import { IceCreamComponent } from './ice-cream/ice-cream.component';
 import { OtherProductsComponent } from './other-products/other-products.component';
 import { SubMenuComponent } from './sub-menu/sub-menu.component';
 
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SubMenuComponent } from './sub-menu/sub-menu.component';
   ],
   imports: [
     CommonModule,
-    MenuRoutingModule
+    MenuRoutingModule,
+    MatButtonModule
   ]
 })
 export class MenuModule { }

@@ -1,6 +1,126 @@
-button{
+@import "../../../_variables.less";
+
+.submenu{
+    position: absolute;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.sm-bg-primary{
+    background: rgb(56, 92, 255);
+    color: whitesmoke;
+}
+.sm-bg-secondary{
+    background: rgb(56, 92, 255);
+    color: whitesmoke;
+}
+.sm-bg-primary button{
+    background-color: rgb(240, 240, 240);
+    color: rgb(56, 92, 255);
+}
+.sm-bg-secondary button{
+    background-color: rgb(240, 240, 240);
+    color: rgb(56, 92, 255);
+}
+
+
+
+#menu-home button#submenu-back{
     position: absolute;
     z-index: 100000;
     top: 20px;
-    left: 20px;
+    left: 40px;
+    width: 200px;
+    border-width: 4px;
+    font-size: 20px;
+    border: 3px solid currentColor;
+    padding: 0 15px;
+    line-height: 34px;
+    border-radius:  7px;
+    background: rgba(255,255,255,0.7);
+}
+.submenu>div:not(.banner){
+    
+}
+.submenu>div.banner{
+    height: 70px;
+    padding-top: 40px;
+}
+.submenu>div h3{
+    font-family: "Lobster";
+    font-size: 32px;
+}
+.submenu>div li, .submenu>div p{
+    font-family: "Montserrat";
+    font-size: 18px;
+}
+
+.submenu .button-row{
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 35px;
+    height:40px;
+    text-align: center;
+}
+.submenu .button-row button{
+    display: inline-block;
+    position: relative;
+    z-index: 100000;
+    min-width: 100px;
+    top: 0px;
+    left: 0px;
+    margin-left: -25px; 
+    font-family: "Montserrat";
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    text-indent: 3px;
+}
+.row-effect{
+    border-top: 1px solid rgb(100,100,100);
+    border-bottom: 2px solid rgb(100,100,100);
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.row-effect:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+.submenu-lastrow{
+    height: 240px;
+}
+.submenu-lastrow button{
+    position: absolute;
+    width: 80%;
+    height: 70%;
+    top: 20%;
+    left: 10%;
+    border-width: 4px;
+    border-radius: 24px;
+    border-color: #3f51b5;
+    font-size: 30px;
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+
+@media (min-width: @sizes-media-min[md]) {
+    .submenu div.l {
+        padding-left: 10vw;
+    }
+    .submenu div.l .button-row button{
+        margin-right: 10vw;
+    }
+
+    .submenu div.r{
+        padding-right: 10vw;
+    }
+    .submenu div.r .button-row button{
+        margin-left: -10vw;
+    }
+    
 }

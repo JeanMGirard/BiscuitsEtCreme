@@ -22,12 +22,12 @@ export const MENUS: Menu[] = [
     }, {
         name: 'autre-produits',
         title: 'Autres spécialitées',
-        elem: 'app-other-product',
-        linkImgUrl: '/assets/img/backgrounds/tarte-bg-600.png',
+        elem: 'app-other-products',
+        linkImgUrl: '/assets/img/menu/menu-other-prod.jpg',
         
         tileTitle: 'spécialitées',
         tileDesc: 'Autres produits',
-        tileImage: '/assets/img/home/grid-1-1.3.jpg'
+        tileImage: '/assets/img/menu/menu-other-prod.jpg'
     }
 ];
 export const MENUS_EN: Menu[] = [
@@ -44,7 +44,7 @@ export const MENUS_EN: Menu[] = [
     }, {
         name: 'other-products',
         title: 'Autres spécialitées',
-        elem: 'app-other-product',
-        linkImgUrl: '/assets/img/backgrounds/tarte-bg-600.png'
+        elem: 'app-other-products',
+        linkImgUrl: '/assets/img/menu/menu-other-prod.jpg'
     }
 ];
