@@ -11,7 +11,7 @@ import { FooterService } from './components/footer/footer.service';
 import { HeaderModule } from './components/header/header.module';
 import { FooterModule } from './components/footer/footer.module';
 import { SocialModule } from './modules/social/social.module';
-
+import { ScheduleModule } from './components/schedule/schedule.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,8 @@ import { SocialModule } from './modules/social/social.module';
     AppRoutingModule,
     HeaderModule,
     FooterModule,
-    SocialModule
+    SocialModule,
+    ScheduleModule
   ],
   providers: [
     HeaderService,

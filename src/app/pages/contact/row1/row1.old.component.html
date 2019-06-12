@@ -1,0 +1,110 @@
+
+<div id="row-1" class="row justify-content-center">
+    <div id="coordonnes" class="col-md-6">
+        <h3>Nos coordonnees</h3>
+        <table>
+            <tr>
+                <td><h6><b>Telephone</b></h6></td>
+                <td><p>[[ __('contact_phone')]]</p></td>
+            </tr>
+            <tr>
+                <td><h6><b>Email</b></h6></td>
+                <td><p><a href="mailto:[[__('contact_email')]]">[[ __('contact_email')]]</a></p></td>
+            </tr>
+            <tr>
+                <td><h6><b>En Personne</b></h6><br /></td>
+                <td><p>[[ __('addr1')]]<br />[[ __('addr2')]]</p></td>
+            </tr>
+            <tr>
+                <td><h6><b>Heures d'ouverture</b></h6><br /></td>
+                <td style="padding-left:-5px;">
+                    @component('components.hours')
+                    <strong>Unable to load table</strong>
+                    @endcomponent
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="map" class="col-lg-4 col-md-6">
+        <!--iframe width="100%" height="[[ $gmap_height]]" 
+            src="https://maps.google.com/maps?width=100%&amp;height=[[ $gmap_height]]&amp;hl=en&amp;coord=45.6998248,-73.9265654&amp;q=13619%20Boulevard%20Cur%C3%A9-Labelle%2C%20Mirabel%2C%20QC%20J7J%201K3+(Biscuits%20%26%20Cr%C3%A8me)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" 
+            frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                <a href="https://www.maps.ie/map-my-route/">Create a route on google maps</a>
+        </iframe-->
+    </div>
+</div>
+
+
+<style>
+
+</style>
+
+
+
+
+<?php
+goto fin;
+?>
+
+
+
+<!--div id="contactUs-box" class="col-7">
+        @component('components.social')
+        <strong>Unable to load table</strong>
+        @endcomponent
+
+
+        <div id="contactUs" style="padding-left:20px;">
+            <h3>Nos coordonnees</h3>
+            <br />
+            <table>
+                <tr>
+                    <td>
+                        <h6><b>Telephone</b></h6>
+                    </td>
+                    <td>
+                        <p>[[ __('contact_phone')]]</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h6><b>Email</b></h6>
+                    </td>
+                    <td>
+                        <p><a href="mailto:[[ __('contact_email')]]">[[ __('contact_email')]]</a></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h6><b>En Personne</b></h6><br />
+                    </td>
+                    <td>
+                        <p>[[ __('addr1')]]<br />[[ __('addr2')]]</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h6><b>Heures d'ouverture</b></h6><br />
+                    </td>
+                    <td style="padding-left:-5px;">
+                        @component('components.hours')
+                        <strong>Unable to load table</strong>
+                        @endcomponent
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div id="map" style="height:[[ $gmap_height]]px;width:[[ $gmap_width]]px;">
+            <iframe width="100%" height="[[ $gmap_height]]" src="https://maps.google.com/maps?width=100%&amp;height=[[ $gmap_height]]&amp;hl=en&amp;coord=45.6998248,-73.9265654&amp;q=13619%20Boulevard%20Cur%C3%A9-Labelle%2C%20Mirabel%2C%20QC%20J7J%201K3+(Biscuits%20%26%20Cr%C3%A8me)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                <a href="https://www.maps.ie/map-my-route/">Create a route on google maps</a>
+            </iframe>
+        </div>
+        <br />
+    </div>
+</div>
+
+<?php
+fin:
+?>

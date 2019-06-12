@@ -1,29 +1,32 @@
 <table id="hours-tbl" class="no-indent">
-    <tr><td>{{ __('monday') }}</td>
-        <td>{{ __('open_mon') }}</td>
+    <tr><td>Lundi</td>
+        <td>{{ schedule.mon }}</td>
     </tr>
-    <tr><td>{{ __('tuesday') }}</td>
-        <td>{{ __('open_tue') }}</td>
+    <tr><td>Mardi</td>
+        <td>{{ schedule.tue }}</td>
     </tr>
-    <tr><td>{{ __('wednesday') }}</td>
-        <td>{{ __('open_wed') }}</td>
+    <tr><td>Mercredi</td>
+        <td>{{ schedule.wed }}</td>
     </tr>
-    <tr><td>{{ __('thursday') }}</td>
-        <td>{{ __('open_thu') }}</td>
+    <tr><td>Jeudi</td>
+        <td>{{ schedule.thu }}</td>
     </tr>
-    <tr><td>{{ __('friday') }}</td>
-        <td>{{ __('open_fri') }}</td>
+    <tr><td>Vendredi</td>
+        <td>{{ schedule.fri }}</td>
     </tr>
-    <tr><td>{{ __('saturday') }}</td>
-        <td>{{ __('open_sat') }}</td>
+    <tr><td>Samedi</td>
+        <td>{{ schedule.sat }}</td>
     </tr>
-    <tr><td>{{ __('sunday') }}</td>
-        <td>{{ __('open_sun') }}</td>
+    <tr><td>Dimanche</td>
+        <td>{{ schedule.sun }}</td>
     </tr>
 </table>
 
 <style>
 #hours-tbl{
     text-align: left;
+}
+#hours-tbl>tr>td:first-of-type{
+    padding-right: 30px;
 }
 </style>
