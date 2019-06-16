@@ -1,79 +1,74 @@
 <div class="submenu product-page row justify-content-center">
-    <div class="col-12" style="padding-top: 40px;">
-        <h2>Nos pates a biscuits standards</h2>
-    </div>
-    <div id="cookie-kinds" class="col-12">
-        <div class="top left">
-            <h3>Sorte</h3>
-            <img class="cdough-preview">
-        </div>
-        <div class="top right">
-            <h3>Sorte</h3>
-            <img class="cdough-preview">
-        </div>
-        <div class="bottom left">
-            <h3>Sorte</h3>
-            <img class="cdough-preview">
-        </div>
-        <div class="bottom right">
-            <h3>Sorte</h3>
-            <img class="cdough-preview">
-        </div>
+    <div id="cookie-banner" class="col-12 banner" style="padding-top: 60px;height:160px;margin-bottom: 40px;">
+        <h2>Nos Pates à Biscuits</h2>
     </div>
 
 
+    <div class="col-md-4 col-sm-12 pab-kind"> 
+        <h3>Caramel</h3>
+        <img src="/assets/img/menu-products/pab-rnd-caramel-200.png" alt="caramel">
+    </div>
+    <div class="col-md-4 col-sm-12 pab-kind">
+        <h3>Pépites de chocolat</h3>
+        <img src="/assets/img/menu-products/pab-rnd-pepites-200.png" alt="pepites">
+    </div>
+    <div class="col-md-4 col-sm-12 pab-kind">
+        <h3>Double chocolat</h3>
+        <img src="/assets/img/menu-products/pab-rnd-choco-200.png" alt="choco">
+    </div>
+    <div class="bottom col-md-4 col-sm-12 pab-kind">
+        <h3>Reese</h3>
+        <img src="/assets/img/menu-products/pab-rnd-reese-200.png" alt="reese">
+    </div>
+    <div class="bottom col-md-4 col-sm-12 pab-kind">
+        <h3>Arc-en-ciel</h3>
+        <img src="/assets/img/menu-products/pab-rnd-arc-en-ciel-200.png" alt="reese">
+    </div>
+    <!--div class="top left col-md-6 col-sm-12 pab-kind"> 
+        <h3>Caramel</h3>
+        <img src="/assets/img/menu-products/pab-rnd-caramel-200.png" alt="caramel">
+    </div>
+    <div class="top right col-md-6 col-sm-12 pab-kind">
+        <h3>Pépites de chocolat</h3>
+        <img src="/assets/img/menu-products/pab-rnd-pepites-200.png" alt="pepites">
+    </div>
+    <div class="bottom left col-md-6 col-sm-12 pab-kind">
+        <h3>Double chocolat</h3>
+        <img src="/assets/img/menu-products/pab-rnd-choco-200.png" alt="choco">
+        
+    </div>
+    <div class="bottom right col-md-6 col-sm-12 pab-kind">
+        <h3>Reese</h3>
+        <img src="/assets/img/menu-products/pab-rnd-reese-200.png" alt="reese">
+    </div-->
+
+    <div class="col-12" id="pub-combos">
+        <h3>Ou bien prenez un combo!</h3>
+    </div>
+    <div class="col-md-6 col-sm-12 pub-combo">
+        <h3>Crème Molle</h3>
+        <img src="/assets/img/menu-products/pab-cmb-molle-400.png">
+    </div>
+    <div class="col-md-6 col-sm-12 pub-combo">
+        <h3>Crème Dure</h3>
+        <img src="/assets/img/menu-products/pab-cmb-dure-400.png">
+    </div>
 
 
-    <div id="cookie-carousel" class="carousel slide m col-md-12 col-sm-12" data-ride="carousel">
-        <div class="carousel-inner" style="height:100%;">
-            <div class="carousel-item active" data-interval="5000" style="height:100%;">
-                <img class="cdough-preview d-block w-100" alt="">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3>Nouveaute</h3><p></p>
-                </div>
-            </div>
-            <div class="carousel-item" data-interval="5000" style="height:100%;">
-                <img class="cdough-preview d-block w-100" alt="">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3>Pate du mois</h3><p></p>
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-next" href="#cookie-carousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+    <div class="col-12" id="pub-tartes">
+        <h3>Ou essayez nos tartes!</h3>
+        <img src="/assets/img/menu-products/pab-tarte1-1000.png">
     </div>
 
-    <div class="col-md-6 col-sm-12">
-        <h3>Combo molle</h3>
-        <img>
-    </div>
-    <div class="col-md-6 col-sm-12">
-        <h3>Combo dure</h3>
-        <img>
-    </div>
+    <div class="col-6 submenu-lastrow">
+        <button id="submenu-lastrow-next" mat-stroked-button color="primary" routerLink="/menu/autre-produits">
+            Nos<br/>autres produits
+        </button>
 
-    <div class="col-md-12 col-sm-12">
-        <h3>Tartes</h3>
-        <img>
-        <div class="button-row">
-            <button mat-raised-button color="primary">Saveurs</button>
-        </div>
     </div>
-    <div class="col-md-12 col-sm-12">
-        <h3>Biscuits / Minis</h3>
-        <img>
-        <div class="button-row">
-            <button mat-raised-button color="primary">Saveurs</button>
-        </div>
+    <div class="col-6 submenu-lastrow">
+        <button id="submenu-lastrow-prev" mat-stroked-button color="primary" routerLink="/menu/cremerie">
+            Nos<br/>crèmes glacées
+        </button>
     </div>
-    <div class="col-md-12 col-sm-12">
-        <h3>Sandwichs à la pâte à biscuit</h3>
-        <img>
-        <div class="button-row">
-            <button mat-raised-button color="primary">Saveurs</button>
-        </div>
-    </div>
-
 </div>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { MenuRoutingModule } from './menu-routing.module';
 
@@ -11,6 +11,7 @@ import { OtherProductsComponent } from './other-products/other-products.componen
 import { SubMenuComponent } from './sub-menu/sub-menu.component';
 
 import {MatButtonModule} from '@angular/material/button';
+import { PopupComponent } from './popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +19,17 @@ import {MatButtonModule} from '@angular/material/button';
     CookieDoughComponent,
     IceCreamComponent,
     OtherProductsComponent,
-    SubMenuComponent
+    SubMenuComponent,
+    PopupComponent
   ],
   imports: [
     CommonModule,
     MenuRoutingModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
+  ],
+  entryComponents:[
+    PopupComponent
   ]
 })
 export class MenuModule { }

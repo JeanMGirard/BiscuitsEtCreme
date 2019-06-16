@@ -3,18 +3,24 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
 
-  constructor() { }
-  
+  constructor() {}
+
+
   getPhone(): string {
     return '+1 450-508-4066';
   }
   getEmail(): string {
     return 'contact@BiscuitsEtCreme.ca';
+  }
+  getContactFormEmail(): string {
+    return 'girard.jm77@gmail.com';
   }
   getPostal(): string {
     return 'J7J 1K3';

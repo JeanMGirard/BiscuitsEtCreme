@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>{{data.name}}</h1>
+
+<div mat-dialog-content *ngIf="data.wide">
+  <ul *ngFor="let list of data.lists"  class="wide">
+    <h3 *ngIf="list.name">{{ list.name }}</h3>
+    <li *ngFor="let item of list.items">
+        {{item}}
+    </li>
+  </ul>
+</div>
+
+<div mat-dialog-content *ngIf="!data.wide">
+  <ul *ngFor="let list of data.lists">
+    <h3 *ngIf="list.name">{{ list.name }}</h3>
+    <li *ngFor="let item of list.items">
+          {{item}}
+    </li>
+  </ul>
+</div>
+
+<div mat-dialog-actions id="buttons">
+  <button mat-button (click)="close()">Revenir au menu</button>
+</div>

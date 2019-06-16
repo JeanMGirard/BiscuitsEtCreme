@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { PopupComponent } from '../popup/popup.component';
 
 @Component({
   selector: 'app-other-products',
@@ -10,5 +12,18 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class OtherProductsComponent {
+  constructor(public dialog: MatDialog) {}
 
+  openDialogLarge(lists: any): void{
+    this.dialog.open(PopupComponent, {
+      width: '800px',
+      data: lists
+    });
+  }
+  openDialog(lists: any): void{
+    this.dialog.open(PopupComponent, {
+      width: '500px',
+      data: lists
+    });
+  }
 }

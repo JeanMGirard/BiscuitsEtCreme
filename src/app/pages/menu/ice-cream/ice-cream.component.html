@@ -1,110 +1,125 @@
-<div class="submenu product-page row justify-content-center">
-    <div class="m col-md-12 col-sm-12 banner">
-        <h3>Creme glacé...</h3>
+<div id="menu-icecream" class="submenu product-page row justify-content-center">
+    <div class="col-md-12 col-sm-12 banner">
+        <h3 class="shadow-white">Creme glacé...</h3>
     </div>
-    <div class="l col-md-6 col-sm-12">
-        <h3>molle</h3>
-        <p>Vanille / Chocolat</p>
-        <img>
-        <ul style="list-style-type:none;">
-            <li></li>
-        </ul>
+    <div class="col-6" style="z-index: 100;">
+        <h3 class="shadow-white">Molle</h3>
+        <p class="shadow-white">Vanille / Chocolat</p>
     </div>
-    <div class="r col-md-6 col-sm-12">
-        <h3>dure</h3>
-        <img>
-        <div class="button-row">
+    <div class="col-6" style="z-index: 100;">
+        <h3 class="shadow-white">Dure</h3>
+        <!--img  src="/assets/img/menu-products/cornet-dure-200.png"--> 
+        <!--div class="button-row">
             <button mat-raised-button color="primary">Saveurs</button>
-        </div>
+        </div-->
     </div>
-    <div id="molle-fruits" class="m col-md-12 col-sm-12">
-        <h3>Au fruits!</h3>
-        <img>
+    <div id="molle-fruits" class="col-md-12 col-sm-12" style="z-index: 50;">
+        <h3 class="shadow-white" style="margin-top:110px;">Au fruits!</h3>
+        <img src="/assets/img/menu-products/cornets-800.png">
         <div class="button-row">
-            <button mat-raised-button color="primary">Saveurs</button>
+            <button mat-raised-button color="primary" (click)="openIceCreams()">Saveurs</button>
         </div>
     </div>
 
-    <div class="l col-md-6 col-sm-12 sm-bg-primary  row-effect">
+    <div id="pub-garnitures" class="l col-md-6 col-sm-12 sm-bg-secondary  row-effect">
+        <h3>Garnitures</h3>
+        <img style="top: 50px; margin-left: -7%;">
+        <div class="button-row">
+            <button mat-raised-button color="primary" style="top:-75px;left:60px;" (click)="openGarnitures()">Saveurs</button>
+        </div>
+    </div>
+    <div id="pub-trempages" class="r col-md-6 col-sm-12 sm-bg-primary  row-effect">
+        <h3>Trempages</h3>
+        <img src="/assets/img/menu-products/trempage-choco-320.png" style="top: 0; margin-left:35%;">
+        <div class="button-row">
+            <button mat-raised-button color="primary" style="top:-75px;left:-100px;" (click)="openTrempages()">Saveurs</button>
+        </div>
+    </div>
+
+
+    <div id="pub-barbotines" class="m col-md-12 col-sm-12">
+        <div class="row justify-content-center">
+            <div class="col-md-3 col-sm-6">
+                <h3>Slush</h3>
+                <img src="/assets/img/menu-products/brb-slush-150.png">
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <h3>Montblancs</h3>
+                <img src="/assets/img/menu-products/brb-montblanc-150.png">
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <h3>Mousselines</h3>
+                <img src="/assets/img/menu-products/brb-mousseline-150.png">
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <h3>Explosions</h3>
+                <img src="/assets/img/menu-products/brb-explosions-150.png">
+            </div>
+        </div>
+        <img>
+        <div class="button-row" style="bottom: 100px;">
+            <button mat-raised-button color="primary" (click)="openSlushes()">Saveurs</button>
+        </div>
+    </div>
+
+    <div id="pub-yogourts" class="l col-md-6 col-sm-12 sm-bg-primary  row-effect">
         <h3>Yogourts glacés</h3>
-        <img>
+        <img src="/assets/img/menu-products/yogourt-glace.png" style="top: -30px; margin-left:-50%;">
         <div class="button-row">
-            <button mat-raised-button color="primary">Saveurs</button>
+            <button mat-raised-button color="primary" style="top:-100px;left:100px;" (click)="openYogourts()">Saveurs</button>
         </div>
     </div>
-    <div class="r col-md-6 col-sm-12 sm-bg-secondary  row-effect">
+    <div id="pub-tourbillons" class="r col-md-6 col-sm-12 sm-bg-secondary  row-effect">
         <h3>Tourbillons</h3>
-        <img>
+        <img src="/assets/img/menu-products/tourbillons.png" style="top: 50px; margin-left: -7%;">
         <div class="button-row">
-            <button mat-raised-button color="primary">Saveurs</button>
+            <button mat-raised-button color="primary" style="top:-100px;left:-100px;" (click)="openTourbillons()">Saveurs</button>
         </div>
     </div>
 
-
-    <div class="m col-md-12 col-sm-12" style="min-height: 440px;padding-top: 80px;">
-        <div class="row">
-            <div class="col-3"><h3>Slush</h3></div>
-            <div class="col-3"><h3>Montblancs</h3></div>
-            <div class="col-3"><h3>Mousselines</h3></div>
-            <div class="col-3"><h3>Explosions</h3></div>
-        </div>
-        <img>
-        <div class="button-row" style="bottom: 60px;">
-            <button mat-raised-button color="primary">Saveurs</button>
-        </div>
-    </div>
-    <div class="l col-md-6 col-sm-12 sm-bg-secondary row-effect">
-        <h3>Smoothies</h3>
-        <img>
-        <div class="button-row">
-            <button mat-raised-button color="primary">Saveurs</button>
-        </div>
-    </div>
-    <div class="r col-md-6 col-sm-12 sm-bg-secondary row-effect">
-        <h3>Milkshakes</h3>
-        <img>
-        <div class="button-row">
-            <button mat-raised-button color="primary">Saveurs</button>
-        </div>
-    </div>
     <div id="icecream-carousel" class="carousel slide m col-md-12 col-sm-12" data-ride="carousel">
 
         <div class="carousel-inner" style="height:100%;">
-            <div class="carousel-item active" data-interval="5000" style="height:100%;">
-                <img src="" class="d-block w-100" alt="">
+            <div class="carousel-item active" data-interval="5000">
+                <img src="/assets/img/menu-products/sundae.png" class="d-block w-100" alt="">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3>Sundaes</h3><p></p>
-                </div>
-            </div>
-            <div class="carousel-item" data-interval="5000" style="height:100%;">
-                <img src="" class="d-block w-100" alt="">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3>Banane royale</h3><p></p>
-                </div>
-            </div>
-            <div class="carousel-item" data-interval="5000" style="height:100%;">
-                <img src="" class="d-block w-100" alt="">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3>Carre au chocolat</h3><p></p>
-                </div>
-            </div>
-            <div class="carousel-item" data-interval="5000" style="height:100%;">
-                <img src="" class="d-block w-100" alt="">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3>Parfait</h3><p></p>
-                </div>
-            </div>
-            <div class="carousel-item" data-interval="5000" style="height:100%;">
-                <img src="" class="d-block w-100" alt="">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3>Duo</h3>
+                    <h3>Sundae</h3>
                     <p>Un sundae de format petit  avec une garniture de votre choix sur votre crème glacée dure favorite</p>
                 </div>
             </div>
-            <div class="carousel-item" data-interval="5000" style="height:100%;">
-                <img src="" class="d-block w-100" alt="">
+            <div class="carousel-item" data-interval="5000">
+                <img src="/assets/img/menu-products/banane-oreo.png" class="d-block w-100" alt="" style="">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3>Fiesta</h3><p></p>
+                    <h3>Banane Oreo</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="carousel-item" data-interval="5000">
+                <img src="/assets/img/menu-products/peanut-buster.png" class="d-block w-100" alt="" style="">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Peanut Buster</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="carousel-item" data-interval="5000">
+                <img src="/assets/img/menu-products/fiesta.png" class="d-block w-100" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Fiesta</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="carousel-item" data-interval="5000">
+                <img src="/assets/img/menu-products/duo.png" class="d-block w-100" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Duo</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="carousel-item" data-interval="5000">
+                <img src="/assets/img/menu-products/carre-sucre-creme.png" class="d-block w-100" alt="">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>carre-sucre-creme</h3>
+                    <p></p>
                 </div>
             </div>
         </div>
@@ -118,13 +133,28 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+    <div class="l col-md-6 col-sm-12 sm-bg-secondary row-effect">
+        <h3>Smoothies</h3>
+        <img>
+        <div class="button-row">
+            <button mat-raised-button color="primary" (click)="openMilkshakes()">Saveurs</button>
+        </div>
+    </div>
+    <div class="r col-md-6 col-sm-12 sm-bg-secondary row-effect">
+        <h3>Milkshakes</h3>
+        <img>
+        <div class="button-row">
+            <button mat-raised-button color="primary" (click)="openMilkshakes()" >Saveurs</button>
+        </div>
+    </div>
+
     <div class="col-6 submenu-lastrow">
-        <button id="submenu-lastrow-prev" mat-stroked-button color="primary">
+        <button id="submenu-lastrow-prev" mat-stroked-button color="primary" routerLink="/menu/pates-a-biscuit">
             Nos<br/>pates a biscuits
         </button>
     </div>
     <div class="col-6 submenu-lastrow">
-        <button id="submenu-lastrow-next" mat-stroked-button color="primary">
+        <button id="submenu-lastrow-next" mat-stroked-button color="primary" routerLink="/menu/autre-produits">
             Nos<br/>autres produits
         </button>
     </div>

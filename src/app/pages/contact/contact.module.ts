@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { ContactRoutingModule } from './contact-routing.module';
 
@@ -20,7 +21,8 @@ import { Row3Component } from './row3/row3.component';
   imports: [
     CommonModule,
     ContactRoutingModule,
-    ScheduleModule
+    ScheduleModule,
+    FormsModule
   ]
 })
 export class ContactModule { }

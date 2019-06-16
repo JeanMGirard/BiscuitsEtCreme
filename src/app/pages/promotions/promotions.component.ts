@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PromosService } from '../../modules/products/promos.service';
 
 declare var $: any;
 

@@ -17,7 +17,8 @@ if(isProd) targetPath = `./src/environments/environment.${environment}.ts`;
 const envConfigFile = `
 export const environment = {
   production: ${isProd},
-  googleApiKey: "${process.env.GOOGLEAPI_KEY}"
+  googleApiKey: "${process.env.GOOGLE_API_KEY}",
+  googlePlaceId: "${process.env.GOOGLE_PLACEID}",
 };
 `
 fs.writeFile(targetPath, envConfigFile, function (err) {

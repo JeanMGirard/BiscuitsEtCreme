@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FooterService } from './footer.service';
 import { ContactService } from 'src/app/modules/contact/contact.service';
-import { Observable } from 'rxjs';
 
 declare var $: any;
 
@@ -17,23 +16,22 @@ export class FooterComponent implements OnInit {
   address2: string;
   phone: string;
 
-  constructor(
-      private service: FooterService,
-      private contacts: ContactService,
-    ) { 
-    this.service.hide.subscribe((value)=>{ this.serviceHide(value); });
+  constructor(private service: FooterService, private contacts: ContactService) { 
+    this.service.hide.subscribe((value)=>{ 
+      this.serviceHide(value); 
+    });
   }
 
-  ngOnInit() {
-    this.getAddress();
-  }
 
+  ngOnInit(): void {
+    this.getAddress( );
+  }
   serviceHide(value: boolean){
     this.hidden = value;
-    if(value){  $('#footer').hide();
-    } else {  $('#footer').show(); }
+    if(value){  $('#footer').hide();} 
+    else {  $('#footer').show(); }
   }
-  getAddress(){
+  getAddress(): void {
     this.address1 = this.contacts.getAddressLine1();
     this.address2 = this.contacts.getAddressLine2();
     this.phone = this.contacts.getPhone();

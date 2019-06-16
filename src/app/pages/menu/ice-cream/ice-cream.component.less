@@ -5,23 +5,104 @@
     padding-top: 15px;
     text-align: center;
 }
+
+.shadow-white{
+    text-shadow: 0 0 4px rgba(255,255,255,0.62) ;
+}
 #molle-fruits{
-    @media (min-width: @sizes-media-min[md]) {
-        margin-top: -150px;
+    margin-top: -300px;
+    z-index:50;
+}
+#molle-fruits h3{
+    z-index: 1;
+    position: relative;
+}
+#molle-fruits img{
+    z-index: -1;
+    @media (max-width: @sizes-media-max[sm]) {
+        width: 100%;
+    }
+    @media (min-width: 400px) {
+        margin-top:-110px;
     }
 }
+
 .submenu>div.done{
     border: none !important;
 }
+.row-effect{
+    overflow: hidden;
+}
+.row-effect button{
+}
+#pub-trempages{
+    text-align: left;
+    padding-left: 70px;
+}
+#pub-garnitures{
+    text-align: right;
+    padding-right: 70px;
+}
+#pub-trempages,
+#pub-garnitures{
+    height: 250px;
+}
+#pub-trempages h3,
+#pub-garnitures h3,
+#pub-trempages .button-row,
+#pub-garnitures .button-row{
+    padding-top: 60px;
+}
+#pub-trempages img,
+#pub-garnitures img{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+#pub-tourbillons,
+#pub-yogourts{
+    height: 320px;
+}
+#pub-tourbillons img,
+#pub-yogourts img{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+#pub-barbotines{
+    min-height: 580px;
+    padding-top: 70px;
+    text-align: center;
+    @media (min-width: @sizes-media-min[md]) {
+
+    }
+}
+#pub-barbotines h3{
+    padding-bottom: 20px;
+}
 #icecream-carousel{
-    height: 400px;
+    height: 750px;
+    -webkit-box-shadow: 0 -20px 50px 20px rgba(255,255,255,1) inset;
+    box-shadow: 0 -20px 50px 20px rgba(255,255,255,1) inset;
+    border-bottom: 2px solid lightgray;
+    overflow: hidden;
 }
 #icecream-carousel div{
-    height: 100%;
-    text-align: center;
+    min-height: 300px;
+    //text-align: center;
+    overflow: visible;
 }
 #icecream-carousel img{
-    height: 300px;
+    min-height: 200px;
+    bottom: 0;
+    position: absolute;
+    margin-bottom:-3vw;
+}
+.carousel-item{
+    min-height: 300px;
+    height: 100%;
 }
 
 #icecream-carousel .carousel-caption h3, 
@@ -35,13 +116,15 @@
 #icecream-carousel h3{
     font-size: 38px;
     padding-bottom: 28px;
+    text-shadow: 3px 3px 5px white;
+
 }
 #icecream-carousel p{
     bottom: 15px !important;
     padding-left: 5vw;
     padding-right: 5vw;
+    text-shadow: 2px 2px 3px white;
 }
-
 
 #icecream-carousel a.carousel-control-prev,
 #icecream-carousel a.carousel-control-next{
