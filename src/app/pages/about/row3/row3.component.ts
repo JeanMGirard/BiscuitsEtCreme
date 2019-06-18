@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SocialService } from '../../../modules/social/social.service';
 
 @Component({
   selector: 'about-row3',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Row3Component implements OnInit {
 
-  constructor() { }
+  constructor(
+    private socials: SocialService
+  ) { }
 
   ngOnInit() {
   }

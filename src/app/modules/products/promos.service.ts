@@ -16,15 +16,14 @@ export class PromosService {
     return this.getWeekday(new Date().getDay());
   }
   getWeekday(day: number): Promo{
+// tslint:disable-next-line: prefer-for-of
     for(let i=0; i< PROMOS.length; i++){
-      if(PROMOS[i].weekday != null && PROMOS[i].weekday === day) return PROMOS[i];
+      if(PROMOS[i].weekday != null && PROMOS[i].weekday === day) { return PROMOS[i]; }
     }
-    if(day > 6)
+    if(day > 6) {
       throw new Error('PromosService.getWeekday(<integer/WorkDay>): arg must be int <= 6');
-
-    // else if(typeof day === "WeekDay")
-    //  PROMOS.forEach((promo)=>{if(promo.weekday != null && promo.weekday === day) return promo;});
-    
+    }
+      
     return null;
   }
   getWeekdays(): Promo[]{

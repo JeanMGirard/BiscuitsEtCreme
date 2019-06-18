@@ -5,7 +5,7 @@
     "ng": "ng",
     "config": "ts-node ./scripts/load_env.ts",
     "config:prod": "ts-node ./scripts/load_env.ts -- --environment=prod",
-    "start": "ng serve",
+    "start": "npm run config && ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
