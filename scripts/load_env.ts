@@ -10,21 +10,35 @@ require('dotenv').config();
 // we get it from yargs's argv object
 
 const environment = yargs.argv.environment;
-const isProd = environment === 'prod';
-let targetPath = `./src/environments/environment.ts`;
-if(isProd) targetPath = `./src/environments/environment.${environment}.ts`;
 
-const envConfigFile = `
-export const environment = {
-  production: ${isProd},
-  googleApiKey: "${process.env.GOOGLE_API_KEY}",
-  googlePlaceId: "${process.env.GOOGLE_PLACEID}",
-};
-`
-fs.writeFile(targetPath, envConfigFile, function (err) {
-  if (err) {
-    console.log(err);
-  }
+let targetPath  = `./src/environments/environment.ts`;
+let targetPath2 = `./src/environments/environment.prod.ts`;
 
+function getText(isProd: boolean): string{
+  return `
+    export const environment = {
+      production: ${isProd},
+      googleApiKey: "${process.env.GOOGLE_API_KEY}",
+      googlePlaceId: "${process.env.GOOGLE_PLACEID}",
+      firebase: {
+        apiKey:        "${process.env.FIRE_API_KEY}",
+        authDomain:    "${process.env.FIRE_AUTH_DOM}",
+        databaseURL:   "${process.env.FIRE_DB_URL}",
+        projectId:     "${process.env.FIRE_PROJ_ID}",
+        storageBucket: "${process.env.FIRE_BUCK}",
+        messagingSenderId: "${process.env.FIRE_SENDER_ID}"
+      }
+    };
+  `
+}
+
+
+
+fs.writeFile(targetPath, getText(false), function (err) {
+  if (err) { console.log(err);  }
   console.log(`Output generated at ${targetPath}`);
+});
+fs.writeFile(targetPath2, getText(true), function (err) {
+  if (err) { console.log(err);  }
+  console.log(`Output generated at ${targetPath2}`);
 });

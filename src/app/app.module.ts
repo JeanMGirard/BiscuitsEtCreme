@@ -6,6 +6,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { environment } from '../environments/environment';
+
 import { HeaderService } from './components/header/header.service';
 import { FooterService } from './components/footer/footer.service';
 
@@ -15,6 +17,14 @@ import { SocialModule } from './modules/social/social.module';
 import { ScheduleModule } from './components/schedule/schedule.module';
 import { MenuService } from './pages/menu/menu.service';
 
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
+export const firebaseConfig = environment.firebase;
+
 @NgModule({
   declarations: [
     AppComponent
@@ -22,6 +32,9 @@ import { MenuService } from './pages/menu/menu.service';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
     AppRoutingModule,
     HeaderModule,
     FooterModule,

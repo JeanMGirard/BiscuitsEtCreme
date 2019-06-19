@@ -1,3 +1,4 @@
+@import "../../../_variables";
 #row-1{
     text-align: center;
 }
@@ -9,7 +10,7 @@
     top: 300px;
     opacity: 0;
     z-index:100;
-    font-family: 'Lobster', cursive;
+    font-family: "Lobster", cursive;
     font-size: 60px;
     color: rgb(50,50,50);
     -webkit-transform: rotateZ(1.5deg);
@@ -28,7 +29,7 @@
     opacity 1000ms cubic-bezier(0.42, 0, 0.385, 0.995);
 }
 #row-1 .parallax { 
-    background-image: url('/assets/img/backgrounds/ice-cream-bg-600.png'); 
+    background-image: url("@{base-url}assets/img/backgrounds/ice-cream-bg-600.png"); 
     background-position:50% -10%; top:0; 
     background-size:103% 150%; 
 }

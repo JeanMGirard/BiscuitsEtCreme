@@ -18,27 +18,27 @@ export const PRODUCTS: Product[] = [
     { id: 12, name: 'Ultra Smart', ctg: Category.ICECREAM },
     { id: 13, name: 'Fiesta', ctg: Category.ICECREAM },
     {   id: 14, name: 'Banane Royale', ctg: Category.ICECREAM,
-        img: "/assets/img/products/banane-royale.png" 
+        img: "assets/img/products/banane-royale.png" 
     },
     { id: 15, name: 'Peanut Buster', ctg: Category.ICECREAM,
-        img: "/assets/img/products/peanut-buster.png"
+        img: "assets/img/products/peanut-buster.png"
     },
     { id: 16, name: 'Parfait', ctg: Category.ICECREAM },
     { id: 17, name: 'Skorr', ctg: Category.ICECREAM },
     {   id: 18, name: 'Duo', ctg: Category.ICECREAM,
-        img: "/assets/img/products/duo.png"
+        img: "assets/img/products/duo.png"
     },{   
         id: 19, name: 'Poutine', ctg: Category.ICECREAM,
-        img: "/assets/img/products/poutine.png"
+        img: "assets/img/products/poutine.png"
     },
     { id: 20, name: 'Carré au chocolat', ctg: Category.ICECREAM },
     { id: 21, name: 'Sundae aux bananes', ctg: Category.ICECREAM },
     { id: 22, name: 'Délice sucre à la crème', ctg: Category.ICECREAM },
     {   id: 23, name: 'Barbotine Slush', ctg: Category.ICECREAM,
-        img: "/assets/img/products/montblanc.png"   },
+        img: "assets/img/products/montblanc.png"   },
     { id: 24, name: 'Arc en ciel ', ctg: Category.ICECREAM },
     { id: 25, name: 'Montblanc', ctg: Category.ICECREAM,
-        img: "/assets/img/products/montblanc.png"  
+        img: "assets/img/products/montblanc.png"  
     },
     { id: 26, name: 'Mousseline', ctg: Category.ICECREAM },
     { id: 27, name: 'Explosion', ctg: Category.ICECREAM },

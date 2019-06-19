@@ -11,6 +11,11 @@ import { Row1Component } from './row1/row1.component';
 import { Row2Component } from './row2/row2.component';
 import { Row3Component } from './row3/row3.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
 @NgModule({
   declarations: [
     ContactComponent,
@@ -22,7 +27,9 @@ import { Row3Component } from './row3/row3.component';
     CommonModule,
     ContactRoutingModule,
     ScheduleModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule,
+    AngularFirestoreModule
   ]
 })
 export class ContactModule { }

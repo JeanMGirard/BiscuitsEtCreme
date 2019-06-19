@@ -1,0 +1,23 @@
+[debug] [2019-06-19T06:31:54.305Z] ----------------------------------------------------------------------
+[debug] [2019-06-19T06:31:54.309Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\JeanM\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js open
+[debug] [2019-06-19T06:31:54.309Z] CLI Version:   7.0.0
+[debug] [2019-06-19T06:31:54.309Z] Platform:      win32
+[debug] [2019-06-19T06:31:54.309Z] Node Version:  v11.11.0
+[debug] [2019-06-19T06:31:54.311Z] Time:          Wed Jun 19 2019 02:31:54 GMT-0400 (Eastern Daylight Time)
+[debug] [2019-06-19T06:31:54.311Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-19T06:31:54.326Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-19T06:31:54.327Z] > authorizing via signed-in user
+[debug] [2019-06-19T06:31:54.328Z] [iam] checking project biscuitsetcreme for permissions ["firebase.projects.get"]
+[debug] [2019-06-19T06:31:54.331Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/biscuitsetcreme:testIamPermissions  
+
+[debug] [2019-06-19T06:31:54.758Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-19T06:31:54.763Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/biscuitsetcreme  
+ 
+[debug] [2019-06-19T06:31:55.117Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-19T06:31:55.123Z] TypeError: prompt.once is not a function
+    at Command._action (C:\Users\JeanM\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\open.js:69:14)
+    at C:\Users\JeanM\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:163:37
+    at processTicksAndRejections (internal/process/next_tick.js:81:5)
+[error] 
+[error] Error: An unexpected error has occurred.

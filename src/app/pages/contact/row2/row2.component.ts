@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactService } from '../../../modules/contact/contact.service';
 
+
 declare var $: any;
 
 @Component({
@@ -13,19 +14,28 @@ export class Row2Component implements OnInit {
 
   constructor(
     private contacts: ContactService
+   // private afs: AngularFirestore
   ) { }
 
   ngOnInit() {
-    this.formAction = "https://formspree.io/" + this.contacts.getContactFormEmail();
+    //this.formAction = "https://formspree.io/" + this.contacts.getContactFormEmail();
   }
   onClickSubmit(data) {
-    /*alert("\nname  : " + data.name +
-          "\nemail : " + data.email +
-          "\ndescription : " + data.description +
-          "\nstars : " + data.star);
-    */
-   var hgt = $("#contact-row-2 form").height();
-   $("#contact-row-2 form").css("height", hgt);
-   $("#contact-row-2 form").html($("#contact-r2-thankyou").html());
+    this.saveSubmission(data);
+    this.showThankYouNote();
+  }
+  saveSubmission(data: any){
+    /*const collection = this.afs.collection<any>('user-comments');
+    collection.add({ 
+      name:  data.name, 
+      email: data.email,
+      description: data.description,
+      note: ((data.star/5)*100)
+    });*/
+  }
+  showThankYouNote(){
+    var hgt = $("#contact-row-2 form").height();
+    $("#contact-row-2 form").css("height", hgt);
+    $("#contact-row-2 form").html($("#contact-r2-thankyou").html());
   }
 }

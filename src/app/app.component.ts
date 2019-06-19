@@ -3,6 +3,9 @@ import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
 import { routeAnimation } from './animations';
 import { HeaderService } from './components/header/header.service';
 
+import { FirebaseApp } from '@angular/fire';
+import { AngularFirestore } from '@angular/fire/firestore';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,7 +19,8 @@ export class AppComponent implements OnInit {
 
   constructor(
     private header: HeaderService, 
-    private router: Router
+    private router: Router,
+    public app: FirebaseApp
     ) {
   }
   getAnimationData(outlet: RouterOutlet) {
