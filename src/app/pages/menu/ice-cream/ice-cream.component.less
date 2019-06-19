@@ -1,30 +1,65 @@
 @import "../../../_variables.less";
-.submenu>div:not(.banner){
-    min-height: 250px;
+.submenu>div.defaults{
+    //min-height: 250px;
     //border: 1px solid black;
     padding-top: 15px;
     text-align: center;
+}
+.submenu>div h3{
+    font-family: "Lobster";
+    font-size: 40px;
+}
+#cornets-img{
+    @media (min-width: 1000px) {
+        width: 80%;
+    }
+    z-index: -1;
+    @media (max-width: @sizes-media-max[sm]) {
+        width: 100%;
+    }
+    @media (min-width: 400px) {
+        margin-top:-60px;
+    }
+}
+.submenu>div#pub-molle p{
+    font-size: 24px;
+    @media (min-width: 1400px) {
+        font-size: 30px;
+    }
+}
+
+.submenu>div.banner h3{
+    font-family: "Lobster";
+    font-size: 60px;
+    @media (min-width: 1400px) {
+        font-size: 70px;
+    }
+
 }
 
 .shadow-white{
     text-shadow: 0 0 4px rgba(255,255,255,0.62) ;
 }
 #molle-fruits{
+    min-height: 250px;
     margin-top: -300px;
     z-index:50;
+    overflow: hidden;
+    @media (min-width: 1600px) {
+        min-height: 800px;
+        height: 80vh;
+    }
+}
+#pub-molle h3,
+#pub-molle p{
+    padding-right: 100px;
+}
+#pub-dure h3{
+    padding-left: 100px;
 }
 #molle-fruits h3{
     z-index: 1;
     position: relative;
-}
-#molle-fruits img{
-    z-index: -1;
-    @media (max-width: @sizes-media-max[sm]) {
-        width: 100%;
-    }
-    @media (min-width: 400px) {
-        margin-top:-110px;
-    }
 }
 
 .submenu>div.done{
@@ -39,22 +74,22 @@
     text-align: left;
     padding-left: 70px;
 }
-#pub-garnitures{
+#pub-enrobages{
     text-align: right;
     padding-right: 70px;
 }
 #pub-trempages,
-#pub-garnitures{
-    height: 250px;
+#pub-enrobages{
+    height: 220px;
 }
 #pub-trempages h3,
-#pub-garnitures h3,
+#pub-enrobages h3,
 #pub-trempages .button-row,
-#pub-garnitures .button-row{
+#pub-enrobages .button-row{
     padding-top: 60px;
 }
 #pub-trempages img,
-#pub-garnitures img{
+#pub-enrobages img{
     position: absolute;
     top: 0;
     z-index: 1;
@@ -72,61 +107,90 @@
 }
 
 #pub-barbotines{
-    min-height: 580px;
-    padding-top: 70px;
+    min-height: 700px;
+    padding-top: 140px;
     text-align: center;
     @media (min-width: @sizes-media-min[md]) {
 
     }
 }
+#pub-barbotines .button-row{
+    bottom: 160px;
+}
 #pub-barbotines h3{
     padding-bottom: 20px;
 }
+
+
+
 #icecream-carousel{
-    height: 750px;
-    -webkit-box-shadow: 0 -20px 50px 20px rgba(255,255,255,1) inset;
-    box-shadow: 0 -20px 50px 20px rgba(255,255,255,1) inset;
-    border-bottom: 2px solid lightgray;
-    overflow: hidden;
+    height: 800px;
 }
 #icecream-carousel div{
-    min-height: 300px;
-    //text-align: center;
-    overflow: visible;
-}
-#icecream-carousel img{
-    min-height: 200px;
-    bottom: 0;
-    position: absolute;
-    margin-bottom:-3vw;
-}
-.carousel-item{
-    min-height: 300px;
-    height: 100%;
+
 }
 
-#icecream-carousel .carousel-caption h3, 
-#icecream-carousel .carousel-caption p{
-    color: rgb(29, 29, 29) !important;
-    bottom: 40px;
-    position: absolute;
+
+.carousel-item{
+    padding-top: 40px;
+}
+.carousel-item .carousel-caption{
+    text-align: center;
     left: 0;
     right: 0;
+    bottom: 70px;
 }
-#icecream-carousel h3{
-    font-size: 38px;
-    padding-bottom: 28px;
-    text-shadow: 3px 3px 5px white;
+.carousel-item .carousel-caption p, 
+.carousel-item .carousel-caption h3{
+    font-weight: bold;
+}
+.carousel-item .carousel-caption p{
+    color: rgb(0,0,0);
+    font-family: "Montserrat";
+    font-size: 21px;
+    text-shadow: -1px -1px 0 rgba(255,255,255,0.6), 0 0 4px rgba(255,255,255,0.4);
+}
+.carousel-item .carousel-caption h3{
+    color: rgb(60,60,60);
+    text-shadow: -1px -1px 0 rgba(255,255,255,0.6), 0 0 4px rgba(255,255,255,0.4) , 0 0 20px rgba(255,255,255, 0.8) ;
+    font-family: "Fredericka the Great";
+    font-size: 34px;
+}
+
+
+.carousel-control-prev-icon,.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  background-image: none;
+}
+.carousel-control-next-icon:after,
+.carousel-control-prev-icon:after {
+    font-size: 55px;
+    font-weight: bold;
+    color: rgb(60,60,60);
+}
+.carousel-control-next-icon:after { content: '>'; }
+.carousel-control-prev-icon:after { content: '<'; }
+
+
+@transit-pub: transform 350ms cubic-bezier(0.42, 0, 0.58, 1) 10ms, z-index 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 10ms;
+#pub-enrobages,#pub-trempages,#pub-yogourts,
+#pub-tourbillons,#pub-milkshakes,#pub-smoothies{
+    cursor: pointer;
+    z-index: 200;
+    -webkit-transition: @transit-pub;
+    -moz-transition: @transit-pub;
+    -o-transition: @transit-pub;
+    transition: @transit-pub;
 
 }
-#icecream-carousel p{
-    bottom: 15px !important;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    text-shadow: 2px 2px 3px white;
-}
-
-#icecream-carousel a.carousel-control-prev,
-#icecream-carousel a.carousel-control-next{
-    background-color: rgba(150,150,150,0.1);
+#pub-enrobages:hover,#pub-trempages:hover,#pub-yogourts:hover,
+#pub-tourbillons:hover,#pub-milkshakes:hover,#pub-smoothies:hover{
+    -webkit-transform: scaleX(1.1) scaleY(1.1);
+    transform: scaleX(1.1) scaleY(1.1);
+    z-index: 1000;
+    -webkit-transition: @transit-pub;
+    -moz-transition: @transit-pub;
+    -o-transition: @transit-pub;
+    transition: @transit-pub;
 }

@@ -1,7 +1,8 @@
 
 export class Social {
+    key: string;
     name: string;
-    link: string;
+    url: string;
     img: string;
 
     constructor(name: string) {

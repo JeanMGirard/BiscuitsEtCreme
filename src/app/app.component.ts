@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { routeAnimation } from './pages/menu/animations';
+import { Component, OnInit } from '@angular/core';
+import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
+import { routeAnimation } from './animations';
 import { HeaderService } from './components/header/header.service';
 
 @Component({
@@ -11,19 +11,26 @@ import { HeaderService } from './components/header/header.service';
   ],
   animations: [ routeAnimation ]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'BiscuitsEtCreme';
 
-  constructor(private headerService: HeaderService) {
-    
+  constructor(
+    private header: HeaderService, 
+    private router: Router
+    ) {
   }
   getAnimationData(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
   hideHeader(){
-
-    this.headerService.expended = true;
+    this.header.expended = true;
   }
-
-  
+  ngOnInit() {
+    this.router.events.subscribe((evt) => {
+        if (!(evt instanceof NavigationEnd)) {
+            return;
+        }
+        window.scrollTo(0, 0)
+    });
+  }
 }

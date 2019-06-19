@@ -1,25 +1,31 @@
 <div id="footer" class="row">
     <div class="col-md-4">
         <div class="row justify-content-center title-row">
-            <div>
-                <h5>Notre addresse</h5>
-            </div>
+            <h5>Notre addresse</h5>
         </div>
         <div class="row justify-content-center">
-            <div>
-                <p>{{ address1 }}<br/>{{ address2 }}</p>
-            </div>
+            <p>{{ address1 }}<br/>{{ address2 }}</p>
         </div>
     </div>
-    <div class="col-md-4">
-        <div class="row justify-content-start">
-            
+    <div class="col-md-3">
+        <div class="row justify-content-center title-row">
+            <h5>Nous contacter</h5>
+        </div>
+        <div class="row justify-content-center">
+            <table>
+                <tr><td>Telephone</td><td>{{ phone }}</td></tr>
+                <tr><td>Email</td><td>{{ email }}</td></tr>
+            </table>
         </div>
     </div>
+    <div class="col-1"></div>
     <div class="col-md-4">
         <div class="row justify-content-start">
-            <div id="social-icons" style="margin-top: 10px;">
-                <h3>FOLLOW US</h3>
+            <div id="social-icons">
+                <h3>Nous suivre</h3>
+                <a *ngFor="let link of links" href="{{ link.url }}" target="_blank">
+                    <img src="{{ link.img }}" alt="{{ link.name }}" />
+                </a>
             </div>
             <br />
         </div>

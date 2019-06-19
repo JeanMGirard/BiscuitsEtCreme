@@ -2,19 +2,19 @@ import { Social } from './social';
 
 export const SOCIALS: Social[] = [
     { 
-        ref: 'fb',
+        key: 'fb',
         name: 'Facebook',
-        link: 'https://goo.gl/maps/VS3aiRYsAGVwmhvR9',
-        img: '/assets/img/social/instagram-96.png'
+        url: 'https://www.facebook.com/biscuitsetcreme/',
+        img: '/assets/img/social/facebook-96.png'
     },{
-        ref: 'ggl',
+        key: 'ggl',
         name: 'Google',
-        link: 'https://goo.gl/maps/VS3aiRYsAGVwmhvR9',
+        url: 'https://goo.gl/maps/VS3aiRYsAGVwmhvR9',
         img: '/assets/img/social/google-96.png'
     },{
-        ref: 'insta',
+        key: 'insta',
         name: 'Instagram',
-        link: 'https://goo.gl/maps/VS3aiRYsAGVwmhvR9',
+        url: 'https://www.instagram.com/biscuitsetcreme/',
         img: '/assets/img/social/instagram-96.png'
     }
 ];

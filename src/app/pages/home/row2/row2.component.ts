@@ -19,5 +19,8 @@ export class Row2Component implements OnInit {
   ngOnInit(): void {
     this.menus$ = this.menuService.getMenus();
   }
+  goToMenu(menu: Menu){
+    this.menuService.goToMenu(menu);
+  }
 
 }

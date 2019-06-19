@@ -66,11 +66,16 @@ div.pab-kind.right h3   { padding-left: 200px; }
     color: white;
     border: 2px solid black;
 }
-.pub-combo{
+.submenu .pub-combo{
     padding-top: 50px;
     padding-bottom: 50px;
-    background-color: rgb(240, 240, 240);
-    border-bottom: 3px solid darkgrey;
+    background-color: rgb(245, 245, 245);
+    border-bottom: 3px solid rgb(70,70,70);
+    box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.4);
+}
+.submenu div.pub-combo.left{
+    z-index: 10;
+    box-shadow: -4px 10px 10px 1px rgba(0, 0, 0, 0.4);
 }
 #pub-combos img{
     margin-top: 10px;
@@ -79,12 +84,33 @@ div.pab-kind.right h3   { padding-left: 200px; }
     }
 }
 #pub-tartes{
-    padding-top: 40px;
+    z-index: -1;
+    padding: 0;
+    //text-align: right;
+    overflow: hidden;
 }
+
 #pub-tartes img {
-    margin-top: 70px;
-   /* 
-    float: left;
-    margin-left: 15vw;
-   */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#info-tartes{
+    min-height: 600px;
+    padding-top: 130px;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    padding-bottom: 200px;
+    width: 50%;
+    float: right;
+    @media (max-width: @sizes-media-max[sm]) {
+        width: 100%;
+    }
+}
+#info-tartes h3{
+    font-weight: bold;
+    font-size: 48px;
+    text-decoration: underline;
 }

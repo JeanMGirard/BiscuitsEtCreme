@@ -7,13 +7,13 @@ action="{{ formAction }}" method="POST" -->
     <form id="row-2" class="row justify-content-center bg-effect col-12" 
         #contactForm="ngForm" (ngSubmit)="onClickSubmit(contactForm.value)">
         <div class="col-12">
-            <h2>Contactez-nous</h2>
+            <h2>Donnez-nous votre avis!</h2>
             <p>Vous avez une suggestion ou un commentaire?</p>
         </div>
 
         <div class="col-sm-12 col-md-4 side-inputs">
-            <input type="text"  name="name"   placeholder="Votre nom      (optionel)" ngModel />
-            <input type="email" name="email"  placeholder="Votre email    (optionel)" ngModel />
+            <input type="text"  name="name"   placeholder="(optionel) nom" ngModel />
+            <input type="email" name="email"  placeholder="(optionel) email" ngModel />
 
             <h5 class="rating-ttl">Comment notereriez-vous votre visite?</h5>
             <div class="rating">

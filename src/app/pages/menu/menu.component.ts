@@ -1,11 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { routeAnimation, animateTimer } from './animations';
+import { routeAnimation, animateTimer } from '../../animations';
 import { switchMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 import { FooterService } from '../../components/footer/footer.service';
-import { HeaderService } from '../../components/header/header.service';
 
 import { MenuService } from './menu.service';
 import { Menu } from './menu';
@@ -29,13 +28,11 @@ export class MenuComponent implements OnInit, OnDestroy {
     private service: MenuService,
     private router: Router,
     private route: ActivatedRoute,
-    private footer: FooterService,
-    private header: HeaderService
+    private footer: FooterService
   ) { }
 
   ngOnInit(): void {
-    this.footer.hideOverride(true);
-
+    this.service.onArriveMenuHome();
     this.menus$ = this.route.paramMap.pipe(
       switchMap(params => {
         this.selectedMenu = params.get('menu');
@@ -48,10 +45,9 @@ export class MenuComponent implements OnInit, OnDestroy {
     });
   }
   goToMenu(menu: Menu){
-//  animateTimer
-    this.router.navigate(['/menu', menu.name]);
+    this.service.goToMenu(menu);
   }
   ngOnDestroy(): void {
-    this.footer.hideWithDelay(false);
+    this.service.onQuitMenuHome();
   }
 }

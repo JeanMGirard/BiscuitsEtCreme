@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PopupComponent } from '../popup/popup.component';
+import { MenuService } from '../menu.service';
 
 @Component({
   selector: 'app-ice-cream',
@@ -11,10 +12,16 @@ import { PopupComponent } from '../popup/popup.component';
     './ice-cream.component.less'
   ]
 })
-export class IceCreamComponent {
+export class IceCreamComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) {}
+  constructor(
+    public dialog: MatDialog,
+    private service: MenuService
+    ) {}
 
+  ngOnInit() {
+    this.service.onArriveMenu();
+  }
   openDialogLarge(lists: any): void{
     const dialogRef = this.dialog.open(PopupComponent, {
       width: '800px',
@@ -23,7 +30,7 @@ export class IceCreamComponent {
   }
   openDialog(lists: any): void{
     const dialogRef = this.dialog.open(PopupComponent, {
-      width: '500px',
+      width: '600px',
       data: lists
     });
 
@@ -41,6 +48,15 @@ export class IceCreamComponent {
     ]});
   }
 
+  openEnrobages(): void {
+    this.openDialog({ 
+      name: 'Enrobages', 
+      lists: [
+        { items: [
+            'Rice crispies', 'Oréos'
+        ]}
+    ]});
+  }
   openTrempages(): void {
     this.openDialogLarge({ 
       name: 'Chocolats', 
@@ -53,29 +69,15 @@ export class IceCreamComponent {
       ]
     });
   }
-  openGarnitures(): void {
+  openYogourts(): void {
     this.openDialog({ 
-      name: 'Garnitures', 
+      name: 'Yogourts', 
       lists: [
         { items: [
-            'Rice crispies'
+                'fraise'
         ]}
     ]});
   }
-
-  openMilkshakes(): void {
-    this.openDialog({ 
-      name: 'Milkshake', 
-      lists: [
-        { items: [
-            'chocolat', 'bananes', 'vanille', 'bleuets', 
-            'framboises', 'cerises', 'caramel', 'fraises', 
-            'fruits des champs'
-        ]}
-    ]});
-  }
-
-
   openTourbillons(): void {
     this.openDialogLarge({ 
       name: 'Tourbillons',
@@ -89,16 +91,6 @@ export class IceCreamComponent {
         ]}
     ]});
   }
-
-  openYogourts(): void {
-    this.openDialog({ 
-      name: 'Yogourts', 
-      lists: [
-        { items: [
-                'fraise'
-        ]}
-    ]});
-  }
   openSlushes(): void {
     this.openDialogLarge({ 
       name: 'Barbotines', 
@@ -109,6 +101,29 @@ export class IceCreamComponent {
           'Orange', 'Citron', 'Melon', 'Lime', 'Bleuet', 'Bonbon sûr', 'Pêche', 
           'Limonade', 'Thé glacé', 'Pomme grenade', 'Verglas d’été', 'Pomme surette', 
           'Rouge électrolyte'
+        ]}
+    ]});
+  }
+  openMilkshakes(): void {
+    this.openDialogLarge({ 
+      name: 'Milkshakes', 
+      lists: [
+        { items: [
+            'chocolat', 'bananes', 'vanille', 'bleuets', 
+            'framboises', 'cerises', 'caramel', 'fraises', 
+            'fruits des champs'
+        ]}
+    ]});
+  }
+
+
+  
+  openSmoothies(): void {
+    this.openDialog({ 
+      name: 'Smoothies', 
+      lists: [
+        { items: [
+                'fraise'
         ]}
     ]});
   }

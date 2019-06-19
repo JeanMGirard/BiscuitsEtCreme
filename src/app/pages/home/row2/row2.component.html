@@ -4,11 +4,12 @@
     <div id="imgrd-1-1" class="col-sm-12 col-md-10 container">
         <div *ngFor="let menu of menus$ | async ; let i = index"
             [id]="'imgrd-1-1-'+i"
-            class="textbox col-sm-12 col-md-4"
-            [routerLink]="['/menu/', menu.name]">
-                <img [src]="menu.tileImage" alt="Snow" />
-                <h3>{{menu.tileTitle}}</h3>
-                <p>{{menu.tileDesc}}</p>
+            class="textbox col-sm-12 col-md-4 linkToMenu"
+            (click)="goToMenu(menu)"
+            >
+            <!--a href="/menu/{{menu.name}}"-->
+                <img src="{{ menu.tileImage }}" alt="Snow" />
+                <h3>{{ menu.tileTitle }}</h3>
         </div>
 
     </div>
@@ -19,19 +20,9 @@
         <div class="textbox">
             <h3>La saveur est au rendez-vous!</h3>
             <p>La saveur est au rendez-vous! La saveur est au rendez-vous! La saveur est au rendez-vous!</p>
-            <a class="button-style" href="/menu">Nos produits</a>
+            <a class="button-style" routerLink="/menu">Nos produits</a>
         </div>
     </div>
 
-    <div id="imgrd-1-3" class="col-sm-12 col-md-10 container">
-        <img src="/assets/img/home/google-map.jpg" alt="google map" style="width:100%;" />
-        <div id="find-us-mask" class="mask"></div>
-        <div class="textbox">
-            <a id="find-us-link" class="button-style" href="https://goo.gl/maps/ezBjXdjLmcSuYs5f7" target="_blank">Nous trouver</a>
-        </div>
-    </div>
+    <img src="/assets/img/home/cornet-pab-300.png">
 </div>
-
-<style>
- 
-</style>

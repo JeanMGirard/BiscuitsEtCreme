@@ -5,7 +5,6 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
 
 import { FooterService } from '../../../components/footer/footer.service';
-import { HeaderService } from '../../../components/header/header.service';
 import { MenuService } from '../menu.service';
 import { Menu } from '../menu';
 
@@ -28,39 +27,40 @@ export class SubMenuComponent implements OnInit, OnDestroy {
     private router: Router,
     private service: MenuService,
     private location: Location,
-    private header: HeaderService,
     private footer: FooterService
-  ) {}
-
-  ngOnInit() {
-    this.header.expended = false;
-    this.header.locked = true;
-    this.footer.hideOverride(true);
-
-    this.service.getMenus()
-      .subscribe(menus => {
-        this.menus = menus as Menu[];
-      });
+  ) {
     this.menu$ = this.route.paramMap.pipe(
       switchMap((params: ParamMap) =>
         this.service.getMenu(params.get('menu')))
     );
+  }
+
+  ngOnInit() {
+    this.footer.hideOverride(true);
+    
+    this.service.getMenus()
+      .subscribe(menus => {
+        this.menus = menus as Menu[];
+      });
+    
     $(document).ready(() => { 
       $('body').addClass('loaded');
     });
   }
   
   ngOnDestroy(): void {
-    this.header.expended = null;
-    this.header.locked = false;
+    this.service.onQuitMenu();
     this.footer.hideWithDelay(false);
   }
 
   gotoMenu() {
+    this.service.onQuitMenu();
     this.router.navigate(['/menu']);
   }
   gotoPrev() {
-    this.location.back();
+    this.service.onQuitMenu();
+    this.router.navigate(['/menu']);
+    // this.location.back();
   }
 
 }

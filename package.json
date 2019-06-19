@@ -2,14 +2,17 @@
   "name": "biscuits-et-creme",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "config": "ts-node ./scripts/load_env.ts",
+    "ng":         "ng",
+    "config":     "ts-node ./scripts/load_env.ts",
     "config:prod": "ts-node ./scripts/load_env.ts -- --environment=prod",
-    "start": "npm run config && ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "start":      "npm run config && ng serve",
+    "build":      "npm run config && ng build",
+    "build:prod": "npm run config:prod && ng build --prod",
+    "build:gh":   "npm run config:prod && ng build --prod --base-href https://jeanmgirard.github.io/BiscuitsEtCreme/ --output-path dist/",
+    "deploy:gh":  "npm run build:gh && ngh",
+    "test":       "ng test",
+    "lint":       "ng lint",
+    "e2e":        "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +26,7 @@
     "@angular/platform-browser": "~8.0.0",
     "@angular/platform-browser-dynamic": "~8.0.0",
     "@angular/router": "~8.0.0",
+    "angular-cli-ghpages": "^0.5.3",
     "bootstrap": "^4.3.1",
     "bootstrap-less-port": "^1.0.0",
     "circletype": "^2.3.0",

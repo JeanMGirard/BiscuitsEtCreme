@@ -10,8 +10,14 @@ import { IceCreamComponent } from './ice-cream/ice-cream.component';
 import { OtherProductsComponent } from './other-products/other-products.component';
 import { SubMenuComponent } from './sub-menu/sub-menu.component';
 
-import {MatButtonModule} from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatButtonModule } from '@angular/material/button';
+
 import { PopupComponent } from './popup/popup.component';
+import { MenuService } from './menu.service';
+
+import { HeaderService } from '../../components/header/header.service';
+import { FooterService } from '../../components/footer/footer.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +32,8 @@ import { PopupComponent } from './popup/popup.component';
     CommonModule,
     MenuRoutingModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTooltipModule
   ],
   entryComponents:[
     PopupComponent

@@ -9,8 +9,11 @@
     color: whitesmoke;
     height: 280px;
 }
+#imgrd-1-1-0{ float:left;  }
+#imgrd-1-1-2{ float:right; }
 
-#imgrd-1-1 .textbox {
+
+#row-2 .linkToMenu {
     height: 100%;
     width: 30%;
     top: 10%;
@@ -19,20 +22,14 @@
     opacity: 0.9;
     overflow: hidden;
     display: inline-block;
+    border-radius: 50%;
+    border:2px solid black;
 }
-#imgrd-1-1-0{
-    float:left;
-}
-#imgrd-1-1-2{
-    float:right;
-}
-
-
-#imgrd-1-1 div.textbox:hover {
+#row-2 .linkToMenu:hover {
     opacity: 1;
 }
 
-#imgrd-1-1 .textbox img {
+#row-2 .linkToMenu img {
     position: absolute;
     top: 0;
     left: 0;
@@ -44,30 +41,16 @@
 }
 
 
-#imgrd-1-1 h3 {
+#row-2 .linkToMenu h3 {
     position: relative;
     display: inline-block;
     z-index: 100;
-
-    margin-top: 20px;
     font-family: 'Fredericka the Great', cursive;
+    font-weight: bold;
     font-size: 30px;
+    color: rgb(210, 210, 210);
+    margin-top: 50%;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
-
-
-}
-
-#imgrd-1-1 p {
-    position: relative;
-    display: inline-block;
-    z-index: 100;
-
-    padding-top: 40px;
-    font-family: 'Anton', sans-serif;
-    font-size: 26px;
-    width: 80%;
-    margin-left: 10%;
-
 }
 
 #imgrd-1-2 {
@@ -154,55 +137,6 @@
     width: 200px;
 }*/
 
-#imgrd-1-3 {
-    height: 240px;
-    padding: 0;
-    margin-top: 90px;
-    margin-bottom: 60px;
-}
-
-#imgrd-1-3 img {
-    width: 100%;
-    height: 100%;
-    border: 2px solid lightgray;
-}
-
-#imgrd-1-3 .textbox {
-    position: absolute;
-    top: 20%;
-    left: 0;
-    width: 100%;
-}
-
-/* #imgrd-1-3 .mask {
-    background: black;
-    opacity: 0.1;
-    width: 100%;
-    height: 50px;
-
-}
-
-#find-us-mask:hover {
-    opacity: 1;
-}*/
-
-#imgrd-1-3 a.button-style {
-    display: block;
-    padding: 2px 3px 6px 6px;
-
-    width: 30%;
-    margin-left: 35%;
-
-    background-color: white;
-    color: rgba(4, 0, 142, 1);
-    text-decoration: none;
-    font-family: 'Alfa Slab One', cursive;
-    font-size: 22px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    border: 3px solid darkblue;
-}
-
 
 @media only screen and (max-width: 850px) {
     #imgrd-1-1 {     height:    200px;   }
@@ -244,10 +178,7 @@
     #imgrd-1-1 div.textbox img{height: 200px; }
     #imgrd-1-1 h3{ font-size:34px;}
     #imgrd-1-1 p{ margin-left: 0;  }
-    #imgrd-1-3 a.button-style {
-        width: 60%;
-        margin-left: 20%;
-    }
+
 }
 @media only screen and (max-width: 400px) {
     #imgrd-1-3 a.button-style {

@@ -1,6 +1,7 @@
+@import '../../../_variables.less';
 #promo-r1{
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 20px;
 }
 
 #promo-r1>div{
@@ -21,6 +22,9 @@
 }
 #promo-today{
     min-height: 400px;
+    @media (max-width: @sizes-media-max[sm]){
+        min-height: 480px;
+    }
 }
 #promo-today h4{
     font-family: "dancing script";
@@ -43,13 +47,21 @@
 #promo-r1 table{
     margin-top: 20px;
     text-align: left;
+    @media (max-width: @sizes-media-max[sm]){
+        text-align: center;
+    }
 }
 #promo-r1 table tr>td:first-of-type{
     font-weight: bold;
-    padding-right: 40px;
+    padding-left: 10px;
+    padding-right: 20px;
     text-align: center;
     font-weight: bold;
     font-size: 18px;
+    @media (min-width: @sizes-media-min[md]){
+        padding-left: 0px;
+        padding-right: 40px;
+    }
 }
 #promo-r1 table tr>td{
     padding-top: 10px;

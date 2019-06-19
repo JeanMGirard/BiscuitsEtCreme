@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PopupComponent } from '../popup/popup.component';
+import { MenuService } from '../menu.service';
 
 @Component({
   selector: 'app-cookie-dough',
@@ -11,8 +12,11 @@ import { PopupComponent } from '../popup/popup.component';
     './cookie-dough.component.less'
   ]
 })
-export class CookieDoughComponent {
-  constructor(public dialog: MatDialog) {}
+export class CookieDoughComponent implements OnInit {
+  constructor(
+    public dialog: MatDialog,
+    private service: MenuService
+    ) {}
 
   openDialogLarge(lists: any): void{
     this.dialog.open(PopupComponent, {
@@ -25,5 +29,8 @@ export class CookieDoughComponent {
       width: '500px',
       data: lists
     });
+  }
+  ngOnInit() {
+    this.service.onArriveMenu();
   }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { PopupComponent } from '../popup/popup.component';
+import { MenuService } from '../menu.service';
 
 @Component({
   selector: 'app-other-products',
@@ -11,8 +12,14 @@ import { PopupComponent } from '../popup/popup.component';
     './other-products.component.less'
   ]
 })
-export class OtherProductsComponent {
-  constructor(public dialog: MatDialog) {}
+export class OtherProductsComponent implements OnInit{
+  constructor(
+    public dialog: MatDialog,
+    private service: MenuService
+    ) {}
+  ngOnInit() {
+    this.service.onArriveMenu();
+  }
 
   openDialogLarge(lists: any): void{
     this.dialog.open(PopupComponent, {

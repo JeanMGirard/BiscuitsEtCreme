@@ -54,18 +54,19 @@ export class HeaderComponent implements OnInit {
     switch (true){
       case (this.locked): 
         break;
-      case (this.expended != null && this.expended):
-      case (scrolled <= this.scrollTrigger && this.toggled ):
-        $('header, #content').removeClass('scrolled');
-        this.toggled = false;
-        this.heightChanged();
-        break;
       case (this.expended != null && !this.expended):
       case (scrolled > this.scrollTrigger && !this.toggled): 
         $('header, #content').addClass('scrolled');
         this.toggled = true;
         this.heightChanged();
         break;
+      case (this.expended != null && this.expended):
+      case (scrolled <= this.scrollTrigger && this.toggled ):
+        $('header, #content').removeClass('scrolled');
+        this.toggled = false;
+        this.heightChanged();
+        break;
+      
       
     }
   }
