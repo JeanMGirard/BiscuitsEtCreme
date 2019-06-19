@@ -16,22 +16,21 @@ let targetPath2 = `./src/environments/environment.prod.ts`;
 
 function getText(isProd: boolean): string{
   return `
-    export const environment = {
-      production: ${isProd},
-      googleApiKey: "${process.env.GOOGLE_API_KEY}",
-      googlePlaceId: "${process.env.GOOGLE_PLACEID}",
-      firebase: {
-        apiKey:        "${process.env.FIRE_API_KEY}",
-        authDomain:    "${process.env.FIRE_AUTH_DOM}",
-        databaseURL:   "${process.env.FIRE_DB_URL}",
-        projectId:     "${process.env.FIRE_PROJ_ID}",
-        storageBucket: "${process.env.FIRE_BUCK}",
-        messagingSenderId: "${process.env.FIRE_SENDER_ID}"
-      }
-    };
-  `
+export const environment = {
+  production: ${isProd},
+  googleApiKey: "${process.env.GOOGLE_API_KEY}",
+  googlePlaceId: "${process.env.GOOGLE_PLACEID}",
+  firebase: {
+    apiKey:        "${process.env.FIRE_API_KEY}",
+    authDomain:    "${process.env.FIRE_AUTH_DOM}",
+    databaseURL:   "${process.env.FIRE_DB_URL}",
+    projectId:     "${process.env.FIRE_PROJ_ID}",
+    storageBucket: "${process.env.FIRE_BUCK}",
+    messagingSenderId: "${process.env.FIRE_SENDER_ID}"
+  }
+};
+`;
 }
-
 
 
 fs.writeFile(targetPath, getText(false), function (err) {

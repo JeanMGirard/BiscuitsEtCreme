@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactService } from '../../../modules/contact/contact.service';
-
+import { MessageService } from "../../../modules/contact/message.service";
+import { Observable } from 'rxjs';
 
 declare var $: any;
 
@@ -10,28 +11,24 @@ declare var $: any;
   styleUrls: ['./row2.component.less']
 })
 export class Row2Component implements OnInit {
+  message: Observable<any>;
   formAction: string;
 
   constructor(
-    private contacts: ContactService
-   // private afs: AngularFirestore
-  ) { }
+    private contacts: ContactService,
+    private messages: MessageService
+    ) { 
+  }
 
   ngOnInit() {
     //this.formAction = "https://formspree.io/" + this.contacts.getContactFormEmail();
   }
   onClickSubmit(data) {
-    this.saveSubmission(data);
+    this.saveMessage(data);
     this.showThankYouNote();
   }
-  saveSubmission(data: any){
-    /*const collection = this.afs.collection<any>('user-comments');
-    collection.add({ 
-      name:  data.name, 
-      email: data.email,
-      description: data.description,
-      note: ((data.star/5)*100)
-    });*/
+  saveMessage(data: any){
+    this.messages.createMessage(data);
   }
   showThankYouNote(){
     var hgt = $("#contact-row-2 form").height();

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Schedule } from './schedule';
+import { ContactService } from '../../modules/contact/contact.service';
 
 @Component({
   selector: 'app-schedule',
@@ -7,11 +7,12 @@ import { Schedule } from './schedule';
   styleUrls: ['./schedule.component.less']
 })
 export class ScheduleComponent implements OnInit {
-  schedule = Schedule;
+  schedule: any;
 
-  constructor() { }
+  constructor(private contacts: ContactService) {}
 
   ngOnInit() {
+    this.schedule = this.contacts.getSchedule();
   }
 
 }

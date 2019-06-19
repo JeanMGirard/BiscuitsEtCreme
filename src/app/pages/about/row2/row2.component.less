@@ -14,11 +14,15 @@
 }
 
 #about-r2 section img {
-    display: inline-block;
+    display: block;
     width: 300px;
     height: 150px;
     float: left;
-
+    border: 2px solid darkgrey;
+    @media (min-width: @sizes-media-min[md]){
+        margin-top: 18px;
+    }
+    
 }
 
 #about-r2 section article {

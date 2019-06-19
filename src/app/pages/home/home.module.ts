@@ -4,19 +4,22 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { Row1Component } from './row1/row1.component';
-import { Row2Component } from './row2/row2.component';
+import { Parallax1Component } from './parallax1/parallax1.component';
+import { MenuLinksComponent } from './menu-links/menu-links.component';
 import { Row3Component } from './row3/row3.component';
 import { GmapLinkComponent } from './gmap-link/gmap-link.component';
+import { FloatingComponent } from './floating/floating.component';
 
 
 
 @NgModule({
   declarations: [
     HomeComponent, 
-    Row1Component, 
-    Row2Component, 
-    Row3Component, GmapLinkComponent
+    Parallax1Component, 
+    MenuLinksComponent, 
+    Row3Component, 
+    GmapLinkComponent, 
+    FloatingComponent
   ],
   imports: [
     CommonModule,

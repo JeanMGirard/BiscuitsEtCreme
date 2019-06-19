@@ -24,7 +24,7 @@ export const PROMOS: Promo[] = [
     },{ 
         weekday: WeekDay.Wednesday,
         product: { 
-            name: 'Tous les items faits avec de la crème glacée molle au chocolat',
+            name: 'Items à base de crème glacée molle au chocolat',
             img: 'assets/img/promos/promo-choco-200.png' 
         }
     },{ 
