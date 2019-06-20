@@ -2,58 +2,64 @@
 .hide{
     display: none;
 }
-#contact-row-2{
+#comment-form{
     margin-top:40px;
 }
-#row-2{
+.contact-form{
     text-align: center;
     min-height: 300px;
     margin-top: 20px !important;
     margin-bottom: 80px !important;
 }
-#row-2.bg-effect{
+.contact-form.bg-effect{
     background: rgba(40,40,40, 0.05);
 }
 
-#row-2>div:first-of-type{
+#contact-us>div:first-of-type{
     padding-top: 40px;
     text-align: center;
     padding-bottom: 10px;
 }
-#row-2>div:first-of-type>h2{
+#contact-us{
+    padding-bottom: 40px;
 }
-#row-2>div:first-of-type>p{
+#contact-us>div:first-of-type>p{
     font-size: 18px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
-#row-2>div:last-of-type{
-    padding-bottom: 20px;
-}
-#row-2 div.side-inputs{
+#contact-us div.side-inputs{
     text-align: center;
 }
-#row-2 .side-inputs input{
+#contact-us .side-inputs input{
     width: 100%;
     max-width: 300px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
-#row-2 div input[type="submit"]{
-    width: 100%;
-    max-width: 400px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-#row-2 div textarea[name="description"]{
+#contact-us div textarea[name="description"]{
     width: 100%;
     height: 100%;
 }
 
-#row-2 h5.rating-ttl{
+#contact-us mat-form-field{
+    font-size: 18px;
+}
+#contact-us mat-form-field textarea{
+    padding-top: 20px;
+    background:rgba(255,255,255,0.1);
+}
+#contact-us button[type='submit']{
+    margin-top: 30px;
+    width: 60%;
+    font-size: 24px;
+    font-family: "Montserrat";
+}
+
+#contact-us h5.rating-ttl{
     padding-top: 20px;
 }
 
-#row-2 div.rating {
+#contact-us div.rating {
     width: 50%;
     padding-top: 5px;
     padding-bottom: 20px;
@@ -64,7 +70,7 @@
     transform: scale(2);
 }
 
-#row-2 div.rating > label {
+#contact-us div.rating > label {
     float: right;
     display: inline;
     padding: 0;
@@ -75,21 +81,23 @@
     color: #000;
 }
 
-#row-2 div.rating > label:hover,
-#row-2 div.rating > label:hover ~ label,
-#row-2 div.rating > input.radio-btn:checked ~ label {
+#contact-us div.rating > label:hover,
+#contact-us div.rating > label:hover ~ label,
+#contact-us div.rating > input.radio-btn:checked ~ label {
     color: transparent;
 }
 
-#row-2 div.rating > label:hover:before,
-#row-2 div.rating > label:hover ~ label:before,
-#row-2 div.rating > input.radio-btn:checked ~ label:before,
-#row-2 div.rating > input.radio-btn:checked ~ label:before {
+#contact-us div.rating > label:hover:before,
+#contact-us div.rating > label:hover ~ label:before,
+#contact-us div.rating > input.radio-btn:checked ~ label:before,
+#contact-us div.rating > input.radio-btn:checked ~ label:before {
     content: "\2605";
     position: absolute;
     left: 0;
     color: #FFD700;
 }
+
+
 
 /*
 

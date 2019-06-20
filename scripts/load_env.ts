@@ -18,8 +18,14 @@ function getText(isProd: boolean): string{
   return `
 export const environment = {
   production: ${isProd},
-  googleApiKey: "${process.env.GOOGLE_API_KEY}",
-  googlePlaceId: "${process.env.GOOGLE_PLACEID}",
+  google: {
+    maps: {
+      apiKey: "${process.env.GOOGLE_API_KEY}",
+      placeId: "${process.env.GOOGLE_PLACEID}",
+      shortUrl: "${process.env.GOOGLE_MAP_URL}",
+      coordinates: "${process.env.MAP_COORD}"
+    }
+  },
   firebase: {
     apiKey:        "${process.env.FIRE_API_KEY}",
     authDomain:    "${process.env.FIRE_AUTH_DOM}",

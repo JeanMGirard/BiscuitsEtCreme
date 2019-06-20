@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Row2Component } from './row2.component';
+import { SocialIconsComponent } from './social-icons.component';
 
-describe('Row2Component', () => {
-  let component: Row2Component;
-  let fixture: ComponentFixture<Row2Component>;
+describe('SocialIconsComponent', () => {
+  let component: SocialIconsComponent;
+  let fixture: ComponentFixture<SocialIconsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Row2Component ]
+      declarations: [ SocialIconsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Row2Component);
+    fixture = TestBed.createComponent(SocialIconsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

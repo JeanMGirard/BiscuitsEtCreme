@@ -32,7 +32,7 @@ export class MessageService {
       email: data.email,
       content: data.description,
       note: ((data.star/5)*100),
-      date: new Date().getDate()
+      date: new Date().toLocaleString()
     };
     return this.messages.add(message);
   }

@@ -1,0 +1,67 @@
+<!--form id="contact-us" class="row justify-content-center bg-effect" 
+action="{{ formAction }}" method="POST" -->
+<div id="comment-form" class="row">
+    <form *ngIf="!sent" id="contact-us" class="row justify-content-center bg-effect col-12 contact-form" 
+        #contactForm="ngForm" (ngSubmit)="onClickSubmit(contactForm.value)">
+        <div class="col-12">
+            <h2>Donnez-nous votre avis!</h2>
+            <p>Vous avez une suggestion ou un commentaire?</p>
+        </div>
+
+        <div class="col-sm-12 col-md-4 side-inputs">
+            <mat-form-field  style="width: 100%;">
+                <input matInput ngModel name="name" type="text" placeholder="votre nom" >
+                <mat-hint>(optionel)</mat-hint>
+            </mat-form-field>
+            <mat-form-field  style="width: 100%;">
+                <input matInput ngModel name="email" type="email" placeholder="votre email" >
+                <mat-hint>(optionel)</mat-hint>
+            </mat-form-field>
+
+            <h5 class="rating-ttl">Une note?</h5>
+            <div class="rating">
+                <input id="star5" name="star" type="radio" value="5" class="radio-btn hide" ngModel/>
+                <label for="star5" >☆</label>
+                <input id="star4" name="star" type="radio" value="4" class="radio-btn hide" ngModel/>
+                <label for="star4" >☆</label>
+                <input id="star3" name="star" type="radio" value="3" class="radio-btn hide" ngModel/>
+                <label for="star3" >☆</label>
+                <input id="star2" name="star" type="radio" value="2" class="radio-btn hide" ngModel/>
+                <label for="star2" >☆</label>
+                <input id="star1" name="star" type="radio" value="1" class="radio-btn hide" ngModel/>
+                <label for="star1" >☆</label>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6" style="padding-top:6px;">
+            <mat-form-field style="width: 100%;">
+                <textarea ngModel matInput cdkTextareaAutosize 
+                    name="description" 
+                    placeholder="Laissez un commentaire"
+                    cdkAutosizeMinRows="2"
+                    cdkAutosizeMaxRows="5"></textarea>
+            </mat-form-field>
+            
+            <button mat-raised-button class="submit-btn" 
+                type="submit" value="Envoyer">
+                Envoyer
+            </button>
+        </div>
+    </form>
+    <app-contact-response *ngIf="sent" class="row contact-form bg-effect col-12"></app-contact-response>
+</div>
+
+
+ <script>
+ $(document).ready(function(){
+    // Check Radio-box
+    $("#contact-us div.rating input:radio").attr("checked", false);
+
+    $('#contact-us div.rating input').click(function () {
+        $("#contact-us div.rating span").removeClass('checked');
+        $(this).parent().addClass('checked');
+    });
+});
+ 
+ </script>

@@ -5,7 +5,10 @@ import CircleType from 'circletype';
 @Component({
   selector: 'app-parallax1',
   templateUrl: './parallax1.component.html',
-  styleUrls: ['./parallax1.component.less']
+  styleUrls: [
+    '../home.component.less',
+    './parallax1.component.less'
+  ]
 })
 export class Parallax1Component implements OnInit {
 

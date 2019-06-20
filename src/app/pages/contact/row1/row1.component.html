@@ -24,17 +24,10 @@
         </table>
     </div>
     <div id="map" class="col-lg-4 col-md-6">
-        <!--iframe width="100%" height="400" style="margin-top: 20px;"
-            src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=en&amp;coord=45.6998248,-73.9265654&amp;q=13619%20Boulevard%20Cur%C3%A9-Labelle%2C%20Mirabel%2C%20QC%20J7J%201K3+(Biscuits%20%26%20Cr%C3%A8me)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" 
-            frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                <a href="https://www.maps.ie/map-my-route/">Create a route on google maps</a>
-        </iframe-->
         <iframe width="100%" height="400" style="margin-top: 20px;"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCnytCiaWQVAtdHzLA6t5QTPg1GJpdTUfM&q=place_id:ChIJSaFlsuDVyEwR7Bm4vDOQSAs" 
+            [src]='sanitizer.bypassSecurityTrustResourceUrl(embedded)' 
             frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                <a href="https://www.maps.ie/map-my-route/">Create a route on google maps</a>
         </iframe>
-
     </div>
 </div>
 

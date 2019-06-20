@@ -10,13 +10,15 @@ import { environment } from '../environments/environment';
 
 // biscuitsetcreme App Modules
 import { HeaderComponent } from './components/header/header.component';
-import { HeaderService } from './components/header/header.service';
 import { FooterComponent } from './components/footer/footer.component';
-import { FooterService } from './components/footer/footer.service';
 import { ScheduleModule } from './components/schedule/schedule.module';
+
+import { HeaderService } from './components/header/header.service';
+import { FooterService } from './components/footer/footer.service';
 import { MenuService } from './pages/menu/menu.service';
+import { MapService } from './modules/map/map.service';
 import { ContactService } from './modules/contact/contact.service';
-import { MessageService } from "./modules/contact/message.service";
+import { MessageService } from './modules/contact/message.service';
 import { SocialService } from './modules/social/social.service';
 
 // @angular/fire/ Modules
@@ -50,7 +52,8 @@ import { AngularFireFunctionsModule } from '@angular/fire/functions';
     FooterService,
     ContactService,
     SocialService,
-    MessageService
+    MessageService,
+    MapService
   ],
   bootstrap: [AppComponent]
 })

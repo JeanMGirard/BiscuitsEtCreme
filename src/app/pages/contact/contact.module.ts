@@ -2,14 +2,20 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+
 import { ContactRoutingModule } from './contact-routing.module';
 import { ScheduleModule } from '../../components/schedule/schedule.module';
 
 import { ContactService } from '../../modules/contact/contact.service';
+import { MapService } from '../../modules/map/map.service';
+
 import { ContactComponent } from './contact.component';
 import { Row1Component } from './row1/row1.component';
-import { Row2Component } from './row2/row2.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 import { Row3Component } from './row3/row3.component';
+import { ContactResponseComponent } from './contact-response/contact-response.component';
 
 
 
@@ -17,14 +23,16 @@ import { Row3Component } from './row3/row3.component';
   declarations: [
     ContactComponent,
     Row1Component, 
-    Row2Component, 
-    Row3Component
+    ContactFormComponent, 
+    Row3Component, ContactResponseComponent
   ],
   imports: [
     CommonModule,
     ContactRoutingModule,
     ScheduleModule,
-    FormsModule
+    FormsModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [
     ContactService
