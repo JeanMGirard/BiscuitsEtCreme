@@ -1,6 +1,6 @@
 @import '../../../_variables.less';
 #row-1 {
-    padding-top: 30px;
+    padding-top: 50px;
 } 
 #row-1>div {
     padding-top: 70px;
@@ -52,5 +52,14 @@
         padding-left: 2px;
         padding-right: 2px;
         font-size: 0.9em;
+    }
+}
+#row-1{
+    @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
+
+        #coordonnes{
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
     }
 }

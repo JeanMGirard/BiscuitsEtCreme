@@ -6,6 +6,7 @@
     "config": "ts-node ./scripts/load_env.ts",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod-cross-domains": "ng build --prod --base-href / --output-path dist/production-cross-domains",
     "build:prod": "ng build --prod --base-href https://biscuitsetcreme.ca/ --deploy-url https://biscuitsetcreme.ca/ --output-path dist/production",
     "build:fire": "ng build --prod --base-href https://biscuitsetcreme.web.app/ --deploy-url https://biscuitsetcreme.web.app/ --output-path dist/firebase",
     "build:gh": "ng build --prod --base-href https://dev.biscuitsetcreme.ca/ --deploy-url https://dev.biscuitsetcreme.ca/ --output-path dist/gh-pages",
