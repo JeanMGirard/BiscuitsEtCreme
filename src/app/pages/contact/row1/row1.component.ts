@@ -35,7 +35,9 @@ export class Row1Component implements OnInit {
     this.address2 = this.contacts.getAddressLine2(); 
   }
   private getGoogleInfo(){
-    this.embedded = this.maps.getUnsanitizedEmbedUrl();
+    if(!this.embedded){
+      this.embedded = this.maps.getUnsanitizedEmbedUrl();
+    }
   }
 
 }
