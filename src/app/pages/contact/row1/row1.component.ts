@@ -21,11 +21,13 @@ export class Row1Component implements OnInit {
     public sanitizer: DomSanitizer,
     private contacts: ContactService,
     private maps: MapService
-    ) { }
+    ) { 
+      this.getContactInfos();
+      this.getGoogleInfo();
+  }
 
   ngOnInit() {
-    this.getContactInfos();
-    this.getGoogleInfo();
+    
   }
 
   private getContactInfos(){
