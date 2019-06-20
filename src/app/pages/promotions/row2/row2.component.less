@@ -32,23 +32,68 @@
     font-weight: bold;
 }
 
-#promo-r2 .promo-group{
-    overflow: hidden;
-    padding: 2px;
+#promo-r2{
+    .promo-group{
+        overflow: hidden;
+        padding: 2px;
 
-    position: relative;
-    text-align: center;
-    color: white;
-    cursor: pointer;
-    /*
-    @media (max-width: @sizes-media-min[sm]) {
-        padding-top: 20px;
+        position: relative;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+        /*
+        @media (max-width: @sizes-media-min[sm]) {
+            padding-top: 20px;
+        }
+        */
+        h4{
+            font-size: 22px;
+            font-weight: normal;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-shadow: 0 0 20px rgba(0,0,0,1) , 0 0 2px rgba(0,0,0,1) ;
+            line-height: 1.5;
+            width: 100%;
+            margin-bottom: 0;
+            padding-bottom: 0.5rem;
+            margin-block-start: 0;
+            line-height: 1;
+            @media (max-width: @sizes-media-max[sm]){
+                font-size: 28px;
+            }
+            @media (min-width: @sizes-media-min[lg]){
+                font-size: 30px;
+            }
+            
+        }
+
+        @media (min-width: @sizes-media-min[md]){
+            flex: 0 0 20%;
+            max-width: 20%;
+            width: 20%;
+        }
     }
-    */
-    @media (min-width: @sizes-media-min[md]){
-        flex: 0 0 20%;
-        max-width: 20%;
-        width: 20%;
+    @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
+        background: rgb(110,110,110);
+        padding-bottom: 7px;
+        div:not(.promo-group){
+            border: none !important;
+        }
+        #promo-title h3{
+            color: whitesmoke;
+        }
+        .promo-group{
+            height: 120px;
+            opacity:0.9;
+            h4{
+                top: 50%;
+                text-shadow: 0 0 6px rgba(0,0,0,1) , 0 0 2px rgba(0,0,0,1) ;
+                // color:black;
+            }
+
+        }
     }
     
 }/*
@@ -62,28 +107,7 @@
         padding-top: 15px;
     }
 }*/
-#promo-r2 .promo-group h4{
-    font-size: 22px;
-    font-weight: normal;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-shadow: 0 0 20px rgba(0,0,0,1) , 0 0 2px rgba(0,0,0,1) ;
-    line-height: 1.5;
-    width: 100%;
-    margin-bottom: 0;
-    padding-bottom: 0.5rem;
-    margin-block-start: 0;
-    line-height: 1;
-    @media (max-width: @sizes-media-max[sm]){
-        font-size: 28px;
-    }
-    @media (min-width: @sizes-media-min[lg]){
-        font-size: 30px;
-    }
-    
-}
+
 #promo-r2 .promo-group br{
     @media (max-width: @sizes-media-min[sm]){
         display: none;

@@ -4,12 +4,19 @@
 
 @a: 100vh;
 @b: ((@content-padding - (@header-max - @header-min)) + @content-padding) / 2;
+@c: ((@content-padding - (@header-max-mobile - @header-min-mobile)) + @content-padding) / 2;
 
 app-parallax1{
    display: block;
    height: ~"calc(@{a} - @{b}) !important";
 }
 
+@media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
+    app-parallax1{
+
+        height: ~"calc(@{a} - @{c}) !important";
+     }
+}
 .parallax { 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;

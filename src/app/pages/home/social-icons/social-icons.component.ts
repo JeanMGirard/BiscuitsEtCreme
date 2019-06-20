@@ -20,8 +20,7 @@ export class SocialIconsComponent implements OnInit {
     this.socials = this.socialSecive.getAll();
 
     $(document).ready(()=>{
-      $('#home-social-icons').css('opacity', '1');
-      $('#home-social-icons').css('margin-top', '-150px');
+      $('#home-social-icons').addClass('loaded');
     });
   }
 

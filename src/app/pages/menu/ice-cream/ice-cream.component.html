@@ -2,27 +2,26 @@
     <div class="col-md-12 col-sm-12 banner">
         <h3 class="shadow-white">Crèmes glacées...</h3>
     </div>
+
+
     <div id="pub-molle" class="col-6 defaults" style="z-index: 100;">
-        <h3 class="shadow-white">Molles</h3>
+        <h4 class="shadow-white">Molles</h4>
         <p class="shadow-white">vanille / chocolat</p>
     </div>
     <div id="pub-dure"  class="col-6 defaults" style="z-index: 100;">
-        <h3 class="shadow-white">Dures</h3>
-        <!--img  src="/assets/img/menu-products/cornet-dure-200.png"--> 
-        <!--div class="button-row">
-            <button mat-raised-button color="primary">Saveurs</button>
-        </div-->
+        <h4 class="shadow-white">Dures</h4>
     </div>
-    <div id="molle-fruits" class="col-md-12 col-sm-12 defaults" style="z-index: 50;">
-        <h3 class="shadow-white" style="margin-top:250px;">Aux fruits!</h3>
+    <div id="pub-fruits" class="col-md-12 col-sm-12 defaults" style="z-index: 50;">
+        <h4 class="shadow-white">Aux fruits!</h4>
         <img src="/assets/img/menu-products/cornets2-800.png" id="cornets-img">
         <div class="button-row" style="bottom: 60px;">
             <button mat-raised-button color="primary" (click)="openIceCreams()">Voir toutes les saveurs</button>
         </div>
     </div>
 
+
     <div id="pub-enrobages" class="l col-md-6 col-sm-12 sm-bg-secondary row-effect" 
-        matTooltip="Cliquez pour découvrir les saveurs disponibles" matTooltipPosition="below"
+        nomatTooltip="Cliquez pour découvrir les saveurs disponibles" nomatTooltipPosition="below"
         (click)="openEnrobages()">
         <h3>Enrobages</h3>
         <img src="/assets/img/menu-products/trempage-enrobages-320.png" style="top: 0; left:0; opacity:0.9;">
@@ -33,28 +32,28 @@
         </div-->
     </div>
     <div id="pub-trempages" class="r col-md-6 col-sm-12 sm-bg-primary  row-effect" 
-        matTooltip="Cliquez pour découvrir les saveurs disponibles" matTooltipPosition="below"
+        nomatTooltip="Cliquez pour découvrir les saveurs disponibles" nomatTooltipPosition="below"
         (click)="openTrempages()">
         <h3>Trempages</h3>
         <img src="/assets/img/menu-products/trempage-choco-320.png" style="top: 0; margin-left:35%;">
     </div>
 
 
-    <div id="pub-barbotines" class="m col-md-12 col-sm-12">
+    <div id="pub-barbotines" class="m col-md-12 col-12">
         <div class="row justify-content-center">
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-6">
                 <h3>Slush</h3>
                 <img src="/assets/img/menu-products/brb-slush-150.png">
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-6">
                 <h3>Montblancs</h3>
                 <img src="/assets/img/menu-products/brb-montblanc-150.png">
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-6">
                 <h3>Mousselines</h3>
                 <img src="/assets/img/menu-products/brb-mousseline-150.png">
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-3 col-6">
                 <h3>Explosions</h3>
                 <img src="/assets/img/menu-products/brb-explosions-150.png">
             </div>
@@ -66,8 +65,8 @@
     </div>
 
     <div id="pub-yogourts" class="l col-md-6 col-sm-12 sm-bg-primary  row-effect" 
-        matTooltip="Cliquez pour découvrir les saveurs disponibles" matTooltipPosition="below"
-        matTooltipShowDelay="1500"
+        nomatTooltip="Cliquez pour découvrir les saveurs disponibles" nomatTooltipPosition="below"
+        nomatTooltipShowDelay="1500"
         (click)="openYogourts()">
         <h3>Yogourts glacés</h3>
         <img src="/assets/img/menu-products/yogourt-glace.png" style="top: -30px; margin-left:-50%;">
@@ -76,8 +75,8 @@
         </div-->
     </div>
     <div id="pub-tourbillons" class="r col-md-6 col-sm-12 sm-bg-secondary  row-effect" 
-        matTooltip="Cliquez pour découvrir les saveurs disponibles" matTooltipPosition="below"
-        matTooltipShowDelay="1500"
+        nomatTooltip="Cliquez pour découvrir les saveurs disponibles" nomatTooltipPosition="below"
+        nomatTooltipShowDelay="1500"
         (click)="openTourbillons()">
         <h3>Tourbillons</h3>
         <img src="/assets/img/menu-products/tourbillons.png" style="top: 50px; margin-left: -7%;">
@@ -153,20 +152,23 @@
     </div>
 
     
-    <div id="pub-milkshakes" class="l col-md-6 col-sm-12 sm-bg-secondary row-effect"  style="max-height: 300px;" 
-        matTooltip="Cliquez pour découvrir les saveurs disponibles" matTooltipPosition="below"
-        matTooltipShowDelay="1500"
+    <div id="pub-milkshakes" class="l col-md-6 col-sm-12 sm-bg-secondary row-effect"
+        nomatTooltip="Cliquez pour découvrir les saveurs disponibles" 
+        nomatTooltipPosition="below"
+        nomatTooltipShowDelay="1500"
         (click)="openMilkshakes()">
-        <h3 style="z-index: 1;position: relative;">Milkshakes</h3>
-        <img src="/assets/img/menu-products/milkshake-400.png"  style="margin-top: -70px;">
+        <h3>Milkshakes</h3>
+        <img src="/assets/img/menu-products/milkshake-400.png">
     </div>
     <div id="pub-smoothies" class="r col-md-6 col-sm-12 sm-bg-secondary row-effect" 
-        matTooltip="Cliquez pour découvrir les saveurs disponibles" matTooltipPosition="below"
-        matTooltipShowDelay="1500"
+        nomatTooltip="Cliquez pour découvrir les saveurs disponibles" 
+        nomatTooltipPosition="below"
+        nomatTooltipShowDelay="1500"
         (click)="openSmoothies()">
-        <h3 style="z-index: 1;position: relative;">Smoothies</h3>
-        <img src="/assets/img/menu-products/smoothie-300.png" style="position: absolute; bottom: -25px; left: 20%;">
+        <h3>Smoothies</h3>
+        <img src="/assets/img/menu-products/smoothie-300.png">
     </div>
+
     <div class="col-12" style="height: 100px;">
 
     </div>

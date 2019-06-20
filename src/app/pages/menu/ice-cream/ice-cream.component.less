@@ -1,14 +1,15 @@
 @import "../../../_variables.less";
-.submenu>div.defaults{
-    //min-height: 250px;
-    //border: 1px solid black;
-    padding-top: 15px;
-    text-align: center;
+.row-effect{    overflow: hidden; }
+.shadow-white{    text-shadow: 0 0 4px rgba(255,255,255,0.62) ;}
+
+#menu-icecream{
+    div h3{
+        font-family: "Lobster";
+        font-size: 40px;
+    }
+    div.done{   border: none !important;   }
 }
-.submenu>div h3{
-    font-family: "Lobster";
-    font-size: 40px;
-}
+
 #cornets-img{
     @media (min-width: 1000px) {
         width: 80%;
@@ -21,156 +22,113 @@
         margin-top:-60px;
     }
 }
-.submenu>div#pub-molle p{
-    font-size: 24px;
-    @media (min-width: 1400px) {
-        font-size: 30px;
-    }
-}
 
-.submenu>div.banner h3{
-    font-family: "Lobster";
-    font-size: 60px;
-    @media (min-width: 1400px) {
-        font-size: 70px;
-    }
 
-}
-
-.shadow-white{
-    text-shadow: 0 0 4px rgba(255,255,255,0.62) ;
-}
-#molle-fruits{
+#pub-fruits{
     min-height: 250px;
     margin-top: -300px;
     z-index:50;
     overflow: hidden;
+
+    h4{
+        margin-top:250px;
+    }
+    
     @media (min-width: 1600px) {
         min-height: 800px;
         height: 80vh;
     }
 }
-#pub-molle h3,
-#pub-molle p{
-    padding-right: 100px;
-}
-#pub-dure h3{
-    padding-left: 100px;
-}
-#molle-fruits h3{
-    z-index: 1;
-    position: relative;
-}
-
-.submenu>div.done{
-    border: none !important;
-}
-.row-effect{
-    overflow: hidden;
-}
-.row-effect button{
-}
-#pub-trempages{
-    text-align: left;
-    padding-left: 70px;
-}
-#pub-enrobages{
-    text-align: right;
-    padding-right: 70px;
-}
-#pub-trempages,
-#pub-enrobages{
-    height: 220px;
-}
-#pub-trempages h3,
-#pub-enrobages h3,
-#pub-trempages .button-row,
-#pub-enrobages .button-row{
-    padding-top: 60px;
-}
-#pub-trempages img,
-#pub-enrobages img{
-    position: absolute;
-    top: 0;
-    z-index: 1;
-}
-
-#pub-tourbillons,
-#pub-yogourts{
-    height: 320px;
-}
-#pub-tourbillons img,
-#pub-yogourts img{
-    position: absolute;
-    top: 0;
-    z-index: 1;
-}
-
-#pub-barbotines{
-    min-height: 700px;
-    padding-top: 140px;
-    text-align: center;
-    @media (min-width: @sizes-media-min[md]) {
-
+#pub-molle{
+    p{  font-size: 24px;
+        @media (min-width: 1400px) {
+            font-size: 30px;
+        }
     }
 }
-#pub-barbotines .button-row{
-    bottom: 160px;
+
+
+#menu-icecream{
+    .banner h3{
+        font-family: "Lobster";
+        font-size: 60px;
+        transform: translateY(-10px);
+    }
+    
+
+    #pub-molle,
+    #pub-dure,
+    #pub-fruits{
+        padding-top: 15px;
+        text-align: center;
+        
+        h4{
+            z-index: 1;
+            position: relative;
+            font-family: "Lobster";
+            font-size: 40px;
+        }
+    }
+    @media  (min-width: @sizes-media-min[md]){
+        #pub-dure{ 
+            h4{ padding-left: 100px; }
+        }
+        #pub-molle{
+            h4, p{  padding-right: 100px;   }
+        }
+    }
+    @media  (max-width: @sizes-media-max[sm]){
+        .banner{
+            height: 70px;
+            padding: 0 !important;
+            h3{
+                -webkit-transform: scaleX(0.7) scaleY(0.7) translateY(-20px);
+                transform: scaleX(0.7) scaleY(0.7) translateY(-20px);
+            }
+        }
+        #pub-molle, #pub-dure, #pub-fruits{
+            min-width: 100%;
+            width: 100%;
+            padding-top: 10px;
+            h4, p{
+                -webkit-transform: scaleX(0.9) scaleY(0.9);
+                transform: scaleX(0.9) scaleY(0.9);
+                position: relative;
+                left:0;
+            }
+        }
+        #pub-fruits h4{
+            margin-top:330px;
+            z-index: 1000;
+        }
+        
+    }
 }
-#pub-barbotines h3{
-    padding-bottom: 20px;
-}
 
 
 
-#icecream-carousel{
-    height: 800px;
-}
-#icecream-carousel div{
-
-}
 
 
-.carousel-item{
-    padding-top: 40px;
-}
-.carousel-item .carousel-caption{
+
+
+#pub-barbotines {
+    padding-top: 80px;
+    min-height: 700px;
     text-align: center;
-    left: 0;
-    right: 0;
-    bottom: 70px;
-}
-.carousel-item .carousel-caption p, 
-.carousel-item .carousel-caption h3{
-    font-weight: bold;
-}
-.carousel-item .carousel-caption p{
-    color: rgb(0,0,0);
-    font-family: "Montserrat";
-    font-size: 21px;
-    text-shadow: -1px -1px 0 rgba(255,255,255,0.6), 0 0 4px rgba(255,255,255,0.4);
-}
-.carousel-item .carousel-caption h3{
-    color: rgb(60,60,60);
-    text-shadow: -1px -1px 0 rgba(255,255,255,0.6), 0 0 4px rgba(255,255,255,0.4) , 0 0 20px rgba(255,255,255, 0.8) ;
-    font-family: "Fredericka the Great";
-    font-size: 34px;
-}
 
+    .button-row{ bottom: 160px; }
+    h3{ padding-bottom: 20px;   }
 
-.carousel-control-prev-icon,.carousel-control-next-icon {
-  height: 100px;
-  width: 100px;
-  background-image: none;
+    @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
+        padding-top: 40px;
+        div{ max-height:250px;  }
+        div.button-row{  bottom: 80px;  }
+        img{  margin-top:-35px;  }
+        img, h3{ -webkit-transform: scaleX(0.7) scaleY(0.7);
+                transform: scaleX(0.7) scaleY(0.7);
+        }
+    }
 }
-.carousel-control-next-icon:after,
-.carousel-control-prev-icon:after {
-    font-size: 55px;
-    font-weight: bold;
-    color: rgb(60,60,60);
-}
-.carousel-control-next-icon:after { content: '>'; }
-.carousel-control-prev-icon:after { content: '<'; }
 
 
 @transit-pub: transform 350ms cubic-bezier(0.42, 0, 0.58, 1) 10ms, z-index 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 10ms;
@@ -183,14 +141,134 @@
     -o-transition: @transit-pub;
     transition: @transit-pub;
 
+    &:hover{
+        -webkit-transform: scaleX(1.1) scaleY(1.1);
+        transform: scaleX(1.1) scaleY(1.1);
+        z-index: 1000;
+        -webkit-transition: @transit-pub;
+        -moz-transition: @transit-pub;
+        -o-transition: @transit-pub;
+        transition: @transit-pub;
+    }
 }
-#pub-enrobages:hover,#pub-trempages:hover,#pub-yogourts:hover,
-#pub-tourbillons:hover,#pub-milkshakes:hover,#pub-smoothies:hover{
-    -webkit-transform: scaleX(1.1) scaleY(1.1);
-    transform: scaleX(1.1) scaleY(1.1);
-    z-index: 1000;
-    -webkit-transition: @transit-pub;
-    -moz-transition: @transit-pub;
-    -o-transition: @transit-pub;
-    transition: @transit-pub;
+
+#pub-trempages,
+#pub-enrobages{
+    text-align: right;
+    padding-right: 70px;
+    height: 220px;
+    h3, .button-row{
+        padding-top: 60px;
+    }
+    img{
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+    @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
+        height: 160px;
+    }
 }
+#pub-trempages{
+    text-align: left;
+    padding-left: 70px;
+    @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
+        padding-right: 120px;
+        // img{ margin-left: 0 !important; }
+    }
+}
+
+#pub-tourbillons,
+#pub-yogourts{
+    height: 320px;
+    h3{ position: relative;
+        z-index: 100;
+    }
+    img{
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+    @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
+        height: 200px;
+    }
+}
+@media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
+    #pub-yogourts img{ top: -70px !important; }
+    #pub-tourbillons img{  top: -50px !important;  margin-left: 15px !important;}
+}
+
+#pub-milkshakes,
+#pub-smoothies {
+    height: 280px;
+    h3{
+        z-index: 1;
+        position: relative;
+    }
+    img{
+        max-height: 300px;
+    }
+    @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
+        height: 200px;
+    }
+}
+#pub-smoothies img{    
+    position: absolute; 
+    bottom: -25px; 
+    left: 20%;
+}
+#pub-milkshakes img{
+    margin-top: -70px;
+}
+
+
+
+
+#icecream-carousel{
+    height: 800px;
+    .carousel-item{
+        padding-top: 40px;
+    }
+    .carousel-item .carousel-caption{
+        text-align: center;
+        left: 0;
+        right: 0;
+        bottom: 70px;
+    }
+    .carousel-item .carousel-caption p, 
+    .carousel-item .carousel-caption h3{
+        font-weight: bold;
+    }
+    .carousel-item .carousel-caption p{
+        color: rgb(0,0,0);
+        font-family: "Montserrat";
+        font-size: 21px;
+        text-shadow: -1px -1px 0 rgba(255,255,255,0.6), 0 0 4px rgba(255,255,255,0.4);
+    }
+    .carousel-item .carousel-caption h3{
+        color: rgb(60,60,60);
+        text-shadow: -1px -1px 0 rgba(255,255,255,0.6), 0 0 4px rgba(255,255,255,0.4) , 0 0 20px rgba(255,255,255, 0.8) ;
+        font-family: "Fredericka the Great";
+        font-size: 34px;
+    }
+    
+    
+    .carousel-control-prev-icon,.carousel-control-next-icon {
+      height: 100px;
+      width: 100px;
+      background-image: none;
+    }
+    .carousel-control-next-icon:after,
+    .carousel-control-prev-icon:after {
+        font-size: 55px;
+        font-weight: bold;
+        color: rgb(60,60,60);
+    }
+    .carousel-control-next-icon:after { content: '>'; }
+    .carousel-control-prev-icon:after { content: '<'; }
+}
+
+
+
+
+

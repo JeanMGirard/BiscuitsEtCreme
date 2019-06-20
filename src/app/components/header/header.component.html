@@ -1,6 +1,7 @@
 <header>
-  <div class="logo" style="pointer-events: none;">
-      <img id="nav-logo" src="/assets/img/logo/logo-title-154.png" alt="" />
+  <div id="default-logo" class="logo" style="pointer-events: none;">
+      <img id="nav-logo"    class="pc-only" src="/assets/img/logo/logo-title-154.png" alt="" />
+      <img id="nav-logo-txt" class="mobile-only" src="/assets/img/logo/logo-txt-only-154.png" alt="" />
   </div>
 
   <div id="lang-select">
@@ -9,24 +10,102 @@
     </span>
   </div>
 
+
   <ul class="nav justify-content-center">
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/" routerLinkActive="active">Accueuil</a>
+    <li class="nav-item pc-only">
+      <a class="nav-link" routerLink="/">
+        Accueuil
+      </a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/info" routerLinkActive="active">À propos</a>
+
+    <li class="nav-item pc-only">
+      <a class="nav-link" routerLink="/info" 
+      routerLinkActive="no-active" [routerLinkActiveOptions]="{exact:true}">
+        À propos
+      </a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/promo" routerLinkActive="active">Promotions</a>
+    <li class="nav-item pc-only">
+      <a class="nav-link" routerLink="/promo" routerLinkActive="no-active" 
+      [routerLinkActiveOptions]="{exact:true}">
+        Promotions
+      </a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/menu" routerLinkActive="active">Menu</a>
+    <li class="nav-item pc-only">
+      <a class="nav-link" routerLink="/menu" routerLinkActive="no-active" 
+      [routerLinkActiveOptions]="{exact:true}">
+        Menu
+      </a>
     </li>
     
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/contact" routerLinkActive="active">Nous contacter</a>
+    <li class="nav-item pc-only">
+      <a class="nav-link" routerLink="/contact" routerLinkActive="no-active" 
+      [routerLinkActiveOptions]="{exact:true}">
+        Nous contacter
+      </a>
     </li>
+    <ul class="subnav mobile-only">
+        <li class="subnav-item" style="min-width:70px;padding:3px;">
+          <a class="nav-link" routerLink="/">
+            <i class="material-icons">home</i>
+          </a>
+        </li>
+    
+        <li class="subnav-item">
+          <a class="nav-link" routerLink="/info" 
+          routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            À propos
+          </a>
+        </li>
+        <li class="subnav-item">
+          <a class="nav-link" routerLink="/promo" routerLinkActive="active" 
+          [routerLinkActiveOptions]="{exact:true}">
+            Promotions
+          </a>
+        </li>
+        <li class="subnav-item">
+          <a class="nav-link" routerLink="/menu" routerLinkActive="no-active" 
+          [routerLinkActiveOptions]="{exact:true}">
+            Menu
+          </a>
+        </li>
+        
+        <li class="subnav-item">
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active" 
+          [routerLinkActiveOptions]="{exact:true}">
+            Contacter
+          </a>
+        </li>
+      </ul>
   </ul>
+  
+
+  <!--ul class="nav mobile-only">
+      
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/"><i class="material-icons">home</i></a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link"  routerLink="/info">
+            <i class="material-icons">info</i>
+          </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  routerLink="/promo">
+          <i class="material-icons">attach_money</i>
+          <i class="material-icons">monetization_on</i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  routerLink="/menu">
+          <i class="material-icons">menu</i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  routerLink="/contact">
+          <i class="material-icons">menu</i>
+        </a>
+      </li>
+    </ul-->
 
 
 </header>

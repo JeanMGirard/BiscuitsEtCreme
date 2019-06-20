@@ -13,7 +13,8 @@ const routes: Routes = [
   { path: 'menu', loadChildren:  () => import('./pages/menu/menu.module').then(mod => mod.MenuModule)
   },
   { path: 'promo', loadChildren:  () => import('./pages/promotions/promotions.module').then(mod => mod.PromotionsModule)
-  }
+  },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

@@ -40,4 +40,12 @@
 #footer #social-icons img:hover{
     opacity: 1;
 }
-
+#footer {
+    
+    @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
+        height: 40px;
+        div{
+            display: none !important;
+        }
+    }
+}

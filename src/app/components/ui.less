@@ -1,1 +1,17 @@
+@import '../_variables.less';
 @import './ui.effects.less';
+
+
+.mobile-only{
+    @media (min-width: @sizes-media-min[md]){
+        display: none !important;
+    } 
+    @media (orientation: landscape) {
+        display: none !important;
+    }
+}
+.pc-only{
+    @media (max-width: @sizes-media-max[sm]) and (orientation: portrait){
+        display: none !important;
+    } 
+}

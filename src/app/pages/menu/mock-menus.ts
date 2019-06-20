@@ -21,8 +21,8 @@ export const MENUS: Menu[] = [
         tileImage: 'assets/img/menu-bg/menu-icecream-tile-200.jpg'
     }, {
         name: 'autre-produits',
-        title: 'Autres spécialitées',
         elem: 'app-other-products',
+        title: 'Autres spécialitées',
         linkImgUrl: 'assets/img/menu-bg/menu-other-bg-600.jpg',
         
         tileTitle: 'spécialitées',

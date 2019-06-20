@@ -1,13 +1,23 @@
 @import "../../_variables.less";
 
+@header-menu: @header-min;
+@header-menu-mobile: @header-min;
+
 #menu-home{
     position: fixed;
+    top: 0;
     bottom: 0;
     left:0;
     width: 100vw;
-    height: ~"calc(100vh - @{header-min})";
+    height: ~"calc(100vh - @{header-menu})";
+    margin-top: @header-menu;
     background: white;
     z-index: 10000;
+
+    @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
+        height: ~"calc(100vh - @{header-menu-mobile})";
+        margin-top: @header-menu-mobile;
+    }
 }
 #menu-home>button{
     position: absolute;
@@ -32,15 +42,17 @@
     background-repeat: no-repeat;
     background-size: auto 100%;
     cursor: pointer;
-    opacity: 0.9;
+    opacity: 0.8;
     border: 2px solid lightgray;
     text-align: center;
-    @media (min-width: @sizes-media-min[md]) {
-        padding-top: 40vh;
-        opacity: 0.8;
-    }
-    @media (max-width: @sizes-media-max[sm]) {
+    padding-top: 40vh;
+
+    @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
         background-size: 100% auto;
+        width: 100% !important;
+        height: ~"calc(33.4vh - (@{header-menu-mobile})/3)" !important;
+        padding-top: 0.5vh;
+        opacity: 0.9;
     }
 }
 .open-menu:hover{
@@ -69,4 +81,6 @@
     @media (max-width: @sizes-media-max[sm]) {
         margin-top: 10vh;
     }
+
 }
+
