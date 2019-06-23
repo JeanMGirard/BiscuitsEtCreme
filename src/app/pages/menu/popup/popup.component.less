@@ -4,9 +4,7 @@
 
 :host{
 
-    @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
-        width: 90vw !important;
-    }
+    
     /* ITEMS OUTER CONTAINER */
     h1{
         position: absolute;
@@ -59,7 +57,7 @@
         mat-grid-tile{
             font-family: "Montserrat";
             font-size: 24px;
-
+            white-space: nowrap;
 
             h4{
                 text-align: center;
@@ -74,6 +72,12 @@
         }
 
         @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
+            max-height: 55vh;
+            margin-top: 80px;
+            margin-bottom: 50px;
+            overflow-y: auto;
+            padding-left: 10px;
+            padding-right: 10px;
 
             mat-list{
               /*  -webkit-column-count: 1!important;
@@ -94,5 +98,7 @@
         }
     }
     
-    
+    @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
+        width: 92vw !important;
+    }
 }
