@@ -1,13 +1,23 @@
 @import "../../../_variables.less";
-.submenu{
-    #cookie-banner h2{
-        font-family: "Lobster";
-        font-size: 60px;
+// Parrallax *******
+.parralax{
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255,255,255,0.1);
+    img{
+        min-height: 100%;
+        min-width: 100%;
     }
-    div.submenu{
-        height: 600px;
-        margin-bottom: 40px;
-    }
+}
+
+#pub-pab-kinds{
+// TITLE *******
+    z-index: 100;
+    width: 100%;
+    background: white;
+    padding-bottom: 20vh;
 
     h2 {
         width: 100%;
@@ -17,111 +27,189 @@
         left: 0;
     }
 
-    @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
-        #cookie-banner {
-            padding-bottom: 40px;
+    #cookie-banner{
+        height: 200px;
+
+        h2{
+            font-family: "Lobster";
+            font-size: 60px;
+            top: 60px;
+        }
+        @media (max-width: @sizes-media-max[sm]){
+            h2{ top: 30px;  }
+        }
+    }
+    @media (max-width: 600px) {
+        padding-bottom: 100px;
+    }
+
+
+// RONDELLES PAB *******
+
+    div.pab-kind{
+        min-height: 220px;
+        position: relative;
+
+        .bottom { 
+            @media (min-width: @sizes-media-min[md]) {
+                margin-top: -70px;
+            }
+        }
+        h3{
+            color: rgb(70, 70, 70);
         }
     }
 }
 
 
-div.pab-kind{
-    min-height: 220px;
-    position: relative;
-}
-div.pab-kind.bottom { 
-    @media (min-width: @sizes-media-min[md]) {
-        margin-top: -70px;
+// COMBOS PAB *******
+.submenu{
+    #pub-combos{
+        z-index: 15;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        background-color: #2b51fd;
+        color: white;
+        border: 2px solid black;
+
+        @media (max-width: 600px) {
+            margin-top: 0px;
+        }
     }
-}
-div.pab-kind h3{
-    color: rgb(70, 70, 70);
-}
-/*
-div.pab-kind{
-    height: 220px;
-}
-div.pab-kind h3{
-    margin-top: 35px;
-}
-div.pab-kind img{
-    position: absolute;
-    top: 10px;
-    height: 200px;
-    width: 200px;
+    .pub-combo{
+        z-index: 14;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: rgb(245, 245, 245);
+        border-bottom: 3px solid rgb(70,70,70);
+        box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.4);
+
+        &.left{
+            z-index: 15;
+            box-shadow: -4px 10px 10px 1px rgba(0, 0, 0, 0.4);
+        }
+
+        img{
+            margin-top: 10px;
+            @media (max-width: 600px) {
+                width: 400px;
+            }
+        }
+    }
 }
 
-div.pab-kind.top        {  }
-div.pab-kind.top img    { bottom: 10px; }
-div.pab-kind.bottom     { bottom: 0;}
-div.pab-kind.bottom img { top: 10px; }
-div.pab-kind.left       { text-align: right; }
-div.pab-kind.left img   { right: 10px; }
-div.pab-kind.left h3    { padding-right: 200px; }
-div.pab-kind.right      { text-align: left; }
-div.pab-kind.right img  { left: 10px; }
-div.pab-kind.right h3   { padding-left: 200px; }
 
-#pub-combos{
-    margin-top: 30px;
-    @media (min-width: @sizes-media-min[md]) {
-        margin-top: 100px;
+// TARTES PAB *******
+.submenu{
+    #pub-tartes{
+        padding: 0;
+        //text-align: right;
+        overflow: hidden;
+        z-index: 10;
+        padding-bottom: 20px;
+        border-bottom: 3px ridge rgb(120,120,120);
+        -webkit-box-shadow: 0 8px 20px 8px rgba(0,0,0,0.5) ;
+        box-shadow: 0 8px 20px 8px rgba(0,0,0,0.5) ;
+
+        img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        #info-tartes{
+            min-height: 600px;
+            padding-top: 130px;
+            padding-left: 6vw;
+            padding-right: 6vw;
+            width: 50%;
+            float: right;
+            @media (max-width: @sizes-media-max[sm]) {
+                margin-top: 24vw;
+                width: 100%;
+                padding-bottom: 50px;
+                min-height: 0px;
+            }
+            h3{
+                font-weight: bold;
+                font-size: 48px;
+                text-decoration: underline;
+            }
+            p{
+                font-family: "Montserrat";
+                font-size: 22px;
+
+            }
+        }
+    }
+
+    #pub-tartes{        background: rgb(246,239,229);  }
+    .submenu-lastrow{  
+        border-top: 2px solid rgb(210,210,210);
+        background: rgb(250,245,235);  
     }
 }
-*/
-#pub-combos{
-    margin-top: 20vh;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    background-color: #2b51fd;
-    color: white;
-    border: 2px solid black;
-}
-.submenu .pub-combo{
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: rgb(245, 245, 245);
-    border-bottom: 3px solid rgb(70,70,70);
-    box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.4);
-}
-.submenu div.pub-combo.left{
-    z-index: 10;
-    box-shadow: -4px 10px 10px 1px rgba(0, 0, 0, 0.4);
-}
-#pub-combos img{
-    margin-top: 10px;
-    @media (max-width: 600px) {
-        width: 400px;
-    }
-}
-#pub-tartes{
-    z-index: -1;
-    padding: 0;
-    //text-align: right;
+
+
+#pub-autres{
+    margin-top: 270px;
     overflow: hidden;
-}
+    border-top: 1px solid black;
+    background: rgba(255,255,255,1);
+    text-align: center;
+    min-height: 300px;
+    z-index: 1;
+    padding-left: 0;
+    -webkit-box-shadow: 0 3px 8px 8px rgba(0,0,0,0.2) inset, 0 -8px 20px 8px rgba(0,0,0,0.5) ;
+    box-shadow: 0 3px 8px 8px rgba(0,0,0,0.2) inset, 0 -8px 20px 8px rgba(0,0,0,0.5) ;
+    
+    
+    img{
+        width: 35%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        border: 4px ridge rgb(180,180,180);
+    }
 
-#pub-tartes img {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-#info-tartes{
-    min-height: 600px;
-    padding-top: 130px;
-    padding-left: 6vw;
-    padding-right: 6vw;
-    padding-bottom: 200px;
-    width: 50%;
-    float: right;
-    @media (max-width: @sizes-media-max[sm]) {
+    div:first-of-type{
+        
+        margin-bottom: 20px;
+        margin-top: 80px;
+        width: 50%;
+        float: right;
+        margin-right: 5%;
+        h3{
+            text-align: center;
+            font-size: 40px;
+        }
+        p{
+            font-family: "Montserrat";
+            font-weight: normal;
+            font-size: 22px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    div:last-of-type{
         width: 100%;
     }
-}
-#info-tartes h3{
-    font-weight: bold;
-    font-size: 48px;
-    text-decoration: underline;
+
+
+    @media (max-width: 850px){
+        img{
+            width: 70%;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-right: 0;
+        }
+        div:first-of-type{
+            width: 60%;
+            margin-right: 20%;
+            margin-top: 30px;
+        }
+        div:last-of-type{
+
+        }
+    }
 }

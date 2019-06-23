@@ -12,12 +12,13 @@ import { SubMenuComponent } from './sub-menu/sub-menu.component';
 
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatTableModule } from '@angular/material/table';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 import { PopupComponent } from './popup/popup.component';
-import { MenuService } from './menu.service';
 
-import { HeaderService } from '../../components/header/header.service';
-import { FooterService } from '../../components/footer/footer.service';
 
 @NgModule({
   declarations: [
@@ -31,9 +32,13 @@ import { FooterService } from '../../components/footer/footer.service';
   imports: [
     CommonModule,
     MenuRoutingModule,
+    ScrollingModule,
     MatButtonModule,
     MatDialogModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatListModule,
+    MatTableModule,
+    MatGridListModule
   ],
   entryComponents:[
     PopupComponent

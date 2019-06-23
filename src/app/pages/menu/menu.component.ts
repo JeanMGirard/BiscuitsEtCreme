@@ -6,12 +6,15 @@ import { Observable } from 'rxjs';
 
 import { FooterService } from '../../components/footer/footer.service';
 
+import { ProductService } from '../../modules/products/product.service';
+import { Product } from '../../modules/products/product';
+import { PRODUCTS } from '../../modules/products/mock-products';
+
 import { MenuService } from './menu.service';
 import { Menu } from './menu';
 
 declare var $: any;
 import CircleType from 'circletype';
-
 
 
 @Component({
@@ -28,10 +31,16 @@ export class MenuComponent implements OnInit, OnDestroy {
     private service: MenuService,
     private router: Router,
     private route: ActivatedRoute,
-    private footer: FooterService
+    private footer: FooterService,
+    private products: ProductService
   ) { }
 
   ngOnInit(): void {
+    //this.resetProducts();
+
+
+
+    
     this.service.onArriveMenuHome();
     this.menus$ = this.route.paramMap.pipe(
       switchMap(params => {
@@ -49,5 +58,8 @@ export class MenuComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy(): void {
     this.service.onQuitMenuHome();
+  }
+  private resetProducts(): void{
+    this.products.setProducts(PRODUCTS);
   }
 }

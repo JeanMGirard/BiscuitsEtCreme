@@ -45,10 +45,10 @@ export class FooterComponent implements OnInit {
     }
   }
   getAddress(): void {
-    this.address1 = this.contacts.getAddressLine1();
-    this.address2 = this.contacts.getAddressLine2();
-    this.phone = this.contacts.getPhone();
-    this.email = this.contacts.getEmail();
+    this.address1 = this.contacts.addressLine1;
+    this.address2 = this.contacts.addressLine2;
+    this.phone = this.contacts.phone;
+    this.email = this.contacts.email;
   }
   getSocialLinks(): void{
     this.links = this.socials.getAll();

@@ -18,6 +18,9 @@ function getText(isProd: boolean): string{
   return `
 export const environment = {
   production: ${isProd},
+  api: {
+    live: ${process.env.API_LIVE}
+  },
   google: {
     maps: {
       apiKey: "${process.env.GOOGLE_API_KEY}",

@@ -5,31 +5,31 @@
     </div>
     <div id="promo-today"  class="col-md-4 col-sm-12">
         <h4>Aujourd'hui!</h4>
-        <h3>{{ promo_today.product.name }}</h3>
-        <img id="today_img" *ngIf="promo_today.product.img" src="{{ promo_today.product.img }}">
+        <h3>{{ promos.today.product.name }}</h3>
+        <img id="today_img" *ngIf="promos.today.product.img" src="{{ promos.today.product.img }}">
     </div>
     <div class="col-md-6 col-sm-12">
         <table class="no-indent">
             <tr><td>Lundi</td>
-                <td>{{ weekdays[1].product.name }}</td>
+                <td>{{ promos.weekdays[1].product.name }}</td>
             </tr>
             <tr><td>Mardi</td>
-                <td>{{ weekdays[2].product.name }}</td>
+                <td>{{ promos.weekdays[2].product.name }}</td>
             </tr>
             <tr><td>Mercredi</td>
-                <td>{{ weekdays[3].product.name }}</td>
+                <td>{{ promos.weekdays[3].product.name }}</td>
             </tr>
             <tr><td>Jeudi</td>
-                <td>{{ weekdays[4].product.name }}</td>
+                <td>{{ promos.weekdays[4].product.name }}</td>
             </tr>
             <tr><td>Vendredi</td>
-                <td>{{ weekdays[5].product.name }}</td>
+                <td>{{ promos.weekdays[5].product.name }}</td>
             </tr>
             <tr><td>Samedi</td>
-                <td>{{ weekdays[6].product.name }}</td>
+                <td>{{ promos.weekdays[6].product.name }}</td>
             </tr>
             <tr><td>Dimanche</td>
-                <td>{{ weekdays[0].product.name }}</td>
+                <td>{{ promos.weekdays[0].product.name }}</td>
             </tr>
         </table>
     </div>

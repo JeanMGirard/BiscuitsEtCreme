@@ -22,10 +22,10 @@ export const MENUS: Menu[] = [
     }, {
         name: 'autre-produits',
         elem: 'app-other-products',
-        title: 'Autres spécialitées',
+        title: 'Autres',
         linkImgUrl: 'assets/img/menu-bg/menu-other-bg-600.jpg',
         
-        tileTitle: 'spécialitées',
+        tileTitle: 'Autres',
         tileDesc: 'Autres produits',
         tileImage: 'assets/img/menu-bg/menu-other-tile-200.jpg'
     }

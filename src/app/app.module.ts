@@ -20,6 +20,7 @@ import { MapService } from './modules/map/map.service';
 import { ContactService } from './modules/contact/contact.service';
 import { MessageService } from './modules/contact/message.service';
 import { SocialService } from './modules/social/social.service';
+import { ProductService } from './modules/products/product.service';
 
 // @angular/fire/ Modules
 import { AngularFireModule } from '@angular/fire';
@@ -27,7 +28,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireFunctionsModule } from '@angular/fire/functions';
-
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { AngularFireFunctionsModule } from '@angular/fire/functions';
     ScheduleModule,
     AngularFireModule.initializeApp(environment.firebase, 'biscuitsetcreme'),
     AngularFirestoreModule,
+    AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
     AngularFireFunctionsModule
@@ -53,7 +55,8 @@ import { AngularFireFunctionsModule } from '@angular/fire/functions';
     ContactService,
     SocialService,
     MessageService,
-    MapService
+    MapService,
+    ProductService
   ],
   bootstrap: [AppComponent]
 })

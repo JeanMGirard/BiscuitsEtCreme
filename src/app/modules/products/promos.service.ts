@@ -9,35 +9,52 @@ import { PROMOS } from './mock-promos';
   providedIn: 'root'
 })
 export class PromosService { 
+  lastUpdated: string;
+  promos: {
+    today: Promo;
+    week: Promo[];
+  };
 
-  constructor() { }
-
-  getToday(): Promo{
-    return this.getWeekday(new Date().getDay());
+  constructor() { 
+    
   }
+
   getWeekday(day: number): Promo{
-// tslint:disable-next-line: prefer-for-of
-    for(let i=0; i< PROMOS.length; i++){
-      if(PROMOS[i].weekday != null && PROMOS[i].weekday === day) { return PROMOS[i]; }
-    }
-    if(day > 6) {
-      throw new Error('PromosService.getWeekday(<integer/WorkDay>): arg must be int <= 6');
-    }
-      
-    return null;
+    this.checkUpdate();
+    return this.promos.week[day];
   }
-  getWeekdays(): Promo[]{
+  get weekdays(): Promo[]{
+    this.checkUpdate();
+    return this.promos.week;
+  }
+
+  get today(): Promo {
+    this.checkUpdate();
+    return this.promos.today;
+  }
+  
+  private checkUpdate() {
+    if(this.lastUpdated || this.lastUpdated !== new Date().toDateString()) {
+      this.lastUpdated = new Date().toDateString();
+      this.updatePromos();
+    }
+  }
+  private updatePromos() {
     let found = 0; 
-    let weekdays: Promo[] = [null, null, null, null, null, null, null];
+    this.promos = {
+      today: null,
+      week: [null, null, null, null, null, null, null]
+    }
 
-
-    for(let i=0; i< PROMOS.length; i++){
-      if(found >= 7) return weekdays;
-      if(PROMOS[i].weekday != null) {
-        weekdays[PROMOS[i].weekday] = PROMOS[i];
+    for(const p of PROMOS) {
+      if (found >= 7) { 
+        return; 
+      } else if(p.weekday != null) { 
+        this.promos.week[p.weekday] = p; 
         found++;
       }
     }
-    return weekdays;
+
+    this.promos.today = this.promos.week[new Date().getDay()];
   }
 }

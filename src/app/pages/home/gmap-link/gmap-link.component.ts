@@ -13,7 +13,7 @@ export class GmapLinkComponent implements OnInit {
   constructor(private maps: MapService) { }
 
   ngOnInit() {
-    this.mapurl = this.maps.getMapUrl();
+    this.mapurl = this.maps.urlOfMap;
   }
 
 }

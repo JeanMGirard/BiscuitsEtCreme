@@ -19,6 +19,9 @@ export class MenuService {
     ) { 
     }
 
+  get menus(): Menu[] {
+    return MENUS;
+  }
   getMenus(): Observable<Menu[]> {
     return of(MENUS);
   }

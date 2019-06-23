@@ -12,7 +12,7 @@ export class ScheduleComponent implements OnInit {
   constructor(private contacts: ContactService) {}
 
   ngOnInit() {
-    this.schedule = this.contacts.getSchedule();
+    this.schedule = this.contacts.schedule;
   }
 
 }

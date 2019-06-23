@@ -15,8 +15,8 @@ export class Row3Component implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.phone = this.contacts.getPhone();
-    this.email = this.contacts.getEmail();
+    this.phone = this.contacts.phone;
+    this.email = this.contacts.email;
   }
 
 }

@@ -43,16 +43,14 @@ export class ContactService {
     );
   }
   loadSchedule(): ISchedule {
-    ContactService.schedule = SCHEDULE;
     if(!ContactService.schedule){
-      // this.scheduleDoc = this.getInfo('schedule');
+      ContactService.schedule = SCHEDULE;
     }
     return ContactService.schedule;
   }
   loadContacts(): IContact {
-    ContactService.contacts = CONTACTS;
     if(!ContactService.contacts){
-      // this.contactDoc = this.getInfo('contacts');
+        ContactService.contacts = CONTACTS;
     }
     return ContactService.contacts;
   }
@@ -70,38 +68,38 @@ export class ContactService {
     return this.getInfo(id).delete();
   }
 
-  getSchedule() {
+  get schedule() {
     return ContactService.schedule;
   }
-  getPhone(): string {
+  get phone(): string {
     return ContactService.contacts.phone;
   }
-  getEmail(): string {
+  get email(): string {
     return ContactService.contacts.email;
   }
-  getContactFormEmail(): string {
+  get email2(): string {
     return ContactService.contacts.email;
   }
-  getPostal(): string {
+  get postal(): string {
     return ContactService.contacts.zipcode;
   }
-  getCity(): string {
+  get city(): string {
     return ContactService.contacts.city;
   }
-  getState(): string {
+  get state(): string {
     return ContactService.contacts.state;
   }
-  getCountry(): string {
+  get country(): string {
     return ContactService.contacts.country;
   }
-  getAddressLine1(): string {
+  get addressLine1(): string {
     return ContactService.contacts.address;
   }
-  getAddressLine2(): string {
-    const ct = this.getCity();
-    const st = this.getState();
-    const zp = this.getPostal();
-    const cn = this.getCountry();
+  get addressLine2(): string {
+    const ct = this.city;
+    const st = this.state;
+    const zp = this.postal;
+    const cn = this.country;
     return ct+', '+st+', '+zp+', '+cn;
   }
 

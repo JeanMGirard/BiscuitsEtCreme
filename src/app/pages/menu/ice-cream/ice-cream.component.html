@@ -6,7 +6,7 @@
 
     <div id="pub-molle" class="col-6 defaults" style="z-index: 100;">
         <h4 class="shadow-white">Molles</h4>
-        <p class="shadow-white">vanille / chocolat</p>
+        <p class="shadow-white" style="margin-block-start: 0em;">vanille / chocolat</p>
     </div>
     <div id="pub-dure"  class="col-6 defaults" style="z-index: 100;">
         <h4 class="shadow-white">Dures</h4>
@@ -20,12 +20,11 @@
     </div>
 
 
-    <div id="pub-enrobages" class="l col-md-6 col-sm-12 sm-bg-secondary row-effect" 
+    <div id="pub-garnitures" class="l col-md-6 col-sm-12 sm-bg-secondary row-effect" 
         nomatTooltip="Cliquez pour découvrir les saveurs disponibles" nomatTooltipPosition="below"
-        (click)="openEnrobages()">
-        <h3>Enrobages</h3>
-        <img src="/assets/img/menu-products/trempage-enrobages-320.png" style="top: 0; left:0; opacity:0.9;">
-        <img style="top: 50px; margin-left: -7%;">
+        (click)="openGarnitures()">
+        <h3>Garnitures</h3>
+        <img src="/assets/img/menu-products/garnitures-400.png">
         
         <!--div class="button-row">
             <button mat-raised-button color="primary" style="top:-75px;left:60px;" (click)="openGarnitures()">Saveurs</button>
@@ -33,9 +32,9 @@
     </div>
     <div id="pub-trempages" class="r col-md-6 col-sm-12 sm-bg-primary  row-effect" 
         nomatTooltip="Cliquez pour découvrir les saveurs disponibles" nomatTooltipPosition="below"
-        (click)="openTrempages()">
-        <h3>Trempages</h3>
-        <img src="/assets/img/menu-products/trempage-choco-320.png" style="top: 0; margin-left:35%;">
+        (click)="openTrempagesEnrobages()">
+        <h3>Trempages<br/>&nbsp;&nbsp;& Enrobages</h3>
+        <img src="/assets/img/menu-products/trempage-choco-320.png">
     </div>
 
 
@@ -85,59 +84,28 @@
         </div-->
     </div>
 
-    <div class="col-12" style="padding: 0; padding-top:120px;">
+    <div class="col-12">
         <div id="iceCreamCarousel" class="carousel slide" 
             data-ride="carousel" data-pause="false" data-interval="4000">
+
             <div class="carousel-inner">
-                <div class="w-100 carousel-item">
-                    <img class="w-100 " src="/assets/img/menu-products/x-carre-chocolat-1200.png" alt="carre-chocolat">
-                    <div class="w-100 carousel-caption">
-                        <h3>Carré au chocolat</h3>
-                        <p>-------------------------- ----------------------</p>
-                    </div>
-                </div>
-                <div class="w-100 carousel-item">
-                    <img class="w-100" src="/assets/img/menu-products/x-peanut-buster-1200.png" alt="peanut-buster">
-                    <div class="w-100 carousel-caption">
-                        <h3>Le peanut buster</h3>
-                        <p>----------- --------------- --------- ------- ------</p>
-                    </div>
-                </div>
-                <div class="w-100 carousel-item ">
-                    <img class="w-100 " src="/assets/img/menu-products/x-carre-sucrecreme-1200.png" alt="carre-sucrecreme">
-                    <div class="w-100 carousel-caption">
-                        <h3>Carré au sucre à la crème</h3>
-                        <p>----------- --------------- --------- ------- ------</p>
-                    </div>
-                </div>
-                <div class="w-100 carousel-item">
-                    <img class="w-100 " src="/assets/img/menu-products/x-banane-oreo-1200.png" alt="banane-oreo">
-                    <div class="w-100 carousel-caption">
-                        <h3>Banane-oréo</h3>
-                        <p>----------- --------------- --------- ------- ------</p>
-                    </div>
-                </div>
+
                 <div class="w-100 carousel-item active">
-                    <img class="w-100 " src="/assets/img/menu-products/x-duo-1200.png" alt="duo">
+                    <img class="w-100 " src="{{ carousel[0].img }}" alt="{{ carousel[0].name }}">
                     <div class="w-100 carousel-caption">
-                        <h3>Le duo</h3>
-                        <p>----------- --------------- --------- ------- ------</p>
+                        <h3>{{ carousel[0].name }}</h3>
+                        <p>{{ carousel[0].desc }}</p>
                     </div>
                 </div>
-                <div class="w-100 carousel-item">
-                    <img class="w-100" src="/assets/img/menu-products/x-parfait-1200.png" alt="parfait">
+
+                <div *ngFor="let item of carousel.slice(1)" class="w-100 carousel-item">
+                    <img class="w-100 " src="{{ item.img }} " alt="{{ item.name }}">
                     <div class="w-100 carousel-caption">
-                        <h3>Parfait</h3>
-                        <p>3 étages de pure ...</p>
+                        <h3>{{ item.name }}</h3>
+                        <p>{{ item.desc }}</p>
                     </div>
                 </div>
-                <div class="w-100 carousel-item">
-                    <img class="w-100 " src="/assets/img/menu-products/x-fiesta-1200.png" alt="fiesta">
-                    <div class="w-100 carousel-caption">
-                        <h3>La fiesta</h3>
-                        <p>----------- --------------- --------- ------- ------</p>
-                    </div>
-                </div>
+
             </div>
             <a class="carousel-control-prev text-primary" href="#iceCreamCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -175,12 +143,12 @@
 
     <div class="col-6 submenu-lastrow cookiedough">
         <button id="submenu-lastrow-prev" mat-stroked-button routerLink="/menu/pates-a-biscuit">
-            Nos<br/>pates a biscuits
+            Pâtes à biscuits
         </button>
     </div>
     <div class="col-6 submenu-lastrow otherproducts">
         <button id="submenu-lastrow-next" mat-stroked-button routerLink="/menu/autre-produits">
-            Nos<br/>autres produits
+            Autres
         </button>
     </div>
 </div>

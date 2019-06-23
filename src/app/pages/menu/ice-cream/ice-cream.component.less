@@ -8,6 +8,9 @@
         font-size: 40px;
     }
     div.done{   border: none !important;   }
+    p{
+        text-align: center !important;
+    }
 }
 
 #cornets-img{
@@ -132,7 +135,7 @@
 
 
 @transit-pub: transform 350ms cubic-bezier(0.42, 0, 0.58, 1) 10ms, z-index 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 10ms;
-#pub-enrobages,#pub-trempages,#pub-yogourts,
+#pub-garnitures,#pub-trempages,#pub-yogourts,
 #pub-tourbillons,#pub-milkshakes,#pub-smoothies{
     cursor: pointer;
     z-index: 200;
@@ -150,15 +153,20 @@
         -o-transition: @transit-pub;
         transition: @transit-pub;
     }
+    h3{
+        text-shadow: 2px 2px 2px rgba(0,0,0,0.5) ;
+    }
 }
 
 #pub-trempages,
-#pub-enrobages{
+#pub-garnitures{
     text-align: right;
     padding-right: 70px;
     height: 220px;
     h3, .button-row{
         padding-top: 60px;
+        position: relative;
+        z-index: 100;
     }
     img{
         position: absolute;
@@ -169,9 +177,38 @@
         height: 160px;
     }
 }
+#pub-garnitures{
+    img{
+        top: 25px;
+        bottom: 0;
+        left:0; 
+        @media(max-width: @sizes-media-max[sm]) {
+            top:-25px;
+            left: -100px;
+        }
+    }
+}
 #pub-trempages{
     text-align: left;
     padding-left: 70px;
+    img{
+        top: 0; 
+        margin-left:35%;
+    }
+    h3{
+        margin-top:-15px;
+        margin-left:-20px;
+        @media(max-width: @sizes-media-max[sm]) {
+            margin-top:-25px;
+        }
+        @media(max-width: 500px) {
+            margin-left:-40px;
+            -webkit-transform: scaleX(0.85) scaleY(0.85);
+            transform: scaleX(0.85) scaleY(0.85);
+        }
+    }
+
+    
     @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
         padding-right: 120px;
         // img{ margin-left: 0 !important; }
@@ -224,35 +261,46 @@
 
 
 
-#icecream-carousel{
-    height: 800px;
-    .carousel-item{
-        padding-top: 40px;
+#iceCreamCarousel{
+    // height: 800px;
+    .carousel-inner{
+        .carousel-item{
+            padding: 0;
+            padding-top: 40px;
+        
+            .carousel-caption{
+                text-align: center;
+                left: 0;
+                right: 0;
+                bottom: 70px;
+
+
+            
+                p, h3{
+                    font-weight: bold;
+                }
+                p{
+                    color: rgb(0,0,0);
+                    font-family: "Montserrat";
+                    font-size: 21px;
+                    text-shadow: -1px -1px 0 rgba(255,255,255,0.6), 0 0 4px rgba(255,255,255,0.4);
+                }
+                h3{
+                    color: rgb(60,60,60);
+                    text-shadow: -1px -1px 0 rgba(255,255,255,0.6), 0 0 4px rgba(255,255,255,0.4) , 0 0 20px rgba(255,255,255, 0.8) ;
+                    font-family: "Fredericka the Great";
+                    font-size: 34px;
+                }
+            }
+        }
     }
-    .carousel-item .carousel-caption{
-        text-align: center;
-        left: 0;
-        right: 0;
-        bottom: 70px;
+    .carousel-inner{
+        z-index: 20;
     }
-    .carousel-item .carousel-caption p, 
-    .carousel-item .carousel-caption h3{
-        font-weight: bold;
+    >a {
+        z-index: 200;
     }
-    .carousel-item .carousel-caption p{
-        color: rgb(0,0,0);
-        font-family: "Montserrat";
-        font-size: 21px;
-        text-shadow: -1px -1px 0 rgba(255,255,255,0.6), 0 0 4px rgba(255,255,255,0.4);
-    }
-    .carousel-item .carousel-caption h3{
-        color: rgb(60,60,60);
-        text-shadow: -1px -1px 0 rgba(255,255,255,0.6), 0 0 4px rgba(255,255,255,0.4) , 0 0 20px rgba(255,255,255, 0.8) ;
-        font-family: "Fredericka the Great";
-        font-size: 34px;
-    }
-    
-    
+
     .carousel-control-prev-icon,.carousel-control-next-icon {
       height: 100px;
       width: 100px;

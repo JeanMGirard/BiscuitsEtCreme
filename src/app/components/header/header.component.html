@@ -4,73 +4,75 @@
       <img id="nav-logo-txt" class="mobile-only" src="/assets/img/logo/logo-txt-only-154.png" alt="" />
   </div>
 
-  <div id="lang-select">
+  <!--div id="lang-select">
     <span class="wide-vw">
 
     </span>
-  </div>
+  </div-->
 
 
   <ul class="nav justify-content-center">
     <li class="nav-item pc-only">
-      <a class="nav-link" routerLink="/">
+      <a class="nav-link" routerLink="/" routerLinkActive="active not-hidden" 
+      [routerLinkActiveOptions]="{exact:true}">
         Accueuil
       </a>
     </li>
 
     <li class="nav-item pc-only">
-      <a class="nav-link" routerLink="/info" 
-      routerLinkActive="no-active" [routerLinkActiveOptions]="{exact:true}">
+      <a class="nav-link" routerLink="/info" routerLinkActive="active not-hidden" 
+      [routerLinkActiveOptions]="{exact:false}">
         À propos
       </a>
     </li>
     <li class="nav-item pc-only">
-      <a class="nav-link" routerLink="/promo" routerLinkActive="no-active" 
-      [routerLinkActiveOptions]="{exact:true}">
+      <a class="nav-link" routerLink="/promo" routerLinkActive="active not-hidden" 
+      [routerLinkActiveOptions]="{exact:false}">
         Promotions
       </a>
     </li>
     <li class="nav-item pc-only">
-      <a class="nav-link" routerLink="/menu" routerLinkActive="no-active" 
+      <a class="nav-link" routerLink="/menu" routerLinkActive="active not-hidden" 
       [routerLinkActiveOptions]="{exact:true}">
         Menu
       </a>
     </li>
     
     <li class="nav-item pc-only">
-      <a class="nav-link" routerLink="/contact" routerLinkActive="no-active" 
-      [routerLinkActiveOptions]="{exact:true}">
+      <a class="nav-link" routerLink="/contact" routerLinkActive="active not-hidden" 
+      [routerLinkActiveOptions]="{exact:false}">
         Nous contacter
       </a>
     </li>
     <ul class="subnav mobile-only">
         <li class="subnav-item" style="min-width:70px;padding:3px;">
-          <a class="nav-link" routerLink="/">
+          <a class="nav-link" routerLink="/"  routerLinkActive="active not-hidden"
+            [routerLinkActiveOptions]="{exact:true}">
             <i class="material-icons">home</i>
           </a>
         </li>
     
         <li class="subnav-item">
-          <a class="nav-link" routerLink="/info" 
-          routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+          <a class="nav-link" routerLink="/info" routerLinkActive="active not-hidden" 
+          [routerLinkActiveOptions]="{exact:true}">
             À propos
           </a>
         </li>
         <li class="subnav-item">
-          <a class="nav-link" routerLink="/promo" routerLinkActive="active" 
+          <a class="nav-link" routerLink="/promo" routerLinkActive="active not-hidden" 
           [routerLinkActiveOptions]="{exact:true}">
             Promotions
           </a>
         </li>
         <li class="subnav-item">
-          <a class="nav-link" routerLink="/menu" routerLinkActive="no-active" 
+          <a class="nav-link" routerLink="/menu" routerLinkActive="active not-hidden" 
           [routerLinkActiveOptions]="{exact:true}">
             Menu
           </a>
         </li>
         
         <li class="subnav-item">
-          <a class="nav-link" routerLink="/contact" routerLinkActive="active" 
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active not-hidden" 
           [routerLinkActiveOptions]="{exact:true}">
             Contacter
           </a>

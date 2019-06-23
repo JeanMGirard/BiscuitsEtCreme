@@ -1,23 +1,30 @@
 <h1 mat-dialog-title>{{data.name}}</h1>
 
-<div mat-dialog-content *ngIf="data.wide">
-  <ul *ngFor="let list of data.lists"  class="wide">
-    <h3 *ngIf="list.name">{{ list.name }}</h3>
-    <li *ngFor="let item of list.items">
-        {{item}}
-    </li>
-  </ul>
-</div>
 
-<div mat-dialog-content *ngIf="!data.wide">
-  <ul *ngFor="let list of data.lists">
-    <h3 *ngIf="list.name">{{ list.name }}</h3>
-    <li *ngFor="let item of list.items">
-          {{item}}
-    </li>
-  </ul>
+<div id="popup-items" mat-dialog-content [class]="classes">
+
+    <mat-grid-list *ngFor="let list of data.lists" [cols]="columns" rowHeight="40px">
+
+      <mat-grid-tile *ngIf="list.name" [colspan]="columns" rowspan="2" class="list-name">
+        <h4>{{ list.name }}</h4>
+      </mat-grid-tile>
+
+      <mat-grid-tile *ngFor="let item of list.items" colspan="1" rowspan="1">
+        {{item}}
+      </mat-grid-tile>
+    </mat-grid-list>
+
+
 </div>
 
 <div mat-dialog-actions id="buttons">
   <button mat-button (click)="close()">Revenir au menu</button>
 </div>
+
+<!--section  list of data.lists">
+    <h3 st.name">{{ list.nme </h3>
+<mat-list-item role="listitem"="let item of list.items">
+  <span>{{item</span>
+</mat-list-item>
+</mat-list>
+</section-->

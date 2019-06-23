@@ -11,34 +11,34 @@ import { MapService } from '../../../modules/map/map.service';
   styleUrls: ['./row1.component.less']
 })
 export class Row1Component implements OnInit {
-  embedded: string;
-  email: string;
-  phone: string;
-  address1: string;
-  address2: string;
+  embedded: any;
+  info: any;
 
   constructor(
-    public sanitizer: DomSanitizer,
+    private sanitizer: DomSanitizer,
     private contacts: ContactService,
     private maps: MapService
-    ) { 
-      this.getContactInfos();
-      this.getGoogleInfo();
-  }
+    ) { }
 
   ngOnInit() {
-    
+    this.getContactInfos();
+    this.getGoogleInfo();
+    this.embedded = this.sanitizer.bypassSecurityTrustResourceUrl(this.maps.urlOfEmbeddedMap);
   }
 
   private getContactInfos(){
-    this.email = this.contacts.getEmail();
-    this.phone = this.contacts.getPhone();
-    this.address1 = this.contacts.getAddressLine1();
-    this.address2 = this.contacts.getAddressLine2(); 
+    if(!this.info){
+      this.info = {
+        email: this.contacts.email,
+        phone: this.contacts.phone,
+        address1: this.contacts.addressLine1,
+        address2: this.contacts.addressLine2
+      };
+    }
   }
   private getGoogleInfo(){
     if(!this.embedded){
-      this.embedded = this.maps.getUnsanitizedEmbedUrl();
+      this.embedded = this.maps.urlOfEmbeddedMap;
     }
   }
 
