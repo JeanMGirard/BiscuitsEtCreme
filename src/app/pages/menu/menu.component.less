@@ -3,6 +3,26 @@
 @header-menu: @header-min;
 @header-menu-mobile: @header-mobile;
 
+
+.sm-bg-primary{
+    background: rgb(56, 92, 255);
+    color: whitesmoke;
+}
+.sm-bg-secondary{
+    background: rgb(56, 92, 255);
+    color: whitesmoke;
+}
+.sm-bg-primary button{
+    background-color: rgb(240, 240, 240);
+    color: rgb(56, 92, 255);
+}
+.sm-bg-secondary button{
+    background-color: rgb(240, 240, 240);
+    color: rgb(56, 92, 255);
+}
+
+
+
 #menu-home{
     position: fixed;
     top: 0;
@@ -50,23 +70,8 @@
     padding-top: 40vh;
 
 
-    @media (max-width: @sizes-media-max[sm]){
-        background-size: 100% auto;
-        padding-top: 4vh;
-    }
-    @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
-        &:first-of-type{
-            margin-top: ~"calc(@{header-max-mobile} - 2px)";
-        }
-        background-size: 100% auto;
-        width: 100% !important;
-        height: ~"calc(33.4vh - (@{header-menu-mobile} + @{header-max-mobile})/3)" !important;
-        padding-top: 0.4vh;
-        opacity: 0.9;
-    }
-    &:hover{
-        opacity: 1;
-    }
+    
+    &:hover{ opacity: 1; }
     .mask{
         position: absolute;
         width: 100%;
@@ -75,39 +80,44 @@
         left: 0;
         background: rgba(255,255,255, 0.4);
         opacity: 0;
-        @media (min-width: @sizes-media-min[md]) {
-            opacity: 0.1;
-        }
-        &:hover{
-            opacity: 0;
-        }
-    }
-}
-
-.open-menu h4{
-    font-family: 'Fredericka the Great';
-    font-size: 48px;
-    font-weight: bold;
-    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.7);
-    @media (max-width: @sizes-media-max[sm]) {
-        margin-top: 10vh;
+        
+        &:hover{ opacity: 0; }
     }
 
+    h4{
+        font-family: 'Fredericka the Great';
+        font-size: 48px;
+        font-weight: bold;
+        text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.7);
+        
+    
+    }
+    @media (min-width: @sizes-media-min[md]) {
+        .mask{ opacity: 0.1; }
+    }
+    @media (max-width: @sizes-media-max[sm]){
+        background-size: 100% auto;
+        width: 100% !important;
+        height: ~"calc(33.4vh - (@{header-menu-mobile} + @{header-max-mobile})/3)" !important;
+        padding-top: 0.4vh;
+
+        &:first-of-type{
+            margin-top: ~"calc(@{header-min-mobile} - 2px)";
+            height: ~"calc(33.4vh - (@{header-menu-mobile} + @{header-max-mobile})/3 + @{header-max-mobile})" !important;
+            padding-top: 7vh;
+        }
+        h4{ margin-top: 10vh; }
+    }
+
+
+    @media (max-width: 500px){
+    }
+    @media (max-width: 400px){
+        h4{
+            font-size: 40px;
+        }
+
+    }
+
 }
 
-.sm-bg-primary{
-    background: rgb(56, 92, 255);
-    color: whitesmoke;
-}
-.sm-bg-secondary{
-    background: rgb(56, 92, 255);
-    color: whitesmoke;
-}
-.sm-bg-primary button{
-    background-color: rgb(240, 240, 240);
-    color: rgb(56, 92, 255);
-}
-.sm-bg-secondary button{
-    background-color: rgb(240, 240, 240);
-    color: rgb(56, 92, 255);
-}

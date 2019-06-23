@@ -155,7 +155,13 @@
     }
     h3{
         text-shadow: 2px 2px 2px rgba(0,0,0,0.5) ;
+        padding-top: 60px;
     }
+    @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
+        border-radius: 20px;
+        border: 4px ridge white;
+    }
+   
 }
 
 #pub-trempages,
@@ -164,7 +170,6 @@
     padding-right: 70px;
     height: 220px;
     h3, .button-row{
-        padding-top: 60px;
         position: relative;
         z-index: 100;
     }
@@ -175,6 +180,11 @@
     }
     @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
         height: 160px;
+    }
+    @media (max-width: 400px){
+        h3{
+            font-size: 32px !important;
+        }
     }
 }
 #pub-garnitures{
@@ -249,13 +259,17 @@
         height: 200px;
     }
 }
+
 #pub-smoothies img{    
-    position: absolute; 
-    bottom: -25px; 
-    left: 20%;
+    position: absolute;
+    bottom: -25px;
+    right: 5%;
+    transform: scaleX(1.4);
 }
 #pub-milkshakes img{
-    margin-top: -70px;
+    top: 0px;
+    position: absolute;
+    left: 0%;
 }
 
 
@@ -314,6 +328,27 @@
     }
     .carousel-control-next-icon:after { content: '>'; }
     .carousel-control-prev-icon:after { content: '<'; }
+
+    @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
+        .carousel-inner{
+            .carousel-item{
+                padding-top: 140px;
+
+                img{
+                    transform: scaleX(1.6) scaleY(1.6);
+                }
+            }
+        }
+    }
+    @media (max-width: 500px){
+        .carousel-inner{
+            .carousel-item{
+                p{
+                    opacity: 0;
+                }
+            }
+        }
+    }
 }
 
 

@@ -1,5 +1,6 @@
 @import '../../../_variables.less';
 
+
 #promo-r2{
     min-height: 300px;
     margin-top: 40px;
@@ -13,13 +14,12 @@
     @media (min-width: @sizes-media-max[sm]){
         padding-left: 20px;
         padding-right: 20px;
-     }
-}
-#promo-r2 div{
-    text-align: center;
-} 
+    }
 
-#promo-r2 {
+    div{
+        text-align: center;
+    }
+
     #promo-title{
         margin-bottom: 0px;
         padding-bottom: 0px;
@@ -41,8 +41,7 @@
         font-family: "Montserrat";
         font-size: 18px;
     }
-}
-#promo-r2{
+
     .promo-group{
         overflow: hidden;
         padding: 2px;
@@ -56,6 +55,12 @@
             padding-top: 20px;
         }
         */
+
+        img{
+            width: 100%;
+            border: 2px solid rgb(40,40,40);
+        }
+        
         h4{
             font-size: 22px;
             font-weight: normal;
@@ -70,19 +75,32 @@
             padding-bottom: 0.5rem;
             margin-block-start: 0;
             line-height: 1;
-            @media (max-width: @sizes-media-max[sm]){
-                font-size: 28px;
-            }
-            @media (min-width: @sizes-media-min[lg]){
-                font-size: 30px;
-            }
-            
         }
 
-        @media (min-width: @sizes-media-min[md]){
+
+        
+    }
+
+    @media (min-width: @sizes-media-min[lg]){
+        .promo-group{ 
+            h4{ font-size: 30px; }
+        }
+    }
+    @media (max-width: @sizes-media-max[sm]){
+        .promo-group{ 
+            h4{ font-size: 28px; }
+        }
+    }
+    @media (min-width: @sizes-media-min[md]){
+        .promo-group{ 
             flex: 0 0 20%;
             max-width: 20%;
             width: 20%;
+        }
+    }
+    @media (max-width: @sizes-media-min[sm]){
+        .promo-group{
+            br{ display: none;  }
         }
     }
     @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
@@ -110,24 +128,6 @@
         }
     }
     
-}/*
-#promo-r2 .promo-group.sm-new-line{
-    @media (max-width: @sizes-media-max[sm]) and (min-width: @sizes-media-min[sm]){
-       padding-top: 40px;
-    }
 }
-#promo-r2 .promo-group.one-word h4{
-    @media (min-width: @sizes-media-min[sm]){
-        padding-top: 15px;
-    }
-}*/
 
-#promo-r2 .promo-group br{
-    @media (max-width: @sizes-media-min[sm]){
-        display: none;
-    }
-}
-#promo-r2 .promo-group img{
-    width: 100%;
-    border: 2px solid rgb(40,40,40);
-}
+@import '../_override.less';

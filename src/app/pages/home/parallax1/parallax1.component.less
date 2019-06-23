@@ -6,41 +6,82 @@
     min-height: 500px;
     top:0; 
 }
-#row-1 .parallax { 
-    background-image: url("@{base-url}assets/img/home/home-bg-1-1400.jpg"); 
-    background-position:50% -10%; 
-    top:0; 
-    background-size:103% 150%; 
 
+#row-1{
+
+    .parallax { 
+        background-image: url("@{base-url}assets/img/home/home-bg-1-1400.jpg"); 
+        content: "";
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        //background: url(photos/2452.jpg) no-repeat center center;
+        background-image: url("@{base-url}assets/img/home/home-bg-1-1400.jpg"); 
+        background-position-x: 50%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        @media (orientation: portrait){
+            background-position:50% 50%; 
+            background-size: auto 100%; 
+        }
+    }
+    .scroll-down {
+        position: absolute;
+        left: 50%;
+        bottom: 50px;
+        width: 60px;
+        height: 60px;
+        left: 50%;
+        display: block;
+        z-index: 9;
+        text-decoration: none;
+        text-shadow: 0;
+        text-align: center;
+        font-size: 20px;
+        border-bottom: 4px solid black;
+        border-right: 4px solid black;
+        cursor: pointer;
+        -webkit-transform: translate(-50%, 0%) rotate(45deg);
+        -moz-transform: translate(-50%, 0%) rotate(45deg);
+        transform: translate(-50%, 0%) rotate(45deg);
+        -webkit-animation: fade_move_down 4s ease-in-out infinite;
+        -moz-animation:    fade_move_down 4s ease-in-out infinite;
+        animation:         fade_move_down 4s ease-in-out infinite;
+    }
+}
+
+/*
+#row-1:before {
+        content: "";
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        //background: url(photos/2452.jpg) no-repeat center center;
+        background-image: url("@{base-url}assets/img/home/home-bg-1-1400.jpg"); 
+        background-position-x: 50%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     @media (orientation: portrait){
         background-image: url("@{base-url}assets/img/home/cornet-molle-vanille-top2-250.png"); 
         background-position:50% 50%; 
-        background-size:100% auto; 
+        background-size: auto 100%; 
     }
 }
-#row-1 .scroll-down {
-    position: absolute;
-    left: 50%;
-    bottom: 50px;
-    width: 60px;
-    height: 60px;
-    left: 50%;
-    display: block;
-    z-index: 9;
-    text-decoration: none;
-    text-shadow: 0;
-    text-align: center;
-    font-size: 20px;
-    border-bottom: 4px solid black;
-    border-right: 4px solid black;
-    cursor: pointer;
-    -webkit-transform: translate(-50%, 0%) rotate(45deg);
-    -moz-transform: translate(-50%, 0%) rotate(45deg);
-    transform: translate(-50%, 0%) rotate(45deg);
-    -webkit-animation: fade_move_down 4s ease-in-out infinite;
-    -moz-animation:    fade_move_down 4s ease-in-out infinite;
-    animation:         fade_move_down 4s ease-in-out infinite;
-}
+*/
+
 #row-1-intro{
     position: absolute;
     display: inline-block;
@@ -93,24 +134,24 @@
 
 @media only screen and (max-width: 850px) {
     #row-1-intro.loaded{ transform: scale(0.8) translateY(-5vh); }
-    #row-1 .parallax { background-size:150% 150%; }
+    //#row-1 .parallax { background-size:150% 150%; }
 }
 @media only screen and (max-width: 700px) {
     #row-1-intro.loaded{ transform: scale(0.7) translateY(-10vh); }
 }
 @media only screen and (max-width: 600px) {
     #row-1-intro.loaded{ transform: scale(0.50) translateY(-15vh); }
-    #row-1 .parallax { background-size:200% 150%; }
+    //#row-1 .parallax { background-size:200% 150%; }
 }
 @media only screen and (max-width: 400px) {
     #row-1-intro.loaded{ transform: scale(0.4) translateY(-20vh); }
 }
 @media only screen and (max-width: 350px) {
     #row-1-intro.loaded{ transform: scale(0.3) translateY(-25vh); }
-    #row-1 .parallax { background-size:250% 150%; }
+    //#row-1 .parallax { background-size:250% 150%; }
 }
 @media only screen and (min-height: 400px) {
     #row-1-intro{ top: 40vh; }
-    #row-1-intro.loaded{ top: 30vh; }
+   // #row-1-intro.loaded{ top: 30vh; }
 }
 

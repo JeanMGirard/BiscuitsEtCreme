@@ -153,6 +153,7 @@ header {
         height: @header-mobile;
         top: 100%;
         background: rgba(110,110,110,0.9);
+        overflow: hidden;
 
         .subnav-item {
             min-width: 20%;
@@ -163,31 +164,62 @@ header {
             overflow: hidden;
             padding-top: 5px;
             padding-right: 15px;
+            cursor: pointer;
+
+            &.hidden { display: none !important;  }
+            &.active { }
+
+            a{
+                color: @header-secondary-color;
+                font-weight: normal;
+                padding:0;
+                padding-top: 5px;
+                font-size: 15px;
+                width:100%;
+                height:100%;
+            }
+            .material-icons {
+                margin-top: -3px;
+               font-size: 30px;
+            }
         }
-        .subnav-item a{
-            color: @header-secondary-color;
-            font-weight: normal;
-            padding:0;
-            padding-top: 5px;
-            font-size: 15px;
-            width:100%;
-            height:100%;
+        @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
+            .subnav-item{
+                
+                min-width: 22% !important;
+                float: right;
+                text-align: center;
+
+                &:first-of-type{ 
+                    float: left; 
+                    padding-right: 0 !important;
+                }
+                a{
+                    -webkit-transform: scaleX(0.9) scaleY(0.9);
+                    transform: scaleX(0.9) scaleY(0.9);
+                }
+            }
         }
-        .subnav-item .material-icons {
-            margin-top: -3px;
-           font-size: 30px;
+        @media (max-width: 500px){
         }
+        @media (max-width: 400px){
+            .subnav-item{
+                max-width: 30% !important;
+                min-width: 15% !important;
+                padding-right: 0;
+                transform: scaleX(0.8) scaleY(0.8);
+
+                &:first-of-type{
+                    max-width: 30% !important;
+                    min-width: 25% !important;
+                }
+            }
+
+        }
+
     }
-    @media (orientation: portrait) and (max-width: 500px){
-        .subnav-item{
-            padding-right: 2px !important;
-            min-width: 15% !important;
-        }
-        .subnav-item a{
-            -webkit-transform: scaleX(0.8) scaleY(0.9);
-            transform: scaleX(0.8) scaleY(0.9);
-        }
-    }
+   
+    
 /* ----------------- */
 /* HEADER lang-select */
 /* ----------------- */

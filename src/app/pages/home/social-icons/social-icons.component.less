@@ -4,15 +4,15 @@
     min-width: 100vw;
     margin-left: 0px;
     position: absolute;
-    // -webkit-transition: transform 2200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms, opacity 1000ms cubic-bezier(0.42, 0, 0.58, 1) 1000ms;
-    // -moz-transition: transform 2200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms, opacity 1000ms cubic-bezier(0.42, 0, 0.58, 1) 1000ms;
-    // -o-transition: transform 2200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms, opacity 1000ms cubic-bezier(0.42, 0, 0.58, 1) 1000ms;
+    -webkit-transition: transform 2200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms, opacity 1000ms cubic-bezier(0.42, 0, 0.58, 1) 1000ms;
+    -moz-transition: transform 2200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms, opacity 1000ms cubic-bezier(0.42, 0, 0.58, 1) 1000ms;
+    -o-transition: transform 2200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms, opacity 1000ms cubic-bezier(0.42, 0, 0.58, 1) 1000ms;
     transition: transform 2200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms, opacity 1000ms cubic-bezier(0.42, 0, 0.58, 1) 1000ms;
     
     opacity: 0;
     &.loaded{
         opacity: 1;
-        // -webkit-transform: translateY(-140px);
+        -webkit-transform: translateY(-140px);
         transform: translateY(-140px);
     }
 
@@ -30,5 +30,12 @@
     }
     img{
         max-width: 20vw;
+    }
+    @media(max-width: 500px){
+        &.loaded{
+            opacity: 1;
+            -webkit-transform: translateY(-23vh);
+            transform: translateY(-23vh);
+        }
     }
 }

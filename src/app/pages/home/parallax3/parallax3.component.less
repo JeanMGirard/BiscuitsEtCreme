@@ -2,41 +2,55 @@
     min-height: 600px;
     background: white;
     border-top: 1px solid black;
-}
-#home-parallax3>div{
+    z-index: 200;
     position: relative;
-    display: block;
-    width: 100%;
-}
-#home-parallax3 div.row{
-    padding-top: 120px;
-    padding-left: 7vw;
-    z-index: 100;
-    position: relative;
-}
-#home-parallax3 h3{
-    font-family: "montserrat";
-    /* font-weight: bold; */
-    font-size: 34px;
-    text-shadow: 0px 0px 2px rgba(255,255,255,1) ;
-}
-#home-parallax3 p{
-    padding-left: 10px;
-    padding-right: 40px;
-    font-family: "Montserrat";
-    font-size: 22px;
-    line-height: 1.6;
-    text-indent: 0px;
+    >div{
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+    div.row{
+        padding-top: 120px;
+        padding-left: 7vw;
+        z-index: 100;
+        position: relative;
+    }
+    h3{
+        font-family: "montserrat";
+        /* font-weight: bold; */
+        font-size: 34px;
+        text-shadow: 0px 0px 2px rgba(255,255,255,1) ;
+    }
+    p{
+        padding-left: 10px;
+        padding-right: 40px;
+        font-family: "Montserrat";
+        font-size: 22px;
+        line-height: 1.6;
+        text-indent: 0px;
+        text-shadow: 0px 0px 4px rgba(255,255,255,1) ;
 
-}
-#home-parallax3 p:first-of-type{
-    padding-top: 10px;
-}
-#home-parallax3 p:last-of-type{
-    padding-bottom: 20px;
-}
-#home-parallax3 img#home-par3-img1{
-    position: absolute;
-    right: 10vw;
-    bottom: 0;
+        &:first-of-type{
+            padding-top: 10px;
+        }
+        &:last-of-type{
+            padding-bottom: 20px;
+        }
+    }
+    img#home-par3-img1{
+        position: absolute;
+        right: 10vw;
+        bottom: 0;
+    }
+
+    @media only screen and (max-width: 500px) {
+        div.row{
+            padding-top: 40px;
+            padding-left: 2vw;
+        }
+        p{
+            font-size: 19px;
+        }
+    }
+
 }
