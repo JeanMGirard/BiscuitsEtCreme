@@ -79,14 +79,29 @@ export const ICECREAM_PRODUCTS: Product[] = [
         categoryId: 'cremerie',
         category: 'Crèmerie',
         items: [
-            // A FAIRE
-            'fraises', 'ananas', 'bleuets', 'cerises', 'framboises',
-            'caramel', 'caramel chaud',
-            'chocolat', 'fudge chaud',
-            'sucre à la crème', 'fraises', 'ananas', 'bleuets', 'cerises', 'framboises',
-            'caramel', 'caramel chaud',
-            'chocolat', 'fudge chaud',
-            'sucre à la crème'
+            'Rolo'
+        ]
+    },{ 
+        id: 'cornets.dures.coaticook',
+        name: 'Creme dures',
+        img: null,
+        categoryId: 'cremerie',
+        category: 'Crèmerie',
+        items: [
+            'cerises noires', 'doubles fraises',
+            'tire et pépites d\'érable', 'ribambelle', 'érable et noix',
+            'biscuits et crème', 'brownies', 'pâte à biscuit et fudge', 'gomme balloune',
+            'pistache', 'praline et crème', 'mokaramel', 'barbe à papa'
+        ]
+    },{ 
+        id: 'cornets.dures.vegan',
+        name: 'Creme dures vegan',
+        img: null,
+        categoryId: 'cremerie',
+        category: 'Crèmerie',
+        items: [
+            'vanille et fraises bio', 
+            'biscuits et crème'
         ]
     },{ 
         id: 'cornets.fruits',
@@ -95,9 +110,8 @@ export const ICECREAM_PRODUCTS: Product[] = [
         categoryId: 'cremerie',
         category: 'Crèmerie',
         items: [
-            'fraises', 'ananas', 'bleuets', 'cerises', 'framboises', 
-            // A FAIRE
-            'fraises', 'ananas', 'bleuets', 'cerises', 'framboises'
+            'fraise', 'ananas', 'bleuet', 'cerise rouge', 'framboise', 'mangue',
+            'mûre', 'pomme', 'kiwi', 'pêche', 'rhubarbe', 'banane'
         ]
     },{
         id: 'garnitures',
@@ -106,10 +120,9 @@ export const ICECREAM_PRODUCTS: Product[] = [
         categoryId: 'cremerie',
         category: 'Crèmerie',
         items: [ 
+            'caramel chaud', 'chocolat', 'fudge chaud','caramel', 
             'fraises', 'ananas', 'bleuets', 'cerises', 'framboises',
-            'caramel', 'caramel chaud',
-            'chocolat', 'fudge chaud',
-            'sucre à la crème'
+            'sauce sucre à la crème'
         ]
     }, { 
         id: 'tourbillons',
@@ -118,11 +131,11 @@ export const ICECREAM_PRODUCTS: Product[] = [
         categoryId: 'cremerie',
         category: 'Crèmerie',
         items: [
-            'Reese', 'Smarties', 'Skor', 'oréo', 'Kit Kat', 
-            'Crunchie', 'Coffee Crisp', 'arachides', 'Aéro', 
-            'Aéro menthe', 'biscuits et crème', 'Hershey’s',
-            'fraises', 'bleuets', 'nerds', 'framboises', 
-            'brownies', 'bonbons arc-en-ciel', 'pâte à biscuits'
+            'Reese', 'Smarties', 'Skor', 'Oréo', 'Kit Kat', 
+            'Crunchie', 'Coffee Crisp', 'Arachides', 'Aéro', 
+            'Aéro menthe', 'Biscuits & crème (Hershey’s)',
+            'Fraise', 'Bleuet', 'Nerds', 'Framboise', 
+            'Brownies', 'Bonbons arc-en-ciel', 'Pâte à biscuits au choix'
         ]
     }, { 
         id: 'barbotines',
@@ -131,11 +144,11 @@ export const ICECREAM_PRODUCTS: Product[] = [
         categoryId: 'cremerie',
         category: 'Crèmerie',
         items: [
-            'Banane', 'Barbe à papa', 'Framboise', 'Framboise bleue', 'Fraise', 
-            'Raisin', 'Kiwi', 'Gomme balloune', 'Sensation extrême', 'Cerise', 
-            'Orange', 'Citron', 'Melon', 'Lime', 'Bleuet', 'Bonbon sûr', 'Pêche', 
-            'Limonade', 'Thé glacé', 'Pomme grenade', 'Verglas d’été', 'Pomme surette', 
-            'Rouge électrolyte'
+            'banane', 'barbe à papa', 'framboise', 'framboise bleue', 'fraise', 
+            'raisin', 'gomme balloune', 'sensation extrême', 'cerise', 'punch aux fruits',
+            'orange', 'citron', 'melon', 'lime', 'bleuet', 'bonbon sûr', 'pêche', 
+            'limonade', 'thé glacé', 'pomme grenade', 'verglas d’été', 'pomme surette', 
+            'rouge électrolyte'
         ]
     }, { 
         id: 'milkshakes',
@@ -144,8 +157,8 @@ export const ICECREAM_PRODUCTS: Product[] = [
         categoryId: 'cremerie',
         category: 'Crèmerie',
         items: [
-            'chocolat', 'bananes', 'vanille', 'bleuets', 
-            'framboises', 'cerises', 'caramel', 'fraises', 
+            'chocolat', 'banane', 'vanille', 'bleuet', 
+            'framboise', 'cerise', 'caramel', 'fraise', 
             'fruits des champs'
         ]
     }, { 
@@ -155,8 +168,8 @@ export const ICECREAM_PRODUCTS: Product[] = [
         categoryId: 'cremerie',
         category: 'Crèmerie',
         items: [
-            'Noisette', 'Thé chai', 'Érable', 'Espresso', 
-            'Caramel salé', 'Gomme balloune', 'Noix de coco', 'Cannelle & cassonade'
+            'noisette', 'thé chai', 'érable', 'espresso', 
+            'caramel salé', 'gomme balloune', 'noix de coco', 'cannelle & cassonade'
         ]
     }, { 
         id: 'smoothies',
@@ -165,7 +178,8 @@ export const ICECREAM_PRODUCTS: Product[] = [
         categoryId: 'cremerie',
         category: 'Crèmerie',
         items: [ 
-            'tropical', 'fruits des champs' 
+            'fraise', 'ananas', 'bleuet', 'cerise rouge', 'framboise', 'mangue',
+            'mûre', 'pomme', 'kiwi', 'pêche', 'rhubarbe', 'banane'
         ]
     }, { 
         id: 'yogourts',
@@ -174,7 +188,8 @@ export const ICECREAM_PRODUCTS: Product[] = [
         categoryId: 'cremerie',
         category: 'Crèmerie',
         items: [ 
-            'fraises', 'ananas', 'bleuets', 'cerises', 'framboises'
+            'fraise', 'ananas', 'bleuet', 'cerise rouge', 'framboise', 'mangue',
+            'mûre', 'pomme', 'kiwi', 'pêche', 'rhubarbe', 'banane'
         ]
     }, { 
         id: 'yogourts.nouveaux',
@@ -183,7 +198,7 @@ export const ICECREAM_PRODUCTS: Product[] = [
         categoryId: 'cremerie',
         category: 'Crèmerie',
         items: [ 
-            'Pomme-canelle', 'Menthe', 'Noix de coco'
+            'pomme-canelle', 'menthe', 'ananas & noix de coco'
         ]
     }, {
         id: 'trempages.choco',
@@ -201,9 +216,9 @@ export const ICECREAM_PRODUCTS: Product[] = [
         categoryId: 'cremerie',
         category: 'Crèmerie',
         items: [  
-            'Chocolat au lait', 'Chocolat Foncé',
-            'Érable', 'Noisette', 'Caramel', 'Fleur de sel',
-            'Biscuits', 'Oréo', 'Bailey’s' 
+            'au lait', 'foncé (55% cacao)',
+            'érable', 'noisette', 'caramel fleur de sel',
+            'biscuits & crème', 'Bailey’s' 
         ]
     },{
         id: 'trempages.enrobages',
@@ -212,8 +227,8 @@ export const ICECREAM_PRODUCTS: Product[] = [
         categoryId: 'cremerie',
         category: 'Crèmerie',
         items: [ 
-            'Bonbons arc-en-ciel', 'Arachides', 'Rice Crispies',
-            'Oréo émiettés', 'Noix de coco', 'Bretzels' 
+            'bonbons arc-en-ciel', 'arachides', 'Rice Krispies',
+            'Oréo émiettés', 'noix de coco', 'bretzels', 'pépites de chocolats'
         ]
     }
 ]

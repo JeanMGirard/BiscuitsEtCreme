@@ -100,7 +100,7 @@ export class ContactService {
     const st = this.state;
     const zp = this.postal;
     const cn = this.country;
-    return ct+', '+st+', '+zp+', '+cn;
+    return ct+', '+st+', ' + zp;
   }
 
 }

@@ -75,6 +75,29 @@ export class IceCreamComponent implements OnInit {
       ]
     });
   }
+  openMolleFruits(): void {
+    this.openDialog({ 
+      name: 'Molles aux fruits',
+      lists: [
+        { items: this.products.find(e=> e.id === 'cornets.fruits').items
+        }
+      ]
+    });
+  }
+  openDures(): void {
+    this.openDialog({ 
+      name: 'Dures',
+      lists: [
+        {    
+          items: this.products.find(e=> e.id === 'cornets.dures').items
+        },{ name: 'Coaticook',
+          items: this.products.find(e=> e.id === 'cornets.dures.coaticook').items
+        },{ name: 'vegans',
+          items: this.products.find(e=> e.id === 'cornets.dures.vegan').items
+        }
+      ]
+    });
+  }
 
   openEnrobages(): void {
     this.openDialog({ 
@@ -89,7 +112,7 @@ export class IceCreamComponent implements OnInit {
     this.openDialog({ 
       name: 'Chocolats', 
       lists: [
-        { name: 'Reguliers', 
+        { name: 'Réguliers', 
           items: this.products.find(e=> e.id === 'trempages.choco').items 
         }, { 
           name: 'Belges', 
@@ -102,13 +125,13 @@ export class IceCreamComponent implements OnInit {
     this.openDialog({ 
       name: 'Trempages', 
       lists: [{ 
-          name: 'Chocolats reguliers', 
+          name: 'réguliers', 
           items: this.products.find(e=> e.id === 'trempages.choco').items 
         }, { 
-          name: 'Chocolats belges', 
+          name: 'chocolats belges', 
           items: this.products.find(e=> e.id === 'trempages.belges').items 
         },{ 
-          name: 'Enrobages', 
+          name: 'enrobages', 
           items: this.products.find(e=> e.id === 'trempages.enrobages').items 
         }
       ]
@@ -123,14 +146,13 @@ export class IceCreamComponent implements OnInit {
         }
     ]});
   }
-  
   openYogourts(): void {
     this.openDialog({ 
       name: 'Yogourts', 
       lists: [
         { items: this.products.find(e=> e.id === 'yogourts').items },
         { 
-          name:'Nouveautés', 
+          name:'Exclusivités', 
 
           items: this.products.find(e=> e.id === 'yogourts.nouveaux').items 
         }
@@ -145,7 +167,7 @@ export class IceCreamComponent implements OnInit {
   }
   openSlushes(): void {
     this.openDialog({ 
-      name: 'Barbotines', 
+      name: ' ', 
       wide: true,
       lists: [
         { items: this.products.find(e=> e.id === 'barbotines').items }
@@ -157,7 +179,7 @@ export class IceCreamComponent implements OnInit {
       lists: [
         { items: this.products.find(e=> e.id === 'milkshakes').items },
         { 
-          name:'Nouveautés', 
+          name:'exclusivités', 
           items: this.products.find(e=> e.id === 'milkshakes.nouveaux').items 
         }
     ]});
@@ -165,7 +187,7 @@ export class IceCreamComponent implements OnInit {
 
   openSmoothies(): void {
     this.openDialog({ 
-      name: 'Smoothies', 
+      name: 'Smoothies (3 fruits au choix)', 
       lists: [
         { items: this.products.find(e=> e.id === 'smoothies').items }
     ]});

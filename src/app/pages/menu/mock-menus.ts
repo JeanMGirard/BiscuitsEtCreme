@@ -2,13 +2,13 @@ import { Menu } from './menu';
 
 export const MENUS: Menu[] = [
     {
-        name: 'pates-a-biscuit',
-        title: 'Pâtes à biscuit',
+        name: 'pates-a-biscuits',
+        title: 'Pâtes à biscuits',
         elem: 'app-cookie-dough',
         linkImgUrl: 'assets/img/menu-bg/menu-biscuits-bg-600.jpg',
 
-        tileTitle: 'Pâtes à biscuit',
-        tileDesc: 'Pâtes à biscuit',
+        tileTitle: 'Pâtes à biscuits',
+        tileDesc: 'Pâtes à biscuits',
         tileImage: 'assets/img/menu-bg/menu-biscuits-tile-200.jpg'
     }, {
         name: 'cremerie',

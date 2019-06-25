@@ -7,7 +7,7 @@ import { WeekDay } from '@angular/common';
 export const PROMOS_PRODUCTS: Product[] = [
     { 
         id: 'promo-sun',
-        name: 'Items du menu Mini',
+        name: 'Items du mini menu',
         img: 'assets/img/promos/promo-menu-mini-200.png',
         categoryId: 'promotions',
         category: 'Promotions',
@@ -44,15 +44,7 @@ export const PROMOS_PRODUCTS: Product[] = [
         categoryId: 'promotions',
         category: 'Promotions',
         items: []
-    }, 
-    { 
-        id: 'promo-thu',
-        name: 'Peanut Buster',
-        img: 'assets/img/promos/promo-peanut-buster-200.png',
-        categoryId: 'promotions',
-        category: 'Promotions',
-        items: []
-    }, 
+    },
     { 
         id: 'promo-fri',
         name: 'Tourbillons',
