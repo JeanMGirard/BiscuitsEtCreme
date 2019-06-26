@@ -12,17 +12,19 @@
         z-index: 100;
         position: relative;
         margin-top: 50px;
-
+        border-bottom: 1px solid lightgray;
 
         .border{
             border: 2px solid rgb(110,110,110) !important;
         }
         
-        >div{
+        div.banner{
             min-height: 100px;
             position: relative;
             overflow: hidden;
-            
+            margin-bottom: 7px;
+            padding-top: 0px;
+
             @media (min-width: @sizes-media-min[lg]){
             }
 
@@ -56,15 +58,32 @@
             }
 
         }
+
+        div.cocktail{
+            img{
+                width: 50px;
+            }
+            h6{
+                font-family: "Lobster";
+            }
+            &.col-sm-12{
+                @media (min-width: @sizes-media-min[md]){
+                    margin-top: -50px;
+                    margin-bottom: -50px;
+                }
+            }
+
+        }
     }
     #pub-limonades{
         position: relative;
-        margin-top: 40px;
-        margin-bottom: 70px;
+        margin-top: 0px;
+        margin-bottom: 30px;
         min-height: 430px;
         max-height: 450px;
         height: 55vh;
         opacity: 0.95;
+        transform: scale(0.7);
         img{
             position: absolute;
             left: 10vw;
@@ -103,6 +122,8 @@
         left: 10%;
         width: 40%;
         height: 30vh;
+        transform: scale(0.7);
+        max-height: 200px;
 
         img{
             position: absolute;
@@ -115,8 +136,8 @@
             z-index: 20;
             margin-top: -35vh;
             width: 85%;
-            max-height: 500px;
-
+            max-height: 400px;
+            
             background: rgba(255,255,255,0.4);
             border: 4px ridge rgba(220,220,220, 0.5);
 
@@ -127,7 +148,7 @@
             }
             ul{
                 width: 100%;
-                margin-right: 0px;
+                margin-right: 10px;
 
                 height: 75%;
                 float: right;
@@ -140,6 +161,7 @@
                     font-size: 28px;
                     padding-top: 5px;
                     padding-bottom: 5px;
+                    font-size: 34px;
                 }
             }
 
@@ -147,7 +169,7 @@
 
         @media (max-height: 1200px) and (min-width: @sizes-media-min[lg]){
             .pub-content{
-                margin-top: -35% !important;
+                //margin-top: -35% !important;
                 max-height: 500px;
             }
         }
@@ -156,12 +178,14 @@
             width: 100%;
             height: 380px;
             bottom: 20px;
-            
+
             .pub-content{
+                position: absolute;
+                bottom: 0;
                 margin-top: 0 !important;
                 ul{
-                    width: 80%;
-                    margin-right: 20px;
+                    //width: 80%;
+                    //margin-right: 20px;
                 }
             }
         }
@@ -175,7 +199,7 @@
     border-top: 1px solid black;
     background: rgba(255,255,255,0.2);
     text-align: center;
-    height: 600px;
+    height: 300px;
 
     img{
         position: absolute;
@@ -232,6 +256,7 @@
     text-align: left;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+    margin-bottom: 200px;
     position: relative;
     overflow: hidden;
     -webkit-box-shadow: 0 0px 8px 8px rgba(0,0,0,0.1) inset, 0 -4px 20px 8px rgba(0,0,0,0.3) ;
@@ -321,6 +346,7 @@
 }
 
 #pub-thematiques{
+    height: 0px;
     margin-top: 220px;
     -webkit-box-shadow: 0 3px 8px 8px rgba(0,0,0,0.2) inset, 0 -8px 20px 8px rgba(0,0,0,0.4) ;
     box-shadow: 0 3px 8px 8px rgba(0,0,0,0.2) inset, 0 -8px 20px 8px rgba(0,0,0,0.4) ;

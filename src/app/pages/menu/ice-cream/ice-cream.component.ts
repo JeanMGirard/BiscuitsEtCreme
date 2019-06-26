@@ -88,11 +88,14 @@ export class IceCreamComponent implements OnInit {
     this.openDialog({ 
       name: 'Dures',
       lists: [
-        {    
-          items: this.products.find(e=> e.id === 'cornets.dures').items
-        },{ name: 'Coaticook',
+        { 
+          name: 'Coaticook',
           items: this.products.find(e=> e.id === 'cornets.dures.coaticook').items
-        },{ name: 'vegans',
+        },{ 
+          name: 'Nestlé',
+          items: this.products.find(e=> e.id === 'cornets.dures.nestle').items
+        },{ 
+          name: 'vegans',
           items: this.products.find(e=> e.id === 'cornets.dures.vegan').items
         }
       ]
@@ -130,9 +133,6 @@ export class IceCreamComponent implements OnInit {
         }, { 
           name: 'chocolats belges', 
           items: this.products.find(e=> e.id === 'trempages.belges').items 
-        },{ 
-          name: 'enrobages', 
-          items: this.products.find(e=> e.id === 'trempages.enrobages').items 
         }
       ]
     });
@@ -141,8 +141,10 @@ export class IceCreamComponent implements OnInit {
     this.openDialog({ 
       name: 'Garnitures', 
       lists: [
-        { 
-          items: this.products.find(e=> e.id === 'garnitures').items 
+        { items: this.products.find(e=> e.id === 'garnitures').items 
+        },{ 
+          name: 'enrobages', 
+          items: this.products.find(e=> e.id === 'trempages.enrobages').items 
         }
     ]});
   }
@@ -187,9 +189,10 @@ export class IceCreamComponent implements OnInit {
 
   openSmoothies(): void {
     this.openDialog({ 
-      name: 'Smoothies (3 fruits au choix)', 
+      name: 'Smoothies', 
       lists: [
-        { items: this.products.find(e=> e.id === 'smoothies').items }
+        { name: '(3 fruits au choix)',
+          items: this.products.find(e=> e.id === 'smoothies').items }
     ]});
   }
 }

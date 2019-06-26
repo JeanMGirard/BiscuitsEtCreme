@@ -135,12 +135,19 @@
                 font-weight: bold;
                 font-size: 48px;
                 text-decoration: underline;
+
             }
             p{
                 font-family: "Montserrat";
                 font-size: 22px;
-
             }
+        }
+        @media (max-width: @sizes-media-max[sm]) {
+            #info-tartes{
+                h3{ font-size: 32px; }
+                p{ font-size: 18px; }
+            }
+
         }
     }
 
@@ -158,7 +165,7 @@
     border-top: 1px solid black;
     background: rgba(255,255,255,1);
     text-align: center;
-    min-height: 300px;
+    height: 0px;
     z-index: 1;
     padding-left: 0;
     -webkit-box-shadow: 0 3px 8px 8px rgba(0,0,0,0.2) inset, 0 -8px 20px 8px rgba(0,0,0,0.5) ;

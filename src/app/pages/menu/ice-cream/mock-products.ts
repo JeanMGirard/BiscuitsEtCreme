@@ -73,8 +73,8 @@ export const ICECREAM_PRODUCTS: Product[] = [
             'vanille', 'chocolat', 'choco-vanille' 
         ]
     },{ 
-        id: 'cornets.dures',
-        name: 'Creme dures',
+        id: 'cornets.dures.nestle',
+        name: 'Creme dures (Nestle)',
         img: null,
         categoryId: 'cremerie',
         category: 'Crèmerie',
@@ -83,7 +83,7 @@ export const ICECREAM_PRODUCTS: Product[] = [
         ]
     },{ 
         id: 'cornets.dures.coaticook',
-        name: 'Creme dures',
+        name: 'Creme dures (Coaticook)',
         img: null,
         categoryId: 'cremerie',
         category: 'Crèmerie',

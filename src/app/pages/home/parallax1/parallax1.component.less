@@ -91,7 +91,6 @@
     opacity: 0;
     z-index:100;
     font-family: "Lobster", cursive;
-    font-size: 60px;
     color: rgb(50,50,50);
     // -webkit-transform: rotateZ(1.5deg);
     // transform: rotateZ(1.5deg);
@@ -100,6 +99,13 @@
     }
     @media (max-width: @sizes-media-max[md]) {
         //transform: scaleX(1.0) scaleY(1.0);
+    }
+    h2{
+        font-size: 3rem;
+    }
+    h4{
+        font-size: 2.0rem;
+        font-family: "Montserrat";
     }
 }
 #row-1-intro.loaded{
@@ -117,37 +123,37 @@
 
 /*animated scroll arrow animation*/
 @-webkit-keyframes fade_move_down {
-    0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    0%   { -webkit-transform:translate(0,-10px); opacity: 0;  }
     50%  { opacity: 1;  }
-    100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+    100% { -webkit-transform:translate(0,10px); opacity: 0; }
 }
 @-moz-keyframes fade_move_down {
-    0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    0%   { -moz-transform:translate(0,-10px); opacity: 0;  }
     50%  { opacity: 1;  }
-    100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+    100% { -moz-transform:translate(0,10px); opacity: 0; }
 }
 @keyframes fade_move_down {
-    0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    0%   { transform:translate(0,-10px); opacity: 0;  }
     50%  { opacity: 1;  }
-    100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+    100% { transform:translate(0,10px); opacity: 0; }
 }
 
 @media only screen and (max-width: 850px) {
-    #row-1-intro.loaded{ transform: scale(0.8) translateY(-5vh); }
+    #row-1-intro.loaded{ transform: scale(0.9) translateY(-5vh); }
     //#row-1 .parallax { background-size:150% 150%; }
 }
 @media only screen and (max-width: 700px) {
-    #row-1-intro.loaded{ transform: scale(0.7) translateY(-10vh); }
+    #row-1-intro.loaded{ transform: scale(0.8) translateY(-10vh); }
 }
 @media only screen and (max-width: 600px) {
-    #row-1-intro.loaded{ transform: scale(0.50) translateY(-15vh); }
+    #row-1-intro.loaded{ transform: scale(0.70) translateY(-15vh); }
     //#row-1 .parallax { background-size:200% 150%; }
 }
 @media only screen and (max-width: 400px) {
-    #row-1-intro.loaded{ transform: scale(0.4) translateY(-20vh); }
+    #row-1-intro.loaded{ transform: scale(0.65) translateY(-20vh); }
 }
 @media only screen and (max-width: 350px) {
-    #row-1-intro.loaded{ transform: scale(0.3) translateY(-25vh); }
+    #row-1-intro.loaded{ transform: scale(0.6) translateY(-25vh); }
     //#row-1 .parallax { background-size:250% 150%; }
 }
 @media only screen and (min-height: 400px) {

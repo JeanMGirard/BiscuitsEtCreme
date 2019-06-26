@@ -11,6 +11,14 @@
     p{
         text-align: center !important;
     }
+
+    .button-row.small button{
+        margin-left: 25px;
+        padding: 2px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 15px;
+    }
 }
 
 #cornets-img{
@@ -189,12 +197,12 @@
 }
 #pub-garnitures{
     img{
-        top: 25px;
+        top: 33px;
         bottom: 0;
-        left:0; 
+        left:5%; 
         @media(max-width: @sizes-media-max[sm]) {
-            top:-25px;
-            left: -100px;
+            top:10px;
+            left: 0px;
         }
     }
 }
@@ -227,7 +235,7 @@
 
 #pub-tourbillons,
 #pub-yogourts{
-    height: 320px;
+    height: 280px;
     h3{ position: relative;
         z-index: 100;
     }
@@ -241,13 +249,17 @@
     }
 }
 @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
-    #pub-yogourts img{ top: -70px !important; }
-    #pub-tourbillons img{  top: -50px !important;  margin-left: 15px !important;}
+    #pub-yogourts img{ top: -90px !important; }
+    #pub-tourbillons img{  top: 0px !important;  margin-left: -7% !important;}
+}
+@media (orientation: portrait) and (max-width: @sizes-media-min[sm]){
+    #pub-yogourts img{  }
+    #pub-tourbillons img{  top: -70px !important; }
 }
 
 #pub-milkshakes,
 #pub-smoothies {
-    height: 280px;
+    height: 220px;
     h3{
         z-index: 1;
         position: relative;

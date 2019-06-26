@@ -14,9 +14,9 @@
     <div id="pub-fruits" class="col-md-12 col-sm-12 defaults" style="z-index: 50;">
         <h4 class="shadow-white">aux fruits!</h4>
         <img src="/assets/img/menu-products/cornets2-800.png" id="cornets-img">
-        <div class="button-row" style="bottom: 60px;">
+        <div class="button-row small" style="bottom: 60px;">
                 <button mat-raised-button color="primary" (click)="openMolleFruits()">Fruits disponibles</button>
-                <button mat-raised-button color="primary" (click)="openDures()">Saveurs de crèmes glacées dures</button>
+                <button mat-raised-button color="primary" (click)="openDures()">Crèmes glacées dures</button>
         </div>
     </div>
 
@@ -25,7 +25,7 @@
         nomatTooltip="Cliquez pour découvrir les saveurs disponibles" nomatTooltipPosition="below"
         (click)="openGarnitures()">
         <h3>Garnitures</h3>
-        <img src="/assets/img/menu-products/garnitures-400.png">
+        <img src="/assets/img/menu-products/garnitures-300.png">
         
         <!--div class="button-row">
             <button mat-raised-button color="primary" style="top:-75px;left:60px;" (click)="openGarnitures()">Saveurs</button>
@@ -34,7 +34,7 @@
     <div id="pub-trempages" class="r col-md-6 col-sm-12 sm-bg-primary  row-effect" 
         nomatTooltip="Cliquez pour découvrir les saveurs disponibles" nomatTooltipPosition="below"
         (click)="openTrempagesEnrobages()">
-        <h3>Trempages<br/>&nbsp;&nbsp;& Enrobages</h3>
+        <h3>Trempages</h3>
         <img src="/assets/img/menu-products/trempage-choco-320.png">
     </div>
 
@@ -79,7 +79,7 @@
         nomatTooltipShowDelay="1500"
         (click)="openTourbillons()">
         <h3>Tourbillons</h3>
-        <img src="/assets/img/menu-products/tourbillons.png" style="top: 50px; margin-left: -7%;">
+        <img src="/assets/img/menu-products/tourbillons.png">
         <!--div class="button-row">
             <button mat-raised-button color="primary" style="top:-100px;left:-100px;" (click)="openTourbillons()">Saveurs</button>
         </div-->
@@ -142,12 +142,12 @@
 
     </div>
 
-    <div class="col-6 submenu-lastrow cookiedough">
-        <button id="submenu-lastrow-prev" mat-stroked-button routerLink="/menu/pates-a-biscuit">
+    <div class="col-sm-6 col-12 submenu-lastrow  cookiedough">
+        <button id="submenu-lastrow-prev" mat-stroked-button routerLink="/menu/pates-a-biscuits">
             Pâtes à biscuits
         </button>
     </div>
-    <div class="col-6 submenu-lastrow otherproducts">
+    <div class="col-sm-6 col-12 submenu-lastrow otherproducts">
         <button id="submenu-lastrow-next" mat-stroked-button routerLink="/menu/autre-produits">
             Autres
         </button>

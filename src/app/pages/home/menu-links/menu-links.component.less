@@ -16,11 +16,17 @@
     background-clip: border-box;
     -webkit-background-size: auto auto;
     background-size: auto auto;
+    #imgrd-1-1{
+        max-width: 1300px;
+    }
 }
 #imgrd-1-1-0{ float:left;  }
 #imgrd-1-1-2{ float:right; }
 #menu-links .linkToMenu {
     width: 32%;
+    max-width: 370px;
+    min-height: 220px;
+    max-height: 300px;
     cursor: pointer;
     text-align: center;
     opacity: 0.9;
@@ -28,7 +34,10 @@
     display: inline-block;
     border-radius: 5%;
     border: 6px solid rgb(60,60,60);
-    min-height: 220px;
+    
+    @media (min-width: 1000px) {
+        height: 20vw;
+    }
 }
 #menu-links .linkToMenu:hover {
     opacity: 1;
@@ -43,6 +52,7 @@
     cursor: pointer;
     border: 2px solid lightgray;
     border-radius: 5px;
+    
 }
 
 

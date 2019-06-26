@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import CircleType from 'circletype';
+//import CircleType from 'circletype';
 
 @Component({
   selector: 'app-parallax1',
@@ -16,8 +16,8 @@ export class Parallax1Component implements OnInit {
 
   ngOnInit() {
     $(document).ready(() => {
-      try{
-        (new CircleType(document.getElementById('row-1-intro'))).radius(1200);
+      try {
+        // (new CircleType(document.getElementById('row-1-intro'))).radius(1200);
       } catch {
         console.log('CircleType not functionning properly');
       }
