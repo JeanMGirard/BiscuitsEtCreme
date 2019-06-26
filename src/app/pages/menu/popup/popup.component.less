@@ -58,7 +58,6 @@
             font-family: "Montserrat";
             font-size: 24px;
             white-space: nowrap;
-
             h4{
                 text-align: center;
                 font-weight: bold;
@@ -69,6 +68,9 @@
                 padding-bottom: 20px;
                 width:100%;
             }
+            @media (max-width: @sizes-media-max[sm]){
+                font-size: 20px;
+            }
         }
 
         @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
@@ -76,6 +78,7 @@
             margin-top: 80px;
             margin-bottom: 50px;
             overflow-y: auto;
+            overflow-x: visible;
             padding-left: 10px;
             padding-right: 10px;
 
@@ -87,8 +90,12 @@
                 padding-right: 0 !important;
             }
             h3{
+                @media (max-width: @sizes-media-max[sm]){
+                transform: scale(0.8);
+            }
                 @media (max-width: 340px){
                     text-indent: 0%;
+                    
                 }
             }
             mat-list-item{

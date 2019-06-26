@@ -39,9 +39,9 @@ export class FooterComponent implements OnInit {
   serviceHide(value: boolean){
     this.hidden = value;
     if(value){  
-      $('#footer').hide();
+      $('.footer').css('opacity', '0');
     } else {  
-      $('#footer').show(); 
+      $('.footer').css('opacity', '1');
     }
   }
   getAddress(): void {
