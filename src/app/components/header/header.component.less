@@ -114,6 +114,13 @@ header {
             display: none;
         }
     }
+    
+    @media (min-width: 520px) and (max-width: 600px){
+        .nav-item, .nav-item a { font-size: 14px; }
+    }
+    @media (min-width: 500px) and (max-width: 520px){
+        .nav-item, .nav-item a { font-size: 12px; }
+    }
 
     &.scrolled{ 
         .nav-item,
@@ -152,7 +159,7 @@ header {
         opacity:1;
         height: @header-mobile;
         top: 100%;
-        background: rgb(140, 140, 140);
+        background: @header-secondary-mobile;
         overflow: hidden;
 
         .subnav-item {

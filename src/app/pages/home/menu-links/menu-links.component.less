@@ -16,97 +16,96 @@
     background-clip: border-box;
     -webkit-background-size: auto auto;
     background-size: auto auto;
+
+
     #imgrd-1-1{
         max-width: 1300px;
     }
-}
-#imgrd-1-1-0{ float:left;  }
-#imgrd-1-1-2{ float:right; }
-#menu-links .linkToMenu {
-    width: 32%;
-    max-width: 370px;
-    min-height: 220px;
-    max-height: 300px;
-    cursor: pointer;
-    text-align: center;
-    opacity: 0.9;
-    overflow: hidden;
-    display: inline-block;
-    border-radius: 5%;
-    border: 6px solid rgb(60,60,60);
+        
+    #imgrd-1-1-0{ float:left;  }
+    #imgrd-1-1-2{ float:right; }
+
+    .linkToMenu {
+        width: 32%;
+        max-width: 370px;
+        min-height: 220px;
+        max-height: 300px;
+        cursor: pointer;
+        text-align: center;
+        opacity: 0.9;
+        overflow: hidden;
+        display: inline-block;
+        border-radius: 5%;
+        border: 6px solid rgb(60,60,60);
+
+        &:hover {
+            opacity: 1;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            border: 2px solid lightgray;
+            border-radius: 5px;
+            
+        }
+        h3 {
+            position: relative;
+            display: inline-block;
+            z-index: 100;
+            font-family: 'Fredericka the Great', cursive;
+            font-weight: bold;
+            font-size: 30px;
+            color: rgb(210, 210, 210);
+            margin-top: 25%;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+        }
+        @media (min-width: 1000px) {
+            height: 20vw;
+        }
+        
+    }
     
-    @media (min-width: 1000px) {
-        height: 20vw;
-    }
-}
-#menu-links .linkToMenu:hover {
-    opacity: 1;
-}
 
-#menu-links .linkToMenu img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    cursor: pointer;
-    border: 2px solid lightgray;
-    border-radius: 5px;
-    
-}
-
-
-#menu-links .linkToMenu h3 {
-    position: relative;
-    display: inline-block;
-    z-index: 100;
-    font-family: 'Fredericka the Great', cursive;
-    font-weight: bold;
-    font-size: 30px;
-    color: rgb(210, 210, 210);
-    margin-top: 25%;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
-}
-
-
-@media only screen and (max-width: 850px) {
-    #imgrd-1-1 {     height:    200px;   }
-    #imgrd-1-1 h3 {  font-size: 24px;    }
-    #imgrd-1-1 p {   font-size: 20px;    }
-}
-@media only screen and (max-width: 769px) {
-    /* forced by col-sm-12.. */
-    #imgrd-1-1{
-        margin: 0;
-        padding: 0;
+    @media (max-width: 850px) {
+        #imgrd-1-1 {     height:    200px;   }
+        #imgrd-1-1 h3 {  font-size: 24px;    }
+        #imgrd-1-1 p {   font-size: 20px;    }
     }
-    #imgrd-1-1 div.textbox{top: 3px;}
-    #imgrd-1-1 div.textbox{
-        width: 33%;
-        border: 1px solid black;
+    @media (max-width: 769px) {
+        /* forced by col-sm-12.. */
+        #imgrd-1-1{
+            margin: 0;
+            padding: 0;
+        }
+        #imgrd-1-1 div.textbox{top: 3px;}
+        #imgrd-1-1 div.textbox{
+            width: 33%;
+            border: 4px solid black;
+        }
+        #img-1-1-1{ left: 0; }
+        #img-1-1-2{ left: 33.5%; }
+        #img-1-1-3{ left: 67%; }
+        #imgrd-1-2{margin-top: 4px;}
     }
-    #img-1-1-1{ left: 0; }
-    #img-1-1-2{ left: 33.5%; }
-    #img-1-1-3{ left: 67%; }
-    #imgrd-1-2{margin-top: 4px;}
-    #gmap-row{
-        height: 300px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+    @media (max-width: 750px) {
+        .linkToMenu h3{
+            margin-top: 40%;
+        }
     }
-}
-@media only screen and (max-width: 600px) {
-    #imgrd-1-1{ height: 600px;}
-    #imgrd-1-1 div.textbox{
-        position: relative;
-        width: 100%;
-        height:31%;
-        margin-bottom: 3px;
-        left: 0;
+    @media (max-width: 600px) {
+        padding-top: 0px;
+        padding-bottom: 25px;
     }
-    #img-1-1-3{ left: 0; }
-    #imgrd-1-1 div.textbox img{height: 200px; }
-    #imgrd-1-1 h3{ font-size:34px;}
-    #imgrd-1-1 p{ margin-left: 0;  }
+    @media (max-width: 430px) {
+        .linkToMenu h3{
+            font-size: 18px !important;
+            margin-top: 80%;
+        }
+    }
 }
 
