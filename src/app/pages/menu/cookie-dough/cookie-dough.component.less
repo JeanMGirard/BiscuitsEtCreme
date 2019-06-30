@@ -111,26 +111,87 @@
         -webkit-box-shadow: 0 8px 20px 8px rgba(0,0,0,0.5) ;
         box-shadow: 0 8px 20px 8px rgba(0,0,0,0.5) ;
 
+        /*
         img {
             width: 100%;
             position: absolute;
             top: 0;
             left: 0;
             z-index: -1;
+        } 
+        */
+        #img-tartes{
+            width: 30%;
+            margin-top: 100px;
+            margin-bottom: 80px;
+            float: left;
+
+            article{
+                width: 100%;
+                display: inline-block;
+                text-align: center;
+                position: relative;
+
+                img{
+                    width: 100%;
+                }
+                h5{
+                    position: absolute;
+                    color: white;
+                    font-family: "Lobster";
+                    font-size: 32px;
+                    top: 35%;
+                    left: -5vw;
+                    text-shadow: 2px -2px 6px rgba(0,0,0,0.5) , 0 2px 2px rgba(0,0,0,0.5) , 4px 4px 6px rgba(0,0,0,0.5) ;
+                }
+            }
+            @media (min-width: 1000px) {
+                // (100 / width) * max-width = 1000px;
+
+            }
+            @media (min-width: @sizes-media-min[md]) {
+                max-width: 250px;
+                margin-left: 18vw;
+            }
+            @media (max-width: @sizes-media-max[sm]) {
+                width: 100%;
+                margin-top: 10px;
+                margin-bottom: 50px;
+                margin-top: 180px;
+
+                article{
+                    width: 30%;
+                    display: inline-block;
+                    text-align: center;
+                    position: relative;
+                    margin: 0.5%;
+
+                    img{
+                        width: 100%;
+                    }
+                    h5{
+                        top: 80%;
+                        left: 5vw;
+                        transform: rotateZ(40deg);
+                    }
+                }
+            }
+            @media (max-width: 500px) {
+                article h5{ 
+                    top: 70%; 
+                    font-size: 20px; 
+                }
+            }
         }
+
         #info-tartes{
             min-height: 600px;
             padding-top: 130px;
-            padding-left: 6vw;
-            padding-right: 6vw;
+            padding-left: 0vw;
+            padding-right: 12vw;
             width: 50%;
             float: right;
-            @media (max-width: @sizes-media-max[sm]) {
-                margin-top: 24vw;
-                width: 100%;
-                padding-bottom: 50px;
-                min-height: 0px;
-            }
+            
             h3{
                 font-weight: bold;
                 font-size: 48px;
@@ -141,14 +202,31 @@
                 font-family: "Montserrat";
                 font-size: 22px;
             }
-        }
-        @media (max-width: @sizes-media-max[sm]) {
-            #info-tartes{
-                h3{ font-size: 32px; }
-                p{ font-size: 18px; }
-            }
 
+            @media (max-width: @sizes-media-max[sm]) {
+                margin-top: -60vw;
+                width: 100%;
+                min-height: 0px;
+                padding-bottom: 50px;
+                padding-top: 40px;
+                padding-left: 6vw;
+                padding-right: 6vw;
+                h3{ font-size: 32px; }
+                p{ 
+                    margin-top: 280px;
+                    font-size: 18px; 
+                }
+            }
+            @media (max-width: 550px) {
+                margin-top: -75vw;
+                p{  margin-top: 250px; }
+            }
+            @media (max-width: 420px) {
+                margin-top: -350px;
+                p{  margin-top: 200px; }
+            }
         }
+        
     }
 
     #pub-tartes{        background: rgb(246,239,229);  }

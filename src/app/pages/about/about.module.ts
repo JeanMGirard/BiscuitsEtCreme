@@ -5,7 +5,6 @@ import { AboutRoutingModule } from './about-routing.module';
 import { SocialService } from '../../modules/social/social.service';
 
 import { AboutComponent } from './about.component';
-import { Row2Component } from './row2/row2.component';
 import { Parallax1Component } from './parallax1/parallax1.component';
 import { SocialLinksComponent } from './social-links/social-links.component';
 import { IntroComponent } from './intro/intro.component';
@@ -15,7 +14,6 @@ import { ArticlesComponent } from './articles/articles.component';
 @NgModule({
   declarations: [
     AboutComponent, 
-    Row2Component,
     Parallax1Component,
     SocialLinksComponent,
     IntroComponent,

@@ -7,36 +7,42 @@
 #about-articles section {
     text-align: center;
     margin-top: 60px;
-}
 
-#about-articles section:last-of-type {
-    margin-bottom: 70px;
-}
-
-#about-articles section img {
-    display: block;
-    width: 300px;
-    height: 150px;
-    float: left;
-    border: 2px solid darkgrey;
-    @media (min-width: @sizes-media-min[md]){
-        margin-top: 18px;
+    @media (max-width: 600px) {
+        margin-bottom: 45px;
     }
-    
+    &:last-of-type {
+        margin-bottom: 70px;
+    }
+    img {
+        display: block;
+        width: 300px;
+        height: 150px;
+        float: left;
+        border: 2px solid darkgrey;
+        @media (min-width: @sizes-media-min[md]){
+            margin-top: 18px;
+        }
+        
+    }
+
+    article {
+        display: inline-block;
+        float: left;
+        width: 55%;
+        padding-left: 5vw;
+        font-family: "Montserrat", cursive;
+
+        h4{
+            margin-bottom: 8px;
+        }
+        h4, p {
+            text-align: left;
+        }
+    }
 }
 
-#about-articles section article {
-    display: inline-block;
-    float: left;
-    width: 55%;
-    padding-left: 5vw;
-    font-family: "Montserrat", cursive;
-}
 
-#about-articles section article h4,
-#about-articles section article p {
-    text-align: left;
-}
 
 @media only screen and (max-width: 900px) {
     #about-articles section article {
