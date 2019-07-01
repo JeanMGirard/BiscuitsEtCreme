@@ -30,7 +30,7 @@
         @media (min-width: 400px) {  margin-top:-60px;  }
     }
     .button-row{
-
+        left: 0;
         button{
             opacity: 0.9;
             &.hover{ opacity: 1; }
@@ -47,7 +47,12 @@
             button { transform: scale(0.9); }
         }
         @media (max-width: @sizes-media-max[sm]){
-            button { transform: scale(0.8); }
+            button { 
+                transform: scale(0.8); 
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+            
         }
     }
 
