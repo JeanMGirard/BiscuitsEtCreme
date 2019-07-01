@@ -18,6 +18,40 @@
     background-size: auto auto;
 
 
+    #linkToMenuHome{
+        display: block;
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 60px;
+        text-align: center;
+        opacity: 0.5;
+        font-family: "Montserrat";
+        font-weight: bold;
+        color: darkblue;
+
+        cursor: pointer;
+
+        &:hover{ opacity: 0.8; }
+
+        a { 
+            cursor: pointer;
+            opacity: 0.8;
+            &:hover{ opacity: 1; font-weight: bold; } 
+        }
+        i { font-size: 70px; 
+            color: rgba(0,0,0,0.7); }
+        h5{ 
+            font-size: 22px;
+            margin-top: 25px;
+        }
+        h6{ // display: none; 
+            font-size: 18px;
+            color: rgb(68, 3, 3);
+        }
+    }
+    #imgrd-1-1{ display: none; }
+    #linkToMenuHome h6 { display: block; }
+
     #imgrd-1-1{
         max-width: 1300px;
     }
@@ -70,42 +104,19 @@
         
     }
     
-
-    @media (max-width: 850px) {
-        #imgrd-1-1 {     height:    200px;   }
-        #imgrd-1-1 h3 {  font-size: 24px;    }
-        #imgrd-1-1 p {   font-size: 20px;    }
+    
+    @media (min-width: 1400px) {
+        #imgrd-1-1{ display: block; }
+        #linkToMenuHome h6 { display: none; }
     }
-    @media (max-width: 769px) {
-        /* forced by col-sm-12.. */
-        #imgrd-1-1{
-            margin: 0;
-            padding: 0;
-        }
-        #imgrd-1-1 div.textbox{top: 3px;}
-        #imgrd-1-1 div.textbox{
-            width: 33%;
-            border: 4px solid black;
-        }
-        #img-1-1-1{ left: 0; }
-        #img-1-1-2{ left: 33.5%; }
-        #img-1-1-3{ left: 67%; }
-        #imgrd-1-2{margin-top: 4px;}
-    }
-    @media (max-width: 750px) {
-        .linkToMenu h3{
-            margin-top: 40%;
+    @media (max-width: @sizes-media-max[sm]) {
+        #imgrd-1-1{ display: none; }
+        #linkToMenuHome{ 
+            padding-top:60px;
+            padding-bottom: 60px;
+            h6{ display: block; }
         }
     }
-    @media (max-width: 600px) {
-        padding-top: 0px;
-        padding-bottom: 25px;
-    }
-    @media (max-width: 430px) {
-        .linkToMenu h3{
-            font-size: 18px !important;
-            margin-top: 80%;
-        }
-    }
+    
 }
 

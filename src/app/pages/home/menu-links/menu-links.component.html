@@ -3,6 +3,17 @@
 
 
 <div id="menu-links" class="row content-box" style="text-align: center;">
+    <div id="linkToMenuHome" class="col-12">
+        <div (click)="goToMenuHome()">
+            <i class="fas fa-book-open"></i>
+            <h5>Regardez notre menu</h5>
+            <h6>
+                <a (click)="goToMenuStr('pates-a-biscuits')">Pâtes à biscuit</a>
+              | <a (click)="goToMenuStr('cremerie')">Crème glacées</a>
+              | <a (click)="goToMenuStr('autres-produits')">autres</a>
+            </h6>
+        </div>
+    </div>
     <div id="imgrd-1-1" class="col-sm-12 col-md-10 container">
         <div *ngFor="let menu of menus$ | async ; let i = index"
             [id]="'imgrd-1-1-'+i"

@@ -49,4 +49,19 @@ export class MenuService {
     this.onArriveMenu();
     this.router.navigate(['/menu', menu.name]);
   }
+  public goToMenuHome(){
+    this.onArriveMenuHome();
+    this.router.navigate(['/menu']);
+  }
+  public goToMenuStr(menuRef: string){
+    for(let menu of this.menus){
+      switch(menuRef){
+        case menu.name:
+        case menu.title:
+          this.goToMenu(menu);
+          return null;
+      }
+    }
+    this.goToMenuHome();
+  }
 }

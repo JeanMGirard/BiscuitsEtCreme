@@ -22,5 +22,10 @@ export class MenuLinksComponent implements OnInit {
   goToMenu(menu: Menu){
     this.menuService.goToMenu(menu);
   }
-
+  goToMenuHome(){
+    this.menuService.goToMenuHome();
+  }
+  goToMenuStr(menu: string){
+    this.menuService.goToMenuStr(menu);
+  }
 }

@@ -20,7 +20,7 @@ export const MENUS: Menu[] = [
         tileDesc: '',
         tileImage: 'assets/img/menu-bg/menu-icecream-tile-200.jpg'
     }, {
-        name: 'autre-produits',
+        name: 'autres-produits',
         elem: 'app-other-products',
         title: 'Autres',
         linkImgUrl: 'assets/img/menu-bg/menu-other-bg-600.jpg',

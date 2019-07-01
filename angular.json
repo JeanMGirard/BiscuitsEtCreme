@@ -29,6 +29,7 @@
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.css",
               "./node_modules/@fortawesome/fontawesome-free/less/fontawesome.less",
+              "./node_modules/@fortawesome/fontawesome-free/less/solid.less",
               "src/styles.less"
             ],
             "scripts": [
