@@ -63,13 +63,13 @@ export class IceCreamComponent implements OnInit {
     this.openDialog({ 
       name: 'Crèmes glacées',
       lists: [
-        { name: 'Molles',    
+        { name: 'Molle',    
           items: this.products.find(e=> e.id === 'cornets.molles').items
         }, { 
-          name: 'Molles aux fruits', 
+          name: 'Molle aux fruits', 
           items: this.products.find(e=> e.id === 'cornets.fruits').items
         }, { 
-          name: 'Dures',     
+          name: 'Dure',     
           items: this.products.find(e=> e.id === 'cornets.dures').items
         }
       ]

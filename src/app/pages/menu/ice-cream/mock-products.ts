@@ -73,7 +73,7 @@ export const ICECREAM_PRODUCTS: Product[] = [
     // REAL PRODUCTS
     { 
         id: 'cornets.molles',
-        name: 'Molles',
+        name: 'Molle',
         img: null,
         categoryId: 'cremerie',
         category: 'Crèmerie',
@@ -98,12 +98,12 @@ export const ICECREAM_PRODUCTS: Product[] = [
         items: [
             'cerises noires', 'doubles fraises',
             'tire et pépites d\'érable', 'ribambelle', 'érable et noix',
-            'biscuits et crème', 'brownies', 'pâte à biscuit et fudge', 'gomme balloune',
+            'biscuits et crème', 'brownies', 'pâte à biscuits et fudge', 'gomme balloune',
             'pistache', 'praline et crème', 'mokaramel', 'barbe à papa'
         ]
     },{ 
         id: 'cornets.dures.vegan',
-        name: 'Creme dures vegan',
+        name: 'Creme dure vegan',
         img: null,
         categoryId: 'cremerie',
         category: 'Crèmerie',
@@ -113,7 +113,7 @@ export const ICECREAM_PRODUCTS: Product[] = [
         ]
     },{ 
         id: 'cornets.fruits',
-        name: 'Molles aux fruits',
+        name: 'Molle aux fruits',
         img: null,
         categoryId: 'cremerie',
         category: 'Crèmerie',
@@ -236,7 +236,7 @@ export const ICECREAM_PRODUCTS: Product[] = [
         category: 'Crèmerie',
         items: [ 
             'bonbons arc-en-ciel', 'arachides', 'Rice Krispies',
-            'Oréo émiettés', 'noix de coco', 'bretzels', 'pépites de chocolats'
+            'Oréo émiettés', 'noix de coco', 'bretzels', 'pépites de chocolat'
         ]
     }
 ]
