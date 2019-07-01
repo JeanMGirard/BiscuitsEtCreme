@@ -84,17 +84,18 @@
         border-bottom: 3px solid rgb(70,70,70);
         box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.4);
 
+        img{ margin-top: 10px;  }
         &.left{
             z-index: 15;
             box-shadow: -4px 10px 10px 1px rgba(0, 0, 0, 0.4);
         }
+    }
 
-        img{
-            margin-top: 10px;
-            @media (max-width: 600px) {
-                width: 400px;
-            }
-        }
+    @media (max-width: @sizes-media-max[md]) {
+        .pub-combo img { width: 80%; }
+    }
+    @media (max-width: @sizes-media-max[sm]) {
+        .pub-combo img { width: 95%; }
     }
 }
 

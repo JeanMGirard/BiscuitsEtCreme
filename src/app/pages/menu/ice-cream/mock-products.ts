@@ -10,7 +10,7 @@ export const ICECREAM_PRODUCTS: Product[] = [
         category: 'Crèmerie Carousel',
         name: 'Carré au chocolat',
         desc: '...',
-        img: '/assets/img/menu-products/x-carre-chocolat-1200.png',
+        img: '/assets/img/menu-products/x-carre-chocolat.png',
         items: []
     }, { 
         id: 'cremerie.carousel.b',
@@ -18,7 +18,7 @@ export const ICECREAM_PRODUCTS: Product[] = [
         category: 'Crèmerie Carousel',
         name: 'Le peanut buster',
         desc: '...',
-        img: '/assets/img/menu-products/x-peanut-buster-1200.png',
+        img: '/assets/img/menu-products/x-peanut-buster.png',
         items: []
     }, { 
         id: 'cremerie.carousel.c',
@@ -26,7 +26,7 @@ export const ICECREAM_PRODUCTS: Product[] = [
         category: 'Crèmerie Carousel',
         name: 'Carré au sucre à la crème',
         desc: '...',
-        img: '/assets/img/menu-products/x-carre-sucrecreme-1200.png',
+        img: '/assets/img/menu-products/x-carre-sucrecreme.png',
         items: []
     }, { 
         id: 'cremerie.carousel.d',
@@ -34,7 +34,7 @@ export const ICECREAM_PRODUCTS: Product[] = [
         category: 'Crèmerie Carousel',
         name: 'Banane-oréo',
         desc: '...',
-        img: '/assets/img/menu-products/x-banane-oreo-1200.png',
+        img: '/assets/img/menu-products/x-banane-oreo.png',
         items: []
     }, { 
         id: 'cremerie.carousel.e',
@@ -42,7 +42,7 @@ export const ICECREAM_PRODUCTS: Product[] = [
         category: 'Crèmerie Carousel',
         name: 'Le duo',
         desc: '...',
-        img: '/assets/img/menu-products/x-duo-1200.png',
+        img: '/assets/img/menu-products/x-duo.png',
         items: []
     }, { 
         id: 'cremerie.carousel.f',
@@ -50,15 +50,23 @@ export const ICECREAM_PRODUCTS: Product[] = [
         category: 'Crèmerie Carousel',
         name: 'Parfait',
         desc: '...',
-        img: '/assets/img/menu-products/x-parfait-1200.png',
+        img: '/assets/img/menu-products/x-parfait.png',
         items: []
     }, { 
         id: 'cremerie.carousel.g',
         categoryId: 'cremerie.carousel',
         category: 'Crèmerie Carousel',
+        name: 'Le Skorr',
+        desc: '...',
+        img: '/assets/img/menu-products/x-skorr.png',
+        items: []
+    }, { 
+        id: 'cremerie.carousel.h',
+        categoryId: 'cremerie.carousel',
+        category: 'Crèmerie Carousel',
         name: 'La fiesta',
         desc: '...',
-        img: '/assets/img/menu-products/x-fiesta-1200.png',
+        img: '/assets/img/menu-products/x-fiesta.png',
         items: []
     },
     

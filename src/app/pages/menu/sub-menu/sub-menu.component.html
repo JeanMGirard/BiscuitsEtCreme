@@ -1,5 +1,5 @@
 <div id="menu-home" class="row">
-  <button id="submenu-back" class="pc-only" mat-stroked-button (click)="gotoPrev()" color="primary">Retour</button>
+  <button id="submenu-back" mat-stroked-button (click)="gotoPrev()" color="primary">Retour</button>
   <!--button id="submenu-back" mat-stroked-button  routerLink="/menu" color="primary">Retour</button-->
   <div  *ngIf="menu$ | async as menu" style='min-height:100vh'>
       <app-cookie-dough   class="sub-menu"  *ngIf="menu.elem == 'app-cookie-dough'"></app-cookie-dough>

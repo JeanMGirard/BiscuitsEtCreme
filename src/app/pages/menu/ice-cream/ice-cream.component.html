@@ -21,21 +21,28 @@
     </div>
 
 
-    <div id="pub-garnitures" class="l col-md-6 col-sm-12 sm-bg-secondary row-effect" 
-        nomatTooltip="Cliquez pour découvrir les saveurs disponibles" nomatTooltipPosition="below"
-        (click)="openGarnitures()">
+    <div id="pub-garnitures" class="l col-md-6 col-6 sm-bg-secondary row-effect" 
+            nomatTooltip="Cliquez pour découvrir les saveurs disponibles" 
+            nomatTooltipPosition="below"
+            (click)="openGarnitures()">
         <h3>Garnitures</h3>
         <img src="/assets/img/menu-products/garnitures-300.png">
-        
         <!--div class="button-row">
             <button mat-raised-button color="primary" style="top:-75px;left:60px;" (click)="openGarnitures()">Saveurs</button>
         </div-->
+        <div class="row-click-for-info">
+            <h6>Cliquez pour la&nbsp;</h6>
+        </div>
     </div>
-    <div id="pub-trempages" class="r col-md-6 col-sm-12 sm-bg-primary  row-effect" 
-        nomatTooltip="Cliquez pour découvrir les saveurs disponibles" nomatTooltipPosition="below"
-        (click)="openTrempagesEnrobages()">
+    <div id="pub-trempages" class="r col-md-6 col-6 sm-bg-primary  row-effect" 
+            nomatTooltip="Cliquez pour découvrir les saveurs disponibles" 
+            nomatTooltipPosition="below"
+            (click)="openTrempagesEnrobages()">
         <h3>Trempages</h3>
         <img src="/assets/img/menu-products/trempage-choco-320.png">
+        <div class="row-click-for-info">
+            <h6>&nbsp;liste des saveurs.</h6>
+        </div>
     </div>
 
 
@@ -64,7 +71,7 @@
         </div>
     </div>
 
-    <div id="pub-yogourts" class="l col-md-6 col-sm-12 sm-bg-primary  row-effect" 
+    <div id="pub-yogourts" class="l col-md-6 col-6 sm-bg-primary  row-effect" 
         nomatTooltip="Cliquez pour découvrir les saveurs disponibles" nomatTooltipPosition="below"
         nomatTooltipShowDelay="1500"
         (click)="openYogourts()">
@@ -73,8 +80,11 @@
         <!--div class="button-row">
             <button mat-raised-button color="primary" style="top:-100px;left:100px;" (click)="openYogourts()">Saveurs</button>
         </div-->
+        <div class="row-click-for-info">
+            <h6>Cliquez pour la&nbsp;</h6>
+        </div>
     </div>
-    <div id="pub-tourbillons" class="r col-md-6 col-sm-12 sm-bg-secondary  row-effect" 
+    <div id="pub-tourbillons" class="r col-md-6 col-6 sm-bg-secondary  row-effect" 
         nomatTooltip="Cliquez pour découvrir les saveurs disponibles" nomatTooltipPosition="below"
         nomatTooltipShowDelay="1500"
         (click)="openTourbillons()">
@@ -83,6 +93,9 @@
         <!--div class="button-row">
             <button mat-raised-button color="primary" style="top:-100px;left:-100px;" (click)="openTourbillons()">Saveurs</button>
         </div-->
+        <div class="row-click-for-info">
+            <h6>&nbsp;liste des saveurs.</h6>
+        </div>
     </div>
 
     <div class="col-12">
@@ -93,18 +106,18 @@
 
                 <div class="w-100 carousel-item active">
                     <img class="w-100 " src="{{ carousel[0].img }}" alt="{{ carousel[0].name }}">
-                    <div class="w-100 carousel-caption">
+                    <!--div class="w-100 carousel-caption">
                         <h3>{{ carousel[0].name }}</h3>
                         <p>{{ carousel[0].desc }}</p>
-                    </div>
+                    </div-->
                 </div>
 
                 <div *ngFor="let item of carousel.slice(1)" class="w-100 carousel-item">
                     <img class="w-100 " src="{{ item.img }} " alt="{{ item.name }}">
-                    <div class="w-100 carousel-caption">
+                    <!--div class="w-100 carousel-caption">
                         <h3>{{ item.name }}</h3>
                         <p>{{ item.desc }}</p>
-                    </div>
+                    </div-->
                 </div>
 
             </div>
@@ -121,21 +134,27 @@
     </div>
 
     
-    <div id="pub-milkshakes" class="l col-md-6 col-sm-12 sm-bg-secondary row-effect"
+    <div id="pub-milkshakes" class="l col-md-6 col-6 sm-bg-secondary row-effect"
         nomatTooltip="Cliquez pour découvrir les saveurs disponibles" 
         nomatTooltipPosition="below"
         nomatTooltipShowDelay="1500"
         (click)="openMilkshakes()">
         <h3>Milkshakes</h3>
         <img src="/assets/img/menu-products/milkshake3-350.png">
+        <div class="row-click-for-info">
+            <h6>Cliquez pour la&nbsp;</h6>
+        </div>
     </div>
-    <div id="pub-smoothies" class="r col-md-6 col-sm-12 sm-bg-secondary row-effect" 
+    <div id="pub-smoothies" class="r col-md-6 col-6 sm-bg-secondary row-effect" 
         nomatTooltip="Cliquez pour découvrir les saveurs disponibles" 
         nomatTooltipPosition="below"
         nomatTooltipShowDelay="1500"
         (click)="openSmoothies()">
         <h3>Smoothies</h3>
         <img src="/assets/img/menu-products/smoothie-300.png">
+        <div class="row-click-for-info">
+            <h6>&nbsp;liste des saveurs.</h6>
+        </div>
     </div>
 
     <div class="col-12" style="height: 100px;">
