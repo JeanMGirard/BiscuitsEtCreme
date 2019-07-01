@@ -185,22 +185,19 @@
         bottom: 5px;
         white-space: nowrap;
 
-        h6{
-            text-shadow: 2px 2px 2px rgba(255,255,255,0.5), 2px 2px 2px rgba(0,0,0,0.5);
-        }
-        @media (max-width: @sizes-media-max[sm]){
-            h6{
-                font-size: 0.8rem;
-            }
-        }
+        h6{ text-shadow: 2px 2px 2px rgba(255,255,255,0.5), 2px 2px 2px rgba(0,0,0,0.5);   }
     }
     &.l .row-click-for-info{ right: 0; }
     &.r .row-click-for-info{ left: 0;  }
 
     @media (max-width: @sizes-media-max[sm]){
         max-height: 180px;
+        .row-click-for-info h6{ font-size: 0.8rem; }
+        h3{ transform: scale(0.8); }
     }
-    
+    @media (max-width: 400px){
+        h3{ transform: scale(0.7); }
+    }
 }
 
 #pub-trempages,
@@ -283,9 +280,15 @@
     #pub-tourbillons img{  top: 0px !important;  margin-left: -7% !important;}
 }
 @media (orientation: portrait) and (max-width: @sizes-media-min[sm]){
-    #pub-yogourts img{  }
     #pub-tourbillons img{  top: -70px !important; }
 }
+
+@media (max-width: @sizes-media-max[sm]){
+    #pub-yogourts h3{ white-space: normal; 
+        @media (max-width: 564px){ padding-top: 40px;  }
+    }
+}
+
 
 #pub-milkshakes,
 #pub-smoothies {
