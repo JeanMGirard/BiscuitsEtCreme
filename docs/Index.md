@@ -5,7 +5,15 @@
 
 <!-- [index](#index) -->
 - [Settings](./settings)
-- [development](./development)
+    - The environment
+        - system
+        - variables
+    - Change your informations
+        - contact info
+        - schedule
+        - maps / location
+        - branding
+- [develop](./development)
     - Maintain a development site
 - [deploy](./deploy)
     - Requirement
