@@ -180,7 +180,8 @@ export class IceCreamComponent implements OnInit {
       name: 'Milkshakes', 
       lists: [
         { items: this.products.find(e=> e.id === 'milkshakes').items },
-        { items: this.products.find(e=> e.id === 'milkshakes.nouveaux').items 
+        { name:' ',
+          items: this.products.find(e=> e.id === 'milkshakes.nouveaux').items 
         }
     ]});
   }
