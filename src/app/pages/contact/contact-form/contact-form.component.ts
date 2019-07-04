@@ -7,6 +7,7 @@ import { MessageService } from '../../../modules/contact/message.service';
 import { Observable } from 'rxjs';
 
 import { ContactResponseComponent } from '../contact-response/contact-response.component';
+import { environment } from '../../../../environments/environment';
 
 declare var $: any;
 
@@ -39,7 +40,9 @@ export class ContactFormComponent {
     this.showThankYouNote();
   }
   saveMessage(data: any){
-    this.messages.createMessage(data);
+    if(environment.production){
+      this.messages.createMessage(data);
+    }
   }
   showThankYouNote(){
     const hgt = $('#comment-form').height();
