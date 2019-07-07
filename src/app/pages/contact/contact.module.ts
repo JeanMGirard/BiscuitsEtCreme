@@ -16,6 +16,7 @@ import { Row1Component } from './row1/row1.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { Row3Component } from './row3/row3.component';
 import { ContactResponseComponent } from './contact-response/contact-response.component';
+import { ParallaxComponent } from './parallax/parallax.component';
 
 
 
@@ -24,7 +25,7 @@ import { ContactResponseComponent } from './contact-response/contact-response.co
     ContactComponent,
     Row1Component, 
     ContactFormComponent, 
-    Row3Component, ContactResponseComponent
+    Row3Component, ContactResponseComponent, ParallaxComponent
   ],
   imports: [
     CommonModule,
