@@ -51,6 +51,7 @@ export class MenuComponent implements OnInit, OnDestroy {
 
     $(document).ready(() => { 
       $('body').addClass('loaded');
+      window.scrollTo(0, 1);
     });
   }
   goToMenu(menu: Menu){

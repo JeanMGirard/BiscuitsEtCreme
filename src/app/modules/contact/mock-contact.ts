@@ -1,13 +1,13 @@
 import { ISchedule, IContact } from './contact.service';
 
 export const SCHEDULE: ISchedule = {
-    mon: '10:00 - 22:00',
-    tue: '10:00 - 22:00',
-    wed: '10:00 - 22:00',
-    thu: '10:00 - 22:00',
-    fri: '10:00 - 22:00',
-    sat: '10:00 - 22:00',
-    sun: '10:00 - 22:00'
+    mon: '12:00 - 22:00',
+    tue: '12:00 - 22:00',
+    wed: '12:00 - 22:00',
+    thu: '12:00 - 22:00',
+    fri: '12:00 - 22:00',
+    sat: '12:00 - 22:00',
+    sun: '12:00 - 22:00'
 };
 export const CONTACTS: IContact = {
     address:  '13 619 boulevard Curé-Labelle',
