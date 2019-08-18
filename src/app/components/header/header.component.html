@@ -1,3 +1,7 @@
+
+<div id="nav-logo-back" class="pc-only" >
+    <img src="/assets/img/logo/logo-title-154-back.png" alt="" />
+</div>
 <header>
   <div id="default-logo" class="logo" style="pointer-events: none;">
       <img id="nav-logo"    class="pc-only" src="/assets/img/logo/logo-title-154.png" alt="" />
@@ -12,12 +16,12 @@
 
 
   <ul class="nav justify-content-center">
-    <li class="nav-item pc-only">
+    <!--li class="nav-item pc-only">
       <a class="nav-link" routerLink="/" routerLinkActive="active not-hidden" 
       [routerLinkActiveOptions]="{exact:true}">
         Accueil
       </a>
-    </li>
+    </li-->
 
     <li class="nav-item pc-only">
       <a class="nav-link" routerLink="/info" routerLinkActive="active not-hidden" 
@@ -31,6 +35,14 @@
         Promotions
       </a>
     </li>
+
+    <li class="nav-item pc-only">
+      <a class="nav-link" routerLink="/commandes" routerLinkActive="active not-hidden" 
+      [routerLinkActiveOptions]="{exact:false}">
+        Commandes
+      </a>
+    </li>
+
     <li class="nav-item pc-only">
       <a class="nav-link" routerLink="/menu" routerLinkActive="active not-hidden" 
       [routerLinkActiveOptions]="{exact:true}">

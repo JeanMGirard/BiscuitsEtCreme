@@ -31,7 +31,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.checkHeight();
     $(document).ready(()=>{
-      $('header, #content').addClass('loaded');
+      $('header, #content, #nav-logo-back').addClass('loaded');
+      
     })
   }
 
@@ -56,13 +57,13 @@ export class HeaderComponent implements OnInit {
         break;
       case (this.expended != null && !this.expended):
       case (scrolled > this.scrollTrigger && !this.toggled): 
-        $('header, #content').addClass('scrolled');
+        $('header, #content, #nav-logo-back').addClass('scrolled');
         this.toggled = true;
         this.heightChanged();
         break;
       case (this.expended != null && this.expended):
       case (scrolled <= this.scrollTrigger && this.toggled ):
-        $('header, #content').removeClass('scrolled');
+        $('header, #content, #nav-logo-back').removeClass('scrolled');
         this.toggled = false;
         this.heightChanged();
         break;

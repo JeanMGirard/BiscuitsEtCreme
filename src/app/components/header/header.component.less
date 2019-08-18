@@ -1,5 +1,32 @@
 @import "../../_variables";
+:host{
+    display: block;
+    width: 100%;
+    text-align: center;
+    z-index: 1200;
 
+    #nav-logo-back{
+        position: fixed;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        height: 1px;
+        z-index: 501;
+        
+        -webkit-transition: @header-logo-transition-show;
+        transition: @header-logo-transition-show;
+        img{
+            margin-top: -20px;
+        }
+        &.loaded:not(.scrolled){
+            opacity: 1;
+        }
+        &.scrolled{
+            -webkit-transition: @header-logo-transition-hide;
+            transition: @header-logo-transition-hide;
+        }
+    }
+}
 /* HEADER COMPONENT */
 header {
     position: fixed;
@@ -41,7 +68,6 @@ header {
 /* ----------- */
 /* HEADER LOGO */
 /* ----------- */
-
     #default-logo {
         margin-top: -20px;
         text-align: center;
