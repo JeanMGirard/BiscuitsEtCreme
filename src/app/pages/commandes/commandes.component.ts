@@ -11,5 +11,7 @@ export class CommandesComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  showImages(group: string){
+    
+  }
 }

@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "config": "ts-node ./scripts/load_env.ts",
-    "start": "ng serve",
+    "start": "npm run config && ng serve",
     "build": "ng build",
     "build:cross-domains": "ng build --prod --base-href / --output-path dist/cross-domains",
     "build:prod": "ng build --prod --base-href https://biscuitsetcreme.ca/ --deploy-url https://biscuitsetcreme.ca/ --output-path dist/production",
