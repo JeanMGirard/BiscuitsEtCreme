@@ -8,11 +8,11 @@ import { map } from 'rxjs/operators';
 
 
 export interface ISchedule {
-  mon: string;  tue: string;  wed: string;   thu: string;  
+  mon: string;  tue: string;  wed: string;   thu: string;
   fri: string;  sat: string;  sun: string;
 }
 export interface IContact {
-  address: string;  city: string;  country: string;   email: string;  
+  address: string;  city: string;  country: string;   email: string;
   phone: string;  state: string;  zipcode: string;
 }
 
@@ -43,8 +43,12 @@ export class ContactService {
     );
   }
   loadSchedule(): ISchedule {
-    if(!ContactService.schedule){
-      ContactService.schedule = SCHEDULE;
+    if(!ContactService.schedule) {
+      this.afs.collection('info').snapshotChanges().subscribe(data => {
+        (ContactService.schedule as any) = data.map(e => {
+          return {id: e.payload.doc.id, ...e.payload.doc.data()} as any;
+        }).filter(e => (e.docId === 'schedule'))[0];
+      });
     }
     return ContactService.schedule;
   }
