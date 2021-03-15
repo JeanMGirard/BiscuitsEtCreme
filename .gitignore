@@ -5,6 +5,7 @@
 **/*.old
 *.old*
 *~$*
+.firebase/
 
 # compiled output
 /dist

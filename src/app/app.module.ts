@@ -1,3 +1,7 @@
+import 'core-js';
+import 'cross-fetch/polyfill';
+import 'proxy-polyfill'
+
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -29,6 +33,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireFunctionsModule } from '@angular/fire/functions';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAnalyticsModule, ScreenTrackingService } from '@angular/fire/analytics';
+
 
 @NgModule({
   declarations: [
@@ -43,10 +49,11 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
     ScheduleModule,
     AngularFireModule.initializeApp(environment.firebase, 'biscuitsetcreme'),
     AngularFirestoreModule,
+    AngularFireAnalyticsModule,
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
-    AngularFireFunctionsModule
+    AngularFireFunctionsModule,
   ],
   providers: [
     MenuService,
@@ -56,7 +63,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
     SocialService,
     MessageService,
     MapService,
-    ProductService
+    ProductService,
+    ScreenTrackingService
   ],
   bootstrap: [AppComponent]
 })

@@ -3,6 +3,11 @@ import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
 import { routeAnimation } from './animations';
 import { HeaderService } from './components/header/header.service';
 
+
+declare let gtag: Function;
+declare let fbq:  Function;
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,9 +20,10 @@ export class AppComponent implements OnInit {
   title = 'BiscuitsEtCreme';
 
   constructor(
-    private header: HeaderService, 
+    private header: HeaderService,
     private router: Router
     ) {
+    this.router.events.subscribe(this.onRouteChange.bind(this))
   }
   getAnimationData(outlet: RouterOutlet) {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
@@ -32,5 +38,15 @@ export class AppComponent implements OnInit {
         }
         window.scrollTo(0, 0)
     });
+  }
+  onRouteChange(y: NavigationEnd){
+    if(y instanceof NavigationEnd){
+      try {
+        if(typeof gtag === "function") gtag('config','UA-203605058', { 'page_path' : y.url});
+        if(typeof fbq === "function")  fbq('track', 'PageView');
+      } catch (e){
+        // console.error(e.message)
+      }
+     }
   }
 }

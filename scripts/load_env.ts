@@ -30,15 +30,17 @@ export const environment = {
     }
   },
   firebase: {
-    apiKey:        "${process.env.FIRE_API_KEY}",
-    authDomain:    "${process.env.FIRE_AUTH_DOM}",
-    databaseURL:   "${process.env.FIRE_DB_URL}",
-    projectId:     "${process.env.FIRE_PROJ_ID}",
-    storageBucket: "${process.env.FIRE_BUCK}",
-    messagingSenderId: "${process.env.FIRE_SENDER_ID}"
+    apiKey:            "${process.env.FIRE_API_KEY}",
+    authDomain:        "${process.env.FIRE_AUTH_DOM}",
+    databaseURL:       "${process.env.FIRE_DB_URL}",
+    projectId:         "${process.env.FIRE_PROJ_ID}",
+    storageBucket:     "${process.env.FIRE_BUCK}",
+    messagingSenderId: "${process.env.FIRE_SENDER_ID}",
+    appId:             "${process.env.FIRE_APP_ID}",
+    measurementId:     "${process.env.FIRE_MEASUREMENT}"
   }
 };
-`;
+`.split('"undefined"').join("undefined");
 }
 
 
