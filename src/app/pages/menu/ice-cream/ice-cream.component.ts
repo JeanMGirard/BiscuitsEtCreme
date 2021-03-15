@@ -32,12 +32,12 @@ export class IceCreamComponent implements OnInit {
 
     if(environment.api.live) {
       this.productService.getProducts().subscribe(data => {
-        this.products = data.map(e => { 
-            return {id: e.payload.doc.id, ...e.payload.doc.data()} as Product; 
+        this.products = data.map(e => {
+            return Object.assign({ id: e.payload.doc.id }, e.payload.doc.data()) as Product;
           }).filter(e => (e.categoryId === 'cremerie')
         );
-        this.carousel = data.map(e => { 
-            return {id: e.payload.doc.id, ...e.payload.doc.data()} as Product; 
+        this.carousel = data.map(e => {
+            return Object.assign({ id: e.payload.doc.id }, e.payload.doc.data()) as Product;
           }).filter(e => (e.categoryId === 'cremerie.carousel')
         );
       });
@@ -46,7 +46,7 @@ export class IceCreamComponent implements OnInit {
       this.carousel = ICECREAM_PRODUCTS.filter(e => (e.categoryId === 'cremerie.carousel'));
     }
 
-    
+
   }
 
   openDialog(lists: any): void{
@@ -60,23 +60,23 @@ export class IceCreamComponent implements OnInit {
 
 
   openIceCreams(): void {
-    this.openDialog({ 
+    this.openDialog({
       name: 'Crèmes glacées',
       lists: [
-        { name: 'Molle',    
+        { name: 'Molle',
           items: this.products.find(e=> e.id === 'cornets.molles').items
-        }, { 
-          name: 'Molle aux fruits', 
+        }, {
+          name: 'Molle aux fruits',
           items: this.products.find(e=> e.id === 'cornets.fruits').items
-        }, { 
-          name: 'Dure',     
+        }, {
+          name: 'Dure',
           items: this.products.find(e=> e.id === 'cornets.dures').items
         }
       ]
     });
   }
   openMolleFruits(): void {
-    this.openDialog({ 
+    this.openDialog({
       name: 'Molles aux fruits',
       lists: [
         { items: this.products.find(e=> e.id === 'cornets.fruits').items
@@ -85,16 +85,16 @@ export class IceCreamComponent implements OnInit {
     });
   }
   openDures(): void {
-    this.openDialog({ 
+    this.openDialog({
       name: 'Dures',
       lists: [
-        { 
+        {
           name: 'Coaticook',
           items: this.products.find(e=> e.id === 'cornets.dures.coaticook').items
-        },{ 
+        },{
           name: 'Nestlé',
           items: this.products.find(e=> e.id === 'cornets.dures.nestle').items
-        },{ 
+        },{
           name: 'vegans',
           items: this.products.find(e=> e.id === 'cornets.dures.vegan').items
         }
@@ -103,92 +103,92 @@ export class IceCreamComponent implements OnInit {
   }
 
   openEnrobages(): void {
-    this.openDialog({ 
-      name: 'Enrobages', 
+    this.openDialog({
+      name: 'Enrobages',
       lists: [
-        { 
-          items: this.products.find(e=> e.id === 'trempages.enrobages').items 
+        {
+          items: this.products.find(e=> e.id === 'trempages.enrobages').items
         }
     ]});
   }
   openTrempages(): void {
-    this.openDialog({ 
-      name: 'Chocolats', 
+    this.openDialog({
+      name: 'Chocolats',
       lists: [
-        { name: 'Réguliers', 
-          items: this.products.find(e=> e.id === 'trempages.choco').items 
-        }, { 
-          name: 'Belges', 
-          items: this.products.find(e=> e.id === 'trempages.belges').items 
+        { name: 'Réguliers',
+          items: this.products.find(e=> e.id === 'trempages.choco').items
+        }, {
+          name: 'Belges',
+          items: this.products.find(e=> e.id === 'trempages.belges').items
         }
       ]
     });
   }
   openTrempagesEnrobages(): void {
-    this.openDialog({ 
-      name: 'Trempages', 
-      lists: [{ 
-          name: 'réguliers', 
-          items: this.products.find(e=> e.id === 'trempages.choco').items 
-        }, { 
-          name: 'chocolats belges', 
-          items: this.products.find(e=> e.id === 'trempages.belges').items 
+    this.openDialog({
+      name: 'Trempages',
+      lists: [{
+          name: 'réguliers',
+          items: this.products.find(e=> e.id === 'trempages.choco').items
+        }, {
+          name: 'chocolats belges',
+          items: this.products.find(e=> e.id === 'trempages.belges').items
         }
       ]
     });
   }
   openGarnitures(): void {
-    this.openDialog({ 
-      name: 'Garnitures', 
+    this.openDialog({
+      name: 'Garnitures',
       lists: [
-        { items: this.products.find(e=> e.id === 'garnitures').items 
-        },{ 
-          name: 'enrobages', 
-          items: this.products.find(e=> e.id === 'trempages.enrobages').items 
+        { items: this.products.find(e=> e.id === 'garnitures').items
+        },{
+          name: 'enrobages',
+          items: this.products.find(e=> e.id === 'trempages.enrobages').items
         }
     ]});
   }
   openYogourts(): void {
-    this.openDialog({ 
-      name: 'Yogourts', 
+    this.openDialog({
+      name: 'Yogourts',
       lists: [
         { items: this.products.find(e=> e.id === 'yogourts').items },
-        { 
-          name:'Exclusivités', 
+        {
+          name:'Exclusivités',
 
-          items: this.products.find(e=> e.id === 'yogourts.nouveaux').items 
+          items: this.products.find(e=> e.id === 'yogourts.nouveaux').items
         }
     ]});
   }
   openTourbillons(): void {
-    this.openDialog({ 
+    this.openDialog({
       name: 'Tourbillons',
       lists: [
         { items: this.products.find(e=> e.id === 'tourbillons').items }
     ]});
   }
   openSlushes(): void {
-    this.openDialog({ 
-      name: ' ', 
+    this.openDialog({
+      name: ' ',
       wide: true,
       lists: [
         { items: this.products.find(e=> e.id === 'barbotines').items }
     ]});
   }
   openMilkshakes(): void {
-    this.openDialog({ 
-      name: 'Milkshakes', 
+    this.openDialog({
+      name: 'Milkshakes',
       lists: [
         { items: this.products.find(e=> e.id === 'milkshakes').items },
         { name:' ',
-          items: this.products.find(e=> e.id === 'milkshakes.nouveaux').items 
+          items: this.products.find(e=> e.id === 'milkshakes.nouveaux').items
         }
     ]});
   }
 
   openSmoothies(): void {
-    this.openDialog({ 
-      name: 'Smoothies', 
+    this.openDialog({
+      name: 'Smoothies',
       lists: [
         { name: '(3 fruits au choix)',
           items: this.products.find(e=> e.id === 'smoothies').items }
