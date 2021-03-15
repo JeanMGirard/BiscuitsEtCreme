@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { Parallax2Component } from './parallax2.component';
 
@@ -6,7 +6,7 @@ describe('Parallax2Component', () => {
   let component: Parallax2Component;
   let fixture: ComponentFixture<Parallax2Component>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ Parallax2Component ]
     })
