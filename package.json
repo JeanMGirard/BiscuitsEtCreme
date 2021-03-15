@@ -13,7 +13,8 @@
     "build:gh2": "ng build --prod --base-href https://jeanmgirard.github.io/BiscuitsEtCreme/ --deploy-url https://jeanmgirard.github.io/BiscuitsEtCreme/ --output-path dist/",
     "deploy:gh": "npm run build:gh && ngh",
     "deploy:gh2": "npm run build:gh2 && ngh",
-    "deploy:fire": "npm run build:fire && firebase deploy",
+    "deploy:fire": "npm run build:fire && firebase deploy -p dist/firebase",
+    "deploy": "npm run deploy:fire",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
