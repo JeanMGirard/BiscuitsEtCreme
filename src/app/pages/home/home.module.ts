@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 import { HomeRoutingModule } from './home-routing.module';
@@ -15,17 +16,18 @@ import { Parallax3Component } from './parallax3/parallax3.component';
 
 @NgModule({
   declarations: [
-    HomeComponent, 
-    Parallax1Component, 
-    MenuLinksComponent,  
-    GmapLinkComponent, 
-    SocialIconsComponent, 
-    Parallax2Component, 
+    HomeComponent,
+    Parallax1Component,
+    MenuLinksComponent,
+    GmapLinkComponent,
+    SocialIconsComponent,
+    Parallax2Component,
     Parallax3Component
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    FontAwesomeModule,
   ]
 })
 export class HomeModule { }

@@ -13,88 +13,88 @@
 
   <ul class="nav justify-content-center">
     <li class="nav-item pc-only">
-      <a class="nav-link" routerLink="/" routerLinkActive="active not-hidden" 
+      <a class="nav-link" routerLink="/" routerLinkActive="active not-hidden"
       [routerLinkActiveOptions]="{exact:true}">
         Accueil
       </a>
     </li>
 
     <li class="nav-item pc-only">
-      <a class="nav-link" routerLink="/info" routerLinkActive="active not-hidden" 
+      <a class="nav-link" routerLink="/info" routerLinkActive="active not-hidden"
       [routerLinkActiveOptions]="{exact:false}">
         À propos
       </a>
     </li>
     <li class="nav-item pc-only">
-      <a class="nav-link" routerLink="/promo" routerLinkActive="active not-hidden" 
+      <a class="nav-link" routerLink="/promo" routerLinkActive="active not-hidden"
       [routerLinkActiveOptions]="{exact:false}">
         Promotions
       </a>
     </li>
     <li class="nav-item pc-only">
-      <a class="nav-link" routerLink="/menu" routerLinkActive="active not-hidden" 
+      <a class="nav-link" routerLink="/menu" routerLinkActive="active not-hidden"
       [routerLinkActiveOptions]="{exact:true}">
         Menu
       </a>
     </li>
-    
+
     <li class="nav-item pc-only">
-      <a class="nav-link" routerLink="/contact" routerLinkActive="active not-hidden" 
+      <a class="nav-link" routerLink="/contact" routerLinkActive="active not-hidden"
       [routerLinkActiveOptions]="{exact:false}">
         Nous contacter
       </a>
     </li>
 
     <ul class="subnav mobile-only">
-        <li class="subnav-item" 
-            routerLink="/menu"  routerLinkActive="active not-hidden" 
-            [routerLinkActiveOptions]="{exact:true}" 
+        <li class="subnav-item"
+            routerLink="/menu"  routerLinkActive="active not-hidden"
+            [routerLinkActiveOptions]="{exact:true}"
             style="min-width:70px;padding:3px;">
           <a class="nav-link">
-            <i class="fas fa-book-open"></i>
+            <fa-icon [icon]="iconMenu" class="fas"></fa-icon>
             <!--i class="material-icons">home</i-->
             <!--i class="material-icons">room_service</i-->
           </a>
         </li>
 
         <li class="subnav-item"
-            routerLink="/" routerLinkActive="active hidden" 
+            routerLink="/" routerLinkActive="active hidden"
             [routerLinkActiveOptions]="{exact:true}">
           <a class="nav-link" >
             Accueuil
           </a>
         </li>
-        <li class="subnav-item"  
-            routerLink="/promo" routerLinkActive="active hidden" 
+        <li class="subnav-item"
+            routerLink="/promo" routerLinkActive="active hidden"
             [routerLinkActiveOptions]="{exact:true}">
           <a class="nav-link">
             Promotions
           </a>
         </li>
-        <li class="subnav-item" routerLink="/contact" routerLinkActive="active hidden" 
+        <li class="subnav-item" routerLink="/contact" routerLinkActive="active hidden"
             [routerLinkActiveOptions]="{exact:true}">
           <a class="nav-link" >
             Contacter
           </a>
         </li>
         <li class="subnav-item"
-            routerLink="/info" routerLinkActive="active hidden" 
+            routerLink="/info" routerLinkActive="active hidden"
             [routerLinkActiveOptions]="{exact:true}">
           <a class="nav-link">
             À propos
           </a>
         </li>
-        
-        
-        
 
-        
+
+
+
+
       </ul>
   </ul>
-  
+
 
   <!--ul class="nav mobile-only">
-      
+
       <li class="nav-item">
           <a class="nav-link" routerLink="/"><i class="material-icons">home</i></a>
       </li>

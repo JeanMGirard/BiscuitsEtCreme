@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
 import { routeAnimation } from './animations';
 import { HeaderService } from './components/header/header.service';
+import { environment } from '../environments/environment';
 
 
 declare let gtag: Function;
@@ -40,6 +41,8 @@ export class AppComponent implements OnInit {
     });
   }
   onRouteChange(y: NavigationEnd){
+    if(!environment.production) return;
+
     if(y instanceof NavigationEnd){
       try {
         if(typeof gtag === "function") gtag('config','UA-203605058', { 'page_path' : y.url});

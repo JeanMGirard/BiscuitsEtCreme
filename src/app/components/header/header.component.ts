@@ -1,5 +1,6 @@
 import { Component, OnInit, EventEmitter, Output, HostListener } from '@angular/core';
 import { HeaderService } from './header.service';
+import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 
 declare var $: any;
 
@@ -11,6 +12,8 @@ declare var $: any;
   styleUrls: ['./header.component.less']
 })
 export class HeaderComponent implements OnInit {
+  iconMenu = faBookOpen;
+
   private locked: boolean = false;
   private hidden?: boolean = false;
   private expended?: boolean = null;
@@ -22,7 +25,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private service: HeaderService
-  ) { 
+  ) {
     this.service.hide.subscribe((value)=>{ this.serviceHide(value); });
     this.service.lock.subscribe((value)=>{ this.serviceLock(value); });
     this.service.expend.subscribe((value)=>{ this.serviceExpend(value); });
@@ -52,10 +55,10 @@ export class HeaderComponent implements OnInit {
     const scrolled = $(window).scrollTop();
 
     switch (true){
-      case (this.locked): 
+      case (this.locked):
         break;
       case (this.expended != null && !this.expended):
-      case (scrolled > this.scrollTrigger && !this.toggled): 
+      case (scrolled > this.scrollTrigger && !this.toggled):
         $('header, #content').addClass('scrolled');
         this.toggled = true;
         this.heightChanged();
@@ -66,15 +69,15 @@ export class HeaderComponent implements OnInit {
         this.toggled = false;
         this.heightChanged();
         break;
-      
-      
+
+
     }
   }
 
 
-  
 
-  
+
+
   serviceLock(value: boolean){
     this.locked = value;
   }

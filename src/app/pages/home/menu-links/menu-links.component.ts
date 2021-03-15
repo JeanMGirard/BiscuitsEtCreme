@@ -1,5 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs';
+import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
+
 
 import { MenuService } from '../../menu/menu.service';
 import { Menu } from '../../menu/menu';
@@ -11,6 +13,7 @@ import { Menu } from '../../menu/menu';
 })
 export class MenuLinksComponent implements OnInit {
   menus$: Observable<Menu[]>;
+  iconMenu = faBookOpen;
 
   constructor(
     private menuService: MenuService
