@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactService } from '../../modules/contact/contact.service';
+import {ContactService, ISchedule} from '../../modules/contact/contact.service';
+import {Observable, Subscription} from 'rxjs';
+import {tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-schedule',
@@ -7,12 +9,22 @@ import { ContactService } from '../../modules/contact/contact.service';
   styleUrls: ['./schedule.component.less']
 })
 export class ScheduleComponent implements OnInit {
-  schedule: any;
+  schedule: ISchedule;
+  $schedule: Subscription;
 
   constructor(private contacts: ContactService) {}
 
   ngOnInit() {
-    this.schedule = this.contacts.schedule;
+    const svc = this;
+
+    this.$schedule = this.contacts.schedule
+      .subscribe((schedule) => {
+        if(schedule) {
+          svc.schedule = schedule;
+          svc.$schedule.unsubscribe()
+        }
+      })
+
   }
 
 }

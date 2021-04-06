@@ -1,174 +1,176 @@
 <div id="menu-icecream" class="submenu product-page row justify-content-center">
-    <div class="col-md-12 col-sm-12 banner">
-        <h3 class="shadow-white">Crèmes glacées</h3>
+  <div class="col-md-12 col-sm-12 banner">
+    <h3 class="shadow-white">Crèmes glacées</h3>
+  </div>
+
+
+  <div id="pub-molle" class="col-6 defaults" style="z-index: 100;">
+    <h4 class="shadow-white">molles</h4>
+    <p class="shadow-white" style="margin-block-start: 0em;">vanille / chocolat<br/>moitié-moitié</p>
+  </div>
+  <div id="pub-dure"  class="col-6 defaults" style="z-index: 100;">
+    <h4 class="shadow-white">dures</h4>
+  </div>
+  <div id="pub-fruits" class="col-md-12 col-sm-12 defaults" style="z-index: 50;">
+    <h4 class="shadow-white">aux fruits!</h4>
+    <img src="/assets/img/menu-products/cornets2-left.png" id="cornets-img-left" alt="cornets">
+    <img src="/assets/img/menu-products/cornets2-right.png" id="cornets-img-right" alt="cornets">
+    <img src="/assets/img/menu-products/cornets3-1200.png" id="cornets-img" alt="cornets">
+    <div class="button-row small" style="bottom: 60px;">
+      <button mat-raised-button color="primary" (click)="openMolleFruits()">Fruits disponibles</button>
+      <button mat-raised-button color="primary" (click)="openDures()">Crèmes glacées dures</button>
     </div>
+  </div>
 
 
-    <div id="pub-molle" class="col-6 defaults" style="z-index: 100;">
-        <h4 class="shadow-white">molles</h4>
-        <p class="shadow-white" style="margin-block-start: 0em;">vanille / chocolat<br/>moitié-moitié</p>
-    </div>
-    <div id="pub-dure"  class="col-6 defaults" style="z-index: 100;">
-        <h4 class="shadow-white">dures</h4>
-    </div>
-    <div id="pub-fruits" class="col-md-12 col-sm-12 defaults" style="z-index: 50;">
-        <h4 class="shadow-white">aux fruits!</h4>
-        <img src="/assets/img/menu-products/cornets2-800.png" id="cornets-img">
-        <div class="button-row small" style="bottom: 60px;">
-                <button mat-raised-button color="primary" (click)="openMolleFruits()">Fruits disponibles</button>
-                <button mat-raised-button color="primary" (click)="openDures()">Crèmes glacées dures</button>
-        </div>
-    </div>
-
-
-    <div id="pub-garnitures" class="l col-md-6 col-6 sm-bg-secondary row-effect" 
-            nomatTooltip="Cliquez pour découvrir les saveurs disponibles" 
-            nomatTooltipPosition="below"
-            (click)="openGarnitures()">
-        <h3>Garnitures</h3>
-        <img src="/assets/img/menu-products/garnitures-300.png">
-        <!--div class="button-row">
-            <button mat-raised-button color="primary" style="top:-75px;left:60px;" (click)="openGarnitures()">Saveurs</button>
-        </div-->
-        <div class="row-click-for-info">
-            <h6>Cliquez pour la&nbsp;</h6>
-        </div>
-    </div>
-    <div id="pub-trempages" class="r col-md-6 col-6 sm-bg-primary  row-effect" 
-            nomatTooltip="Cliquez pour découvrir les saveurs disponibles" 
-            nomatTooltipPosition="below"
-            (click)="openTrempagesEnrobages()">
-        <h3>Trempages</h3>
-        <img src="/assets/img/menu-products/trempage-choco-320.png">
-        <div class="row-click-for-info">
-            <h6>&nbsp;liste des saveurs.</h6>
-        </div>
-    </div>
-
-
-    <div id="pub-barbotines" class="m col-md-12 col-12">
-        <div class="row justify-content-center">
-            <div class="col-md-3 col-6">
-                <h3>Slush</h3>
-                <img src="/assets/img/menu-products/brb-slush-150.png">
-            </div>
-            <div class="col-md-3 col-6">
-                <h3>Montblanc</h3>
-                <img src="/assets/img/menu-products/brb-montblanc-150.png">
-            </div>
-            <div class="col-md-3 col-6">
-                <h3>Mousseline</h3>
-                <img src="/assets/img/menu-products/brb-mousseline-150.png">
-            </div>
-            <div class="col-md-3 col-6">
-                <h3>Explosion</h3>
-                <img src="/assets/img/menu-products/brb-explosions-150.png">
-            </div>
-        </div>
-        <img>
-        <div class="button-row">
-            <button mat-raised-button color="primary" (click)="openSlushes()">Toutes les saveurs</button>
-        </div>
-    </div>
-
-    <div id="pub-yogourts" class="l col-md-6 col-6 sm-bg-primary  row-effect" 
-        nomatTooltip="Cliquez pour découvrir les saveurs disponibles" nomatTooltipPosition="below"
-        nomatTooltipShowDelay="1500"
-        (click)="openYogourts()">
-        <h3>Yogourts glacés</h3>
-        <img src="/assets/img/menu-products/yogourt-glace.png" style="top: -30px; margin-left:-50%;">
-        <!--div class="button-row">
-            <button mat-raised-button color="primary" style="top:-100px;left:100px;" (click)="openYogourts()">Saveurs</button>
-        </div-->
-        <div class="row-click-for-info">
-            <h6>Cliquez pour la&nbsp;</h6>
-        </div>
-    </div>
-    <div id="pub-tourbillons" class="r col-md-6 col-6 sm-bg-secondary  row-effect" 
-        nomatTooltip="Cliquez pour découvrir les saveurs disponibles" nomatTooltipPosition="below"
-        nomatTooltipShowDelay="1500"
-        (click)="openTourbillons()">
-        <h3>Tourbillons</h3>
-        <img src="/assets/img/menu-products/tourbillons.png">
-        <!--div class="button-row">
-            <button mat-raised-button color="primary" style="top:-100px;left:-100px;" (click)="openTourbillons()">Saveurs</button>
-        </div-->
-        <div class="row-click-for-info">
-            <h6>&nbsp;liste des saveurs.</h6>
-        </div>
-    </div>
-
-    <div class="col-12">
-        <div id="iceCreamCarousel" class="carousel slide" *ngIf="carousel"
-            data-ride="carousel" data-pause="false" data-interval="4000">
-
-            <div class="carousel-inner">
-
-                <div class="w-100 carousel-item active">
-                    <img class="w-100 " src="{{ carousel[0].img }}" alt="{{ carousel[0].name }}">
-                    <!--div class="w-100 carousel-caption">
-                        <h3>{{ carousel[0].name }}</h3>
-                        <p>{{ carousel[0].desc }}</p>
-                    </div-->
-                </div>
-
-                <div *ngFor="let item of carousel.slice(1)" class="w-100 carousel-item">
-                    <img class="w-100 " src="{{ item.img }} " alt="{{ item.name }}">
-                    <!--div class="w-100 carousel-caption">
-                        <h3>{{ item.name }}</h3>
-                        <p>{{ item.desc }}</p>
-                    </div-->
-                </div>
-
-            </div>
-            <a class="carousel-control-prev text-primary" href="#iceCreamCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#iceCreamCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-        
-    </div>
-
-    
-    <div id="pub-milkshakes" class="l col-md-6 col-6 sm-bg-secondary row-effect"
-        nomatTooltip="Cliquez pour découvrir les saveurs disponibles" 
-        nomatTooltipPosition="below"
-        nomatTooltipShowDelay="1500"
-        (click)="openMilkshakes()">
-        <h3>Milkshakes</h3>
-        <img src="/assets/img/menu-products/milkshake3-350.png">
-        <div class="row-click-for-info">
-            <h6>Cliquez pour la&nbsp;</h6>
-        </div>
-    </div>
-    <div id="pub-smoothies" class="r col-md-6 col-6 sm-bg-secondary row-effect" 
-        nomatTooltip="Cliquez pour découvrir les saveurs disponibles" 
-        nomatTooltipPosition="below"
-        nomatTooltipShowDelay="1500"
-        (click)="openSmoothies()">
-        <h3>Smoothies</h3>
-        <img src="/assets/img/menu-products/smoothie-300.png">
-        <div class="row-click-for-info">
-            <h6>&nbsp;liste des saveurs.</h6>
-        </div>
-    </div>
-
-    <div class="col-12" style="height: 80px;">
-
-    </div>
-
-    <!--div class="col-sm-6 col-12 submenu-lastrow  cookiedough">
-        <button id="submenu-lastrow-prev" mat-stroked-button routerLink="/menu/pates-a-biscuits">
-            Pâtes à biscuits
-        </button>
-    </div>
-    <div class="col-sm-6 col-12 submenu-lastrow otherproducts">
-        <button id="submenu-lastrow-next" mat-stroked-button routerLink="/menu/autres-produits">
-            Autres
-        </button>
+  <div id="pub-garnitures" class="l col-md-6 col-6 sm-bg-secondary row-effect"
+       nomatTooltip="Cliquez pour découvrir les saveurs disponibles"
+       nomatTooltipPosition="below"
+       (click)="openGarnitures()">
+    <h3>Garnitures</h3>
+    <img src="/assets/img/menu-products/garnitures-300.png">
+    <!--div class="button-row">
+        <button mat-raised-button color="primary" style="top:-75px;left:60px;" (click)="openGarnitures()">Saveurs</button>
     </div-->
+    <div class="row-click-for-info">
+      <h6>Cliquez pour la&nbsp;</h6>
+    </div>
+  </div>
+  <div id="pub-trempages" class="r col-md-6 col-6 sm-bg-primary  row-effect"
+       nomatTooltip="Cliquez pour découvrir les saveurs disponibles"
+       nomatTooltipPosition="below"
+       (click)="openTrempagesEnrobages()">
+    <h3>Trempages</h3>
+    <img src="/assets/img/menu-products/trempage-choco-320.png">
+    <div class="row-click-for-info">
+      <h6>&nbsp;liste des saveurs.</h6>
+    </div>
+  </div>
+
+
+  <div id="pub-barbotines" class="m col-md-12 col-12">
+    <div class="row justify-content-center">
+      <div class="col-md-3 col-6">
+        <h3>Slush</h3>
+        <img src="/assets/img/menu-products/brb-slush-150.png">
+      </div>
+      <div class="col-md-3 col-6">
+        <h3>Montblanc</h3>
+        <img src="/assets/img/menu-products/brb-montblanc-150.png">
+      </div>
+      <div class="col-md-3 col-6">
+        <h3>Mousseline</h3>
+        <img src="/assets/img/menu-products/brb-mousseline-150.png">
+      </div>
+      <div class="col-md-3 col-6">
+        <h3>Explosion</h3>
+        <img src="/assets/img/menu-products/brb-explosions-150.png">
+      </div>
+    </div>
+    <img>
+    <div class="button-row">
+      <button mat-raised-button color="primary" (click)="openSlushes()">Toutes les saveurs</button>
+    </div>
+  </div>
+
+  <div id="pub-yogourts" class="l col-md-6 col-6 sm-bg-primary  row-effect"
+       nomatTooltip="Cliquez pour découvrir les saveurs disponibles" nomatTooltipPosition="below"
+       nomatTooltipShowDelay="1500"
+       (click)="openYogourts()">
+    <h3>Yogourts glacés</h3>
+    <img src="/assets/img/menu-products/yogourt-glace.png" style="top: -30px; margin-left:-50%;">
+    <!--div class="button-row">
+        <button mat-raised-button color="primary" style="top:-100px;left:100px;" (click)="openYogourts()">Saveurs</button>
+    </div-->
+    <div class="row-click-for-info">
+      <h6>Cliquez pour la&nbsp;</h6>
+    </div>
+  </div>
+  <div id="pub-tourbillons" class="r col-md-6 col-6 sm-bg-secondary  row-effect"
+       nomatTooltip="Cliquez pour découvrir les saveurs disponibles" nomatTooltipPosition="below"
+       nomatTooltipShowDelay="1500"
+       (click)="openTourbillons()">
+    <h3>Tourbillons</h3>
+    <img src="/assets/img/menu-products/tourbillons.png">
+    <!--div class="button-row">
+        <button mat-raised-button color="primary" style="top:-100px;left:-100px;" (click)="openTourbillons()">Saveurs</button>
+    </div-->
+    <div class="row-click-for-info">
+      <h6>&nbsp;liste des saveurs.</h6>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <div id="iceCreamCarousel" class="carousel slide" *ngIf="carousel"
+         data-ride="carousel" data-pause="false" data-interval="4000">
+
+      <div class="carousel-inner">
+
+        <div class="w-100 carousel-item active">
+          <img class="w-100 " src="{{ carousel[0].img }}" alt="{{ carousel[0].name }}">
+          <!--div class="w-100 carousel-caption">
+              <h3>{{ carousel[0].name }}</h3>
+              <p>{{ carousel[0].desc }}</p>
+          </div-->
+        </div>
+
+        <div *ngFor="let item of carousel.slice(1)" class="w-100 carousel-item">
+          <img class="w-100 " src="{{ item.img }} " alt="{{ item.name }}">
+          <!--div class="w-100 carousel-caption">
+              <h3>{{ item.name }}</h3>
+              <p>{{ item.desc }}</p>
+          </div-->
+        </div>
+
+      </div>
+      <a class="carousel-control-prev text-primary" href="#iceCreamCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#iceCreamCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+  </div>
+
+
+  <div id="pub-milkshakes" class="l col-md-6 col-6 sm-bg-secondary row-effect"
+       nomatTooltip="Cliquez pour découvrir les saveurs disponibles"
+       nomatTooltipPosition="below"
+       nomatTooltipShowDelay="1500"
+       (click)="openMilkshakes()">
+    <h3>Milkshakes</h3>
+    <img src="/assets/img/menu-products/milkshake3-350.png">
+    <div class="row-click-for-info">
+      <h6>Cliquez pour la&nbsp;</h6>
+    </div>
+  </div>
+  <div id="pub-smoothies" class="r col-md-6 col-6 sm-bg-secondary row-effect"
+       nomatTooltip="Cliquez pour découvrir les saveurs disponibles"
+       nomatTooltipPosition="below"
+       nomatTooltipShowDelay="1500"
+       (click)="openSmoothies()">
+    <h3>Smoothies</h3>
+    <img src="/assets/img/menu-products/smoothie-300.png">
+    <div class="row-click-for-info">
+      <h6>&nbsp;liste des saveurs.</h6>
+    </div>
+  </div>
+
+  <div class="col-12" style="height: 80px;">
+
+  </div>
+
+  <!--div class="col-sm-6 col-12 submenu-lastrow  cookiedough">
+      <button id="submenu-lastrow-prev" mat-stroked-button routerLink="/menu/pates-a-biscuits">
+          Pâtes à biscuits
+      </button>
+  </div>
+  <div class="col-sm-6 col-12 submenu-lastrow otherproducts">
+      <button id="submenu-lastrow-next" mat-stroked-button routerLink="/menu/autres-produits">
+          Autres
+      </button>
+  </div-->
 </div>

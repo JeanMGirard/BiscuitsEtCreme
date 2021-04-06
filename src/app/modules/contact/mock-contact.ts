@@ -13,7 +13,7 @@ export const CONTACTS: IContact = {
     address:  '13 619 boulevard Curé-Labelle',
     city:     'Mirabel',
     country:  'Canada',
-    email:    'infobiscuitsetcreme@gmail.com',
+    email:    'info@biscuitsetcreme.ca',
     phone:    '450-508-4066',
     state:    'QC',
     zipcode:  'J7J 1K3'

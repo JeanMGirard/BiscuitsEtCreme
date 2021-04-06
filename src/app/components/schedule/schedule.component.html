@@ -1,4 +1,4 @@
-<table id="hours-tbl" class="no-indent">
+<table id="hours-tbl" class="no-indent"  *ngIf="schedule">
     <tr><td>Lundi</td>
         <td>{{ schedule.mon }}</td>
     </tr>
@@ -6,7 +6,7 @@
         <td>{{ schedule.tue }}</td>
     </tr>
     <tr><td>Mercredi</td>
-        <td>{{ schedule.wed }}</td> 
+        <td>{{ schedule.wed }}</td>
     </tr>
     <tr><td>Jeudi</td>
         <td>{{ schedule.thu }}</td>

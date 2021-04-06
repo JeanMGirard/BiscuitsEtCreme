@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "config": "ts-node ./scripts/load_env.ts",
+    "prestart": "npm run config",
     "start": "ng serve",
     "build": "ng build",
     "clean:cors": "npx rimraf dist/cross-domains",

@@ -15,7 +15,7 @@
     },
     "component-class-suffix": true,
     "contextual-lifecycle": true,
-    "curly": true,
+    "curly": false,
     "directive-class-suffix": true,
     "directive-selector": [
       true,
@@ -95,11 +95,7 @@
     "no-output-on-prefix": true,
     "no-output-rename": true,
     "no-outputs-metadata-property": true,
-    "semicolon": {
-      "options": [
-        "always"
-      ]
-    },
+    "semicolon": false,
     "space-before-function-paren": {
       "options": {
         "anonymous": "never",

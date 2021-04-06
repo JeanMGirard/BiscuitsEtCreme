@@ -1,301 +1,329 @@
 @import "../../../_variables.less";
 // Parrallax *******
 .parralax{
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(255,255,255,0.1);
-    img{
-        min-height: 100%;
-        min-width: 100%;
-    }
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255,255,255,0.1);
+  img{
+    min-height: 100%;
+    min-width: 100%;
+  }
 }
 
 #pub-pab-kinds{
-// TITLE *******
-    z-index: 100;
+  // TITLE *******
+  z-index: 100;
+  width: 100%;
+  background: white;
+  padding-bottom: 20vh;
+  border-bottom: 2px solid #46464659;
+
+  h2 {
     width: 100%;
-    background: white;
-    padding-bottom: 20vh;
+    height: 10%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+  }
 
-    h2 {
-        width: 100%;
-        height: 10%;
-        position: absolute;
-        top: 0px;
-        left: 0;
+  #cookie-banner{
+    height: 200px;
+
+    h2{
+      font-family: "Lobster";
+      font-size: 60px;
+      top: 60px;
     }
-
-    #cookie-banner{
-        height: 200px;
-
-        h2{
-            font-family: "Lobster";
-            font-size: 60px;
-            top: 60px;
-        }
-        @media (max-width: @sizes-media-max[sm]){
-            h2{ top: 30px;  }
-        }
+    @media (max-width: @sizes-media-max[sm]){
+      h2{ top: 30px;  }
     }
-    @media (max-width: 600px) {
-        padding-bottom: 100px;
+  }
+  @media (max-width: 600px) {
+    padding-bottom: 100px;
+  }
+
+
+  // RONDELLES PAB *******
+
+  div.pab-kind{
+    min-height: 220px;
+    position: relative;
+
+    img {
+      transform: scale(1.2);
+      position: relative;
+      z-index: 100;
     }
-
-
-// RONDELLES PAB *******
-
-    div.pab-kind{
-        min-height: 220px;
-        position: relative;
-
-        .bottom { 
-            @media (min-width: @sizes-media-min[md]) {
-                margin-top: -70px;
-            }
-        }
-        h3{
-            color: rgb(70, 70, 70);
-        }
+    .bottom {
+      @media (min-width: @sizes-media-min[md]) {
+        margin-top: -70px;
+      }
     }
+    h3{
+      position: relative;
+      z-index: 200;
+      color: rgb(70, 70, 70);
+      text-shadow: 0 0 5px #e6e6e6, 0 0 5px #e6e6e6;
+      transform: translateY(60px);
+      font-family: "Lobster";
+      font-size: 38px;
+    }
+  }
 }
 
 
 // COMBOS PAB *******
 .submenu{
-    #pub-combos{
-        z-index: 15;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        background-color: #2b51fd;
-        color: white;
-        border: 2px solid black;
+  #pub-combos{
+    z-index: 15;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #2b51fd;
+    color: white;
+    border: 2px solid black;
+    margin-top: 140px;
 
-        @media (max-width: 600px) {
-            margin-top: 0px;
-        }
+    @media (max-width: 600px) {
+      margin-top: 95px;
     }
-    .pub-combo{
-        z-index: 14;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        background-color: rgb(245, 245, 245);
-        border-bottom: 3px solid rgb(70,70,70);
-        box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.4);
+  }
+  .pub-combo{
+    z-index: 14;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgb(245, 245, 245);
+    border-bottom: 3px solid rgb(70,70,70);
+    box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.4);
 
-        img{ margin-top: 10px;  }
-        &.left{
-            z-index: 15;
-            box-shadow: -4px 10px 10px 1px rgba(0, 0, 0, 0.4);
-        }
+    img{ margin-top: 10px;  }
+    &.left{
+      z-index: 15;
+      box-shadow: -4px 10px 10px 1px rgba(0, 0, 0, 0.4);
     }
+  }
 
-    @media (max-width: @sizes-media-max[md]) {
-        .pub-combo img { width: 80%; }
-    }
-    @media (max-width: @sizes-media-max[sm]) {
-        .pub-combo img { width: 95%; }
-    }
+  @media (max-width: @sizes-media-max[md]) {
+    .pub-combo img { width: 80%; }
+  }
+  @media (max-width: @sizes-media-max[sm]) {
+    .pub-combo img { width: 95%; }
+  }
 }
 
 
 // TARTES PAB *******
 .submenu{
-    #pub-tartes{
-        padding: 0;
-        //text-align: right;
-        overflow: hidden;
-        z-index: 10;
-        padding-bottom: 20px;
-        border-bottom: 3px ridge rgb(120,120,120);
-        -webkit-box-shadow: 0 8px 20px 8px rgba(0,0,0,0.5) ;
-        box-shadow: 0 8px 20px 8px rgba(0,0,0,0.5) ;
+  #pub-tartes{
+    margin-top: 220px;
+    padding: 0;
+    //text-align: right;
+    overflow: hidden;
+    z-index: 10;
+    padding-bottom: 20px;
+    border-bottom: 3px ridge rgb(120,120,120);
+    -webkit-box-shadow: 0 8px 20px 8px rgba(0,0,0,0.5) ;
+    box-shadow: 0 8px 20px 8px rgba(0,0,0,0.5) ;
 
-        /*
-        img {
+    /*
+    img {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    */
+    #img-tartes{
+      width: 30%;
+      margin-top: 100px;
+      margin-bottom: 80px;
+      float: left;
+
+      article{
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        position: relative;
+
+        img{
+          width: 100%;
+        }
+        h5{
+          position: absolute;
+          color: white;
+          font-family: "Lobster";
+          font-size: 32px;
+          top: 35%;
+          left: -5vw;
+          text-shadow: 2px -2px 6px rgba(0,0,0,0.5) , 0 2px 2px rgba(0,0,0,0.5) , 4px 4px 6px rgba(0,0,0,0.5) ;
+        }
+      }
+      @media (min-width: 1000px) {
+        // (100 / width) * max-width = 1000px;
+
+      }
+      @media (min-width: @sizes-media-min[md]) {
+        max-width: 250px;
+        margin-left: 18vw;
+      }
+      @media (max-width: @sizes-media-max[sm]) {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 50px;
+        margin-top: 180px;
+
+        article{
+          width: 30%;
+          display: inline-block;
+          text-align: center;
+          position: relative;
+          margin: 0.5%;
+
+          img{
             width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        } 
-        */
-        #img-tartes{
-            width: 30%;
-            margin-top: 100px;
-            margin-bottom: 80px;
-            float: left;
-
-            article{
-                width: 100%;
-                display: inline-block;
-                text-align: center;
-                position: relative;
-
-                img{
-                    width: 100%;
-                }
-                h5{
-                    position: absolute;
-                    color: white;
-                    font-family: "Lobster";
-                    font-size: 32px;
-                    top: 35%;
-                    left: -5vw;
-                    text-shadow: 2px -2px 6px rgba(0,0,0,0.5) , 0 2px 2px rgba(0,0,0,0.5) , 4px 4px 6px rgba(0,0,0,0.5) ;
-                }
-            }
-            @media (min-width: 1000px) {
-                // (100 / width) * max-width = 1000px;
-
-            }
-            @media (min-width: @sizes-media-min[md]) {
-                max-width: 250px;
-                margin-left: 18vw;
-            }
-            @media (max-width: @sizes-media-max[sm]) {
-                width: 100%;
-                margin-top: 10px;
-                margin-bottom: 50px;
-                margin-top: 180px;
-
-                article{
-                    width: 30%;
-                    display: inline-block;
-                    text-align: center;
-                    position: relative;
-                    margin: 0.5%;
-
-                    img{
-                        width: 100%;
-                    }
-                    h5{
-                        top: 80%;
-                        left: 5vw;
-                        transform: rotateZ(40deg);
-                    }
-                }
-            }
-            @media (max-width: 500px) {
-                article h5{ 
-                    top: 70%; 
-                    font-size: 20px; 
-                }
-            }
+          }
+          h5{
+            top: 80%;
+            left: 5vw;
+            transform: rotateZ(40deg);
+          }
         }
-
-        #info-tartes{
-            min-height: 600px;
-            padding-top: 130px;
-            padding-left: 0vw;
-            padding-right: 12vw;
-            width: 50%;
-            float: right;
-            
-            h3{
-                font-weight: bold;
-                font-size: 48px;
-                text-decoration: underline;
-
-            }
-            p{
-                font-family: "Montserrat";
-                font-size: 22px;
-            }
-
-            @media (max-width: @sizes-media-max[sm]) {
-                margin-top: -60vw;
-                width: 100%;
-                min-height: 0px;
-                padding-bottom: 50px;
-                padding-top: 40px;
-                padding-left: 6vw;
-                padding-right: 6vw;
-                h3{ font-size: 32px; }
-                p{ 
-                    margin-top: 280px;
-                    font-size: 18px; 
-                }
-            }
-            @media (max-width: 550px) {
-                margin-top: -75vw;
-                p{  margin-top: 250px; }
-            }
-            @media (max-width: 420px) {
-                margin-top: -350px;
-                p{  margin-top: 200px; }
-            }
+      }
+      @media (max-width: 500px) {
+        article h5{
+          top: 70%;
+          font-size: 20px;
         }
-        
+      }
+    }
+    #info-tartes-bg {
+      position: absolute;
+      min-width: 100%;
+      min-height: 100%;
+      height: 100%;
+      width: auto;
+      left: 0;
+      top: 0;
+    }
+    #info-tartes{
+      background: #f6efe5cc;
+      position: relative;
+      min-height: 600px;
+      margin-top: 115px;
+      padding-top: 15px;
+      margin-left: 0;
+      margin-right: 10vw;
+      padding-left: 30px;
+      padding-right: 30px;
+      width: calc(50% - 10vw);
+      float: right;
+
+      h3{
+        font-weight: bold;
+        font-size: 48px;
+        text-decoration: underline;
+
+      }
+      p{
+        font-family: "Montserrat";
+        font-size: 22px;
+      }
+
+      @media (max-width: @sizes-media-max[sm]) {
+        //margin-top: -60vw;
+        width: calc(100% - 12vw);
+        min-height: 0px;
+        padding-bottom: 50px;
+        padding-top: 40px;
+        margin-left: 6vw;
+        margin-right: 6vw;
+
+        h3{ font-size: 32px; }
+        p{
+          //margin-top: 280px;
+          font-size: 18px;
+        }
+      }
+      //@media (max-width: 550px) {
+      //  margin-top: -75vw;
+      //  p{  margin-top: 250px; }
+      //}
+      //@media (max-width: 420px) {
+      //  margin-top: -350px;
+      //  p{  margin-top: 200px; }
+      //}
     }
 
-    #pub-tartes{        background: rgb(246,239,229);  }
-    .submenu-lastrow{  
-        border-top: 2px solid rgb(210,210,210);
-        background: rgb(250,245,235);  
-    }
+  }
+
+  #pub-tartes{        background: rgb(246,239,229);  }
+  .submenu-lastrow{
+    border-top: 2px solid rgb(210,210,210);
+    background: rgb(250,245,235);
+  }
 }
 
 
 #pub-autres{
-    margin-top: 270px;
-    overflow: hidden;
-    border-top: 1px solid black;
-    background: rgba(255,255,255,1);
-    text-align: center;
-    height: 0px;
-    z-index: 1;
-    padding-left: 0;
-    -webkit-box-shadow: 0 3px 8px 8px rgba(0,0,0,0.2) inset, 0 -8px 20px 8px rgba(0,0,0,0.5) ;
-    box-shadow: 0 3px 8px 8px rgba(0,0,0,0.2) inset, 0 -8px 20px 8px rgba(0,0,0,0.5) ;
-    
-    
-    img{
-        width: 35%;
-        margin-top: 100px;
-        margin-bottom: 100px;
-        border: 4px ridge rgb(180,180,180);
-    }
+  margin-top: 270px;
+  overflow: hidden;
+  border-top: 1px solid black;
+  background: rgba(255,255,255,1);
+  text-align: center;
+  height: 0px;
+  z-index: 1;
+  padding-left: 0;
+  -webkit-box-shadow: 0 3px 8px 8px rgba(0,0,0,0.2) inset, 0 -8px 20px 8px rgba(0,0,0,0.5) ;
+  box-shadow: 0 3px 8px 8px rgba(0,0,0,0.2) inset, 0 -8px 20px 8px rgba(0,0,0,0.5) ;
 
+
+  img{
+    width: 35%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border: 4px ridge rgb(180,180,180);
+  }
+
+  div:first-of-type{
+
+    margin-bottom: 20px;
+    margin-top: 80px;
+    width: 50%;
+    float: right;
+    margin-right: 5%;
+    h3{
+      text-align: center;
+      font-size: 40px;
+    }
+    p{
+      font-family: "Montserrat";
+      font-weight: normal;
+      font-size: 22px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  div:last-of-type{
+    width: 100%;
+  }
+
+
+  @media (max-width: 850px){
+    img{
+      width: 70%;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin-right: 0;
+    }
     div:first-of-type{
-        
-        margin-bottom: 20px;
-        margin-top: 80px;
-        width: 50%;
-        float: right;
-        margin-right: 5%;
-        h3{
-            text-align: center;
-            font-size: 40px;
-        }
-        p{
-            font-family: "Montserrat";
-            font-weight: normal;
-            font-size: 22px;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
+      width: 60%;
+      margin-right: 20%;
+      margin-top: 30px;
     }
     div:last-of-type{
-        width: 100%;
+
     }
-
-
-    @media (max-width: 850px){
-        img{
-            width: 70%;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            margin-right: 0;
-        }
-        div:first-of-type{
-            width: 60%;
-            margin-right: 20%;
-            margin-top: 30px;
-        }
-        div:last-of-type{
-
-        }
-    }
+  }
 }
