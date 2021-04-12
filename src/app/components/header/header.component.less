@@ -25,7 +25,6 @@ header {
     background: @header-primary-color;
     border-bottom: 2px solid rgba(212, 212, 212, 0.582);
   }
-
   @media (orientation: portrait) and (max-width: @sizes-media-max[sm]){
     height: @header-max-mobile;
 
@@ -51,7 +50,7 @@ header {
   #default-logo.left {
     text-align: left;
     padding-left: 10vw;
-    padding-top: 10px;
+    padding-top: 5px;
   }
   #default-logo,
   #nav-logo {
@@ -96,6 +95,8 @@ header {
     left: 50%;
     font-size: 15px;
     transform: translateX(-50%);
+    height: 40px;
+    width: 100%;
   }
 
   .nav-item,

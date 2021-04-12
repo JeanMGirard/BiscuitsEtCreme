@@ -56,7 +56,7 @@ export class ContactService {
       const request = {placeId, fields: ['opening_hours', 'formatted_phone_number', 'formatted_address', 'address_component']};
       const results: null | any = await new Promise((res) => {
         service.getDetails(request, (place, status) => {
-          console.log(place)
+          // console.log(place)
           if (status === google.maps.places.PlacesServiceStatus.OK)
             res(place)
           else res(null);
@@ -148,7 +148,7 @@ export class ContactService {
       while(!ContactService.contact){
         await new Promise((res2) => setTimeout(res2, 50));
       }
-      console.log(ContactService.contact)
+      // console.log(ContactService.contact)
       res(ContactService.contact);
     }));
   }

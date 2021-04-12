@@ -19,6 +19,7 @@
     "deploy:gh": "npm run build:gh && ngh",
     "deploy:gh2": "npm run build:gh2 && ngh",
     "deploy:fire": "npm run build:fire && firebase deploy -p dist/firebase",
+    "deploy:prod": "npm run build:prod && firebase deploy -p dist/production",
     "deploy": "npm run deploy:prod",
     "test": "ng test",
     "lint": "ng lint",
